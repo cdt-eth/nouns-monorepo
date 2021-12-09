@@ -181,8 +181,8 @@ const Playground: React.FC = () => {
               </Button>
             </div>
             <p className={classes.nounYearsFooter}>
-              You've generated <span>{nounSvgs ? (nounSvgs.length / 365).toFixed(2) : '0'}</span>{' '}
-              years worth of Nouns
+              You've found <span>{nounSvgs ? (nounSvgs.length / 365).toFixed(2) : '0'}</span> years
+              worth of Nouns
             </p>
           </Col>
           <Col lg={9}>
