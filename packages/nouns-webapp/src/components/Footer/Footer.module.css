@@ -15,6 +15,7 @@
 .footerSignature a {
   text-decoration: none;
   color: black;
+  color: white !important;
   margin: 0 5px;
 }
 .footerSignature a:hover {

@@ -6,3 +6,11 @@
     max-width: 1140px !important;
   }
 }
+
+.navbar .nav-item {
+  font-family: 'LONDRINA SOLID' !important;
+  font-size: 1.2rem !important;
+}
+.navbar-toggler-icon {
+  filter: invert(99%) sepia(4%) saturate(279%) hue-rotate(355deg) brightness(118%) contrast(100%);
+}

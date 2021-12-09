@@ -33,12 +33,16 @@
 .nounsNavLink,
 .nounsNavLink:active,
 .nounsNavLink:visited {
-  font-size: 0.9rem;
   padding: 0.5rem 0.8rem !important;
   color: var(--brand-black) !important;
+  font-size: 1.2rem;
+  color: white !important;
+  font-family: 'Londrina solid';
 }
 .nounsNavLink:hover {
   color: var(--brand-dark-red) !important;
+  color: #ff1f1f !important;
+  opacity: 85%;
 }
 
 .testnetImg {

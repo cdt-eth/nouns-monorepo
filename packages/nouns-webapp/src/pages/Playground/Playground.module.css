@@ -21,16 +21,32 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   border-radius: 12px;
-  background-color: var(--brand-dark-red);
+  /* background-color: var(--brand-dark-red); */
+  background-color: #ff0c0d;
   border: var(--brand-dark-red);
+  font-family: 'Londrina Solid';
+  font-size: 26px !important;
 }
 .generateBtn:focus,
 .generateBtn:hover {
-  background-color: var(--brand-dark-red) !important;
-  box-shadow: 0 0 0 0.2rem rgb(214, 60, 94, 0.75);
+  /* background-color: var(--brand-dark-red) !important; */
+  background-color: #ff0c0d !important;
+  opacity: 85%;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+
+  /* box-shadow: 0 0 0 0.2rem rgb(214, 60, 94, 0.75); */
 }
 .generateBtn:active {
-  background-color: var(--brand-dark-red) !important;
+  /* background-color: var(--brand-dark-red) !important; */
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+  opacity: 85%;
+  background-color: #ff0c0d !important;
 }
 .traitForm {
   height: 4rem;
@@ -58,6 +74,10 @@
 }
 .nounYearsFooter {
   font-style: italic;
+  font-family: 'Londrina solid';
+}
+.nounYearsFooter span {
+  color: #ff0c0d !important;
 }
 .nounImg {
   border-radius: 16px;

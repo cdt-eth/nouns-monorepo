@@ -1,7 +1,8 @@
 import { useAppSelector } from '../../hooks';
 import ShortAddress from '../ShortAddress';
 import classes from './NavBar.module.css';
-import logo from '../../assets/logo.svg';
+// import logo from '../../assets/logo.svg';
+import logo from '../../assets/_lost.png';
 import { useState } from 'react';
 import { useEtherBalance, useEthers } from '@usedapp/core';
 import WalletConnectModal from '../WalletConnectModal';
@@ -82,7 +83,7 @@ const NavBar = () => {
           <Navbar.Brand as={Link} to="/" className={classes.navBarBrand}>
             <img
               src={logo}
-              width="85"
+              width="285"
               height="85"
               className="d-inline-block align-middle"
               alt="Nouns DAO logo"
@@ -118,14 +119,6 @@ const NavBar = () => {
               rel="noreferrer"
             >
               DOCS
-            </Nav.Link>
-            <Nav.Link 
-              href={externalURL(ExternalURL.discourse)}
-              className={classes.nounsNavLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              DISCOURSE
             </Nav.Link>
             <Nav.Link as={Link} to="/playground" className={classes.nounsNavLink}>
               PLAYGROUND

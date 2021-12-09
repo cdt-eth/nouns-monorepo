@@ -1,3 +1,7 @@
 .container {
   padding: 2rem 0rem;
 }
+body {
+  background: #202124;
+  color: white;
+}
