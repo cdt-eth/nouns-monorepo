@@ -3,7 +3,8 @@
 }
 .headerRow span {
   color: #8c8d92;
-  font-size: 24px;
+  color: white;
+  font-size: 34px;
   font-family: 'Londrina Solid';
 }
 .headerRow h1 {
@@ -13,6 +14,14 @@
 }
 .headerRow p {
   color: #14161b;
+  color: white !important;
+  font-weight: bold;
+}
+.headerRow a {
+  color: #ff0c0d !important;
+}
+.headerRow a:hover {
+  color: grey !important;
 }
 
 .generateBtn {
@@ -27,6 +36,13 @@
   font-family: 'Londrina Solid';
   font-size: 26px !important;
 }
+@media (max-width: 767px) {
+  .generateBtn {
+    height: 2rem;
+    font-size: 14px !important;
+  }
+}
+
 .generateBtn:focus,
 .generateBtn:hover {
   /* background-color: var(--brand-dark-red) !important; */
@@ -36,8 +52,6 @@
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.3s;
-
-  /* box-shadow: 0 0 0 0.2rem rgb(214, 60, 94, 0.75); */
 }
 .generateBtn:active {
   /* background-color: var(--brand-dark-red) !important; */
@@ -72,12 +86,42 @@
   font-size: 15px;
   color: #8c8d92;
 }
+@media (max-width: 767px) {
+  .floatingLabel {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .traitForm {
+    width: 48% !important;
+    height: 2.5rem;
+  }
+  .traitForm:last-child {
+    height: 4rem;
+  }
+}
 .nounYearsFooter {
   font-style: italic;
   font-family: 'Londrina solid';
 }
 .nounYearsFooter span {
   color: #ff0c0d !important;
+}
+@media (max-width: 767px) {
+  .nounYearsFooter {
+    padding: 0;
+  }
+  .headerRow {
+    margin: 1rem 0;
+    margin-bottom: 0.5rem;
+  }
+  .headerRow span {
+    font-size: 26px;
+  }
+  .headerRow p {
+    font-size: 12px;
+    padding: 0;
+    padding-top: 10px;
+  }
 }
 .nounImg {
   border-radius: 16px;

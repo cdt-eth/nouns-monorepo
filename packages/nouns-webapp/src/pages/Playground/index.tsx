@@ -1,7 +1,7 @@
 import { Container, Col, Button, Row, FloatingLabel, Form } from 'react-bootstrap';
 import classes from './Playground.module.css';
 import React, { useEffect, useState } from 'react';
-// import Link from '../../components/Link';
+import Link from '../../components/Link';
 import { ImageData, getNounData, getRandomNounSeed } from '@nouns/assets';
 import { buildSVG } from '@nouns/sdk';
 import Noun from '../../components/Noun';
@@ -12,29 +12,29 @@ interface Trait {
   traitNames: string[];
 }
 
-// const nounsProtocolLink = (
-//   <Link
-//     text="Nouns Protocol"
-//     url="https://www.notion.so/Noun-Protocol-32e4f0bf74fe433e927e2ea35e52a507"
-//     leavesPage={true}
-//   />
-// );
+const nounsProtocolLink = (
+  <Link
+    text="Nouns Protocol"
+    url="https://www.notion.so/Noun-Protocol-32e4f0bf74fe433e927e2ea35e52a507"
+    leavesPage={true}
+  />
+);
 
-// const nounsAssetsLink = (
-//   <Link
-//     text="nouns-assets"
-//     url="https://github.com/nounsDAO/nouns-monorepo/tree/master/packages/nouns-assets"
-//     leavesPage={true}
-//   />
-// );
+const nounsAssetsLink = (
+  <Link
+    text="nouns-assets"
+    url="https://github.com/nounsDAO/nouns-monorepo/tree/master/packages/nouns-assets"
+    leavesPage={true}
+  />
+);
 
-// const nounsSDKLink = (
-//   <Link
-//     text="nouns-sdk"
-//     url="https://github.com/nounsDAO/nouns-monorepo/tree/master/packages/nouns-sdk"
-//     leavesPage={true}
-//   />
-// );
+const nounsSDKLink = (
+  <Link
+    text="nouns-sdk"
+    url="https://github.com/nounsDAO/nouns-monorepo/tree/master/packages/nouns-sdk"
+    leavesPage={true}
+  />
+);
 
 const parseTraitName = (partName: string): string =>
   capitalizeFirstLetter(partName.substring(partName.indexOf('-') + 1));
@@ -122,49 +122,64 @@ const Playground: React.FC = () => {
       <Container fluid="lg">
         <Row>
           <Col lg={10} className={classes.headerRow}>
-            {/* <span>Explore</span>
-            
+            <span>Nouns Explorer</span>
+
             <p>
               The playground was built using the {nounsProtocolLink}. Noun's traits are determined
               by the Noun Seed. The seed was generated using {nounsAssetsLink} and rendered using
               the {nounsSDKLink}.
-            </p> */}
+            </p>
           </Col>
         </Row>
         <Row>
           <Col lg={3}>
-            <Button
-              onClick={() => {
-                generateNounSvg();
-              }}
-              className={classes.generateBtn}
-            >
-              Generate
-            </Button>
-            {traits &&
-              traits.map((trait, index) => {
-                return (
-                  <Form className={classes.traitForm}>
-                    <FloatingLabel
-                      controlId="floatingSelect"
-                      label={capitalizeFirstLetter(trait.title)}
-                      key={index}
-                      className={classes.floatingLabel}
-                    >
-                      <Form.Select
-                        aria-label="Floating label select example"
-                        className={classes.traitFormBtn}
-                        onChange={e => {
-                          let index = e.currentTarget.selectedIndex;
-                          traitButtonHandler(trait, index - 1); // - 1 to account for 'random'
-                        }}
+            <div className="d">
+              <Button
+                onClick={() => {
+                  generateNounSvg();
+                }}
+                className={classes.generateBtn}
+              >
+                Generate
+              </Button>
+            </div>
+
+            <div className="fields">
+              {traits &&
+                traits.map((trait, index) => {
+                  return (
+                    <Form className={classes.traitForm}>
+                      <FloatingLabel
+                        controlId="floatingSelect"
+                        label={capitalizeFirstLetter(trait.title)}
+                        key={index}
+                        className={classes.floatingLabel}
                       >
-                        {traitOptions(trait)}
-                      </Form.Select>
-                    </FloatingLabel>
-                  </Form>
-                );
-              })}
+                        <Form.Select
+                          aria-label="Floating label select example"
+                          className={classes.traitFormBtn}
+                          onChange={e => {
+                            let index = e.currentTarget.selectedIndex;
+                            traitButtonHandler(trait, index - 1); // - 1 to account for 'random'
+                          }}
+                        >
+                          {traitOptions(trait)}
+                        </Form.Select>
+                      </FloatingLabel>
+                    </Form>
+                  );
+                })}
+            </div>
+            <div className="m">
+              <Button
+                onClick={() => {
+                  generateNounSvg();
+                }}
+                className={classes.generateBtn}
+              >
+                Generate
+              </Button>
+            </div>
             <p className={classes.nounYearsFooter}>
               You've generated <span>{nounSvgs ? (nounSvgs.length / 365).toFixed(2) : '0'}</span>{' '}
               years worth of Nouns

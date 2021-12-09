@@ -14,3 +14,47 @@
 .navbar-toggler-icon {
   filter: invert(99%) sepia(4%) saturate(279%) hue-rotate(355deg) brightness(118%) contrast(100%);
 }
+
+.homeLogo {
+  width: 285px;
+  height: 85px;
+}
+
+@media (min-width: 768px) {
+  .m {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* height: 215px; */
+    gap: 10px !important;
+    /* grid-template-column: 100px 100px; */
+  }
+  .traitForm {
+    width: 48% !important;
+  }
+  .form-floating > .form-select {
+    padding-top: 1.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .form-floating select {
+    font-size: 12px !important;
+  }
+  .homeLogo {
+    width: 145px;
+    height: 45px;
+  }
+  .navbar-brand {
+    margin-right: 0rem !important;
+  }
+  .navbar .nav-item {
+    display: none;
+  }
+  .d {
+    display: none;
+  }
+}
