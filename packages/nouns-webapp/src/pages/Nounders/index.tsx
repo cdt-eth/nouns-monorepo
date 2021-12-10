@@ -2,77 +2,28 @@ import React from 'react';
 import classes from './NoundersPage.module.css';
 import Section from '../../layout/Section';
 import { Col, Row, Card } from 'react-bootstrap';
-import pfp4156 from '../../assets/nounder-pfps/4156.png';
-import pfp9999 from '../../assets/nounder-pfps/9999.png';
-import pfpCryptoseneca from '../../assets/nounder-pfps/cryptoseneca.png';
-import pfpDevcarrot from '../../assets/nounder-pfps/devcarrot.png';
-import pfpDom from '../../assets/nounder-pfps/dom.png';
-import pfpKai from '../../assets/nounder-pfps/kai.png';
-import pfpSolimander from '../../assets/nounder-pfps/solimander.png';
-import pfpGremplin from '../../assets/nounder-pfps/gremplin.png';
-import pfpTimpers from '../../assets/nounder-pfps/timpers.png';
-import pfpVapeape from '../../assets/nounder-pfps/vapeape.png';
+import pfp12bnoun from '../../assets/nounder-pfps/12bnoun.png';
+import pfpCdt from '../../assets/nounder-pfps/cdt.png';
+import pfpMesshup from '../../assets/nounder-pfps/messhup.png';
 
 const bios = [
   {
-    name: '4156',
-    image: pfp4156,
+    name: '12bnoun',
+    image: pfp12bnoun,
     description: undefined,
-    handle: 'punk4156',
+    handle: '12bnoun',
   },
   {
-    name: 'cryptoseneca',
-    image: pfpCryptoseneca,
+    name: 'cdt.eth',
+    image: pfpCdt,
     description: undefined,
-    handle: 'cryptoseneca',
+    handle: 'cdt_eth',
   },
   {
-    name: 'Kai@eboy',
-    image: pfpKai,
+    name: 'messhup',
+    image: pfpMesshup,
     description: undefined,
-    handle: 'eBoyArts',
-  },
-  {
-    name: 'dom',
-    image: pfpDom,
-    description: undefined,
-    handle: 'dhof',
-  },
-  {
-    name: 'vapeape',
-    image: pfpVapeape,
-    description: undefined,
-    handle: 'punk4464',
-  },
-  {
-    name: 'gremplin',
-    image: pfpGremplin,
-    description: undefined,
-    handle: 'supergremplin',
-  },
-  {
-    name: 'solimader',
-    image: pfpSolimander,
-    description: undefined,
-    handle: '',
-  },
-  {
-    name: 'devcarrot',
-    image: pfpDevcarrot,
-    description: undefined,
-    handle: 'carrot_init',
-  },
-  {
-    name: 'timpers',
-    image: pfpTimpers,
-    description: undefined,
-    handle: 'TimpersHD',
-  },
-  {
-    name: '9999',
-    image: pfp9999,
-    description: undefined,
-    handle: 'lastpunk9999',
+    handle: 'messhup',
   },
 ];
 
@@ -117,7 +68,7 @@ const BioCards: React.FC<{ min: number; max: number }> = props => {
   return (
     <>
       {bios.slice(min, max).map(bio => (
-        <Col xs={5} md={3} lg={3} className={classes.bioGroup}>
+        <Col xs={4} md={3} lg={4} className={classes.bioGroup}>
           <BioCard {...bio} />
         </Col>
       ))}
@@ -129,8 +80,8 @@ const NoundersPage = () => {
   return (
     <Section fullWidth={true} className={classes.noundersPage}>
       <Col lg={{ span: 6, offset: 3 }}>
-        <h2 style={{ marginBottom: '2rem' }}>The Nounders</h2>
-        <h3 style={{ marginBottom: '2rem' }}>3.5 artists, 6.5 technologists</h3>
+        <h2 style={{ marginBottom: '2rem' }}>The Team</h2>
+        <h3 style={{ marginBottom: '2rem' }}>1 artist, 2 technologists</h3>
         <Row style={{ marginBottom: '0rem' }}>
           <BioCards min={0} max={5} />
           <BioCards min={5} max={10} />

@@ -40,7 +40,7 @@
   font-family: 'Londrina solid';
 }
 .nounsNavLink:hover {
-  color: var(--brand-dark-red) !important;
+  color: var(--lost-red) !important;
   color: #ff1f1f !important;
   opacity: 85%;
 }

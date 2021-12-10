@@ -2,6 +2,6 @@
   padding: 2rem 0rem;
 }
 body {
-  background: #202124;
+  background: var(--lost-grey);
   color: white;
 }

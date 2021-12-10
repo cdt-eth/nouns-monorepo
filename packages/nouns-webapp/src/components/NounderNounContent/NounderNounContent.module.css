@@ -5,7 +5,7 @@
   text-decoration: underline;
 }
 .link:hover {
-  color: var(--brand-dark-red);
+  color: var(--lost-red);
 }
 
 .bidRow {

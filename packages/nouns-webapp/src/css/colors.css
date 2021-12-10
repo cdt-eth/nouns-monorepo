@@ -1,7 +1,8 @@
 :root {
   --brand-bg-green: #edf2f0;
-  --brand-dark-red: #d63c5e;
+  --lost-red: #d63c5e;
   --brand-light-green: #6da886;
   --brand-black: #212529;
-  --brand-dark-grey: #202124;
+  --lost-grey: #202124;
+  --lost-red: #ff0c0d;
 }

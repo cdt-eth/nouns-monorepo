@@ -58,3 +58,18 @@
     display: none;
   }
 }
+.navbar-light .navbar-toggler {
+  color: white !important;
+}
+
+.navbar,
+.navbar-expand-lg,
+.navbar-light {
+  background-color: var(--lost-grey) !important;
+}
+
+/* .container, */
+.row > * {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
