@@ -86,18 +86,13 @@ const NoundersPage = () => {
           <BioCards min={0} max={5} />
           <BioCards min={5} max={10} />
         </Row>
-        <h3>Nounders' Reward</h3>
+        {/* <h3>Nounders' Reward</h3> */}
         <p style={{ textAlign: 'justify' }}>
-          All Noun auction proceeds are sent to the Nouns DAO. For this reason, we, the project's
-          founders (‘Nounders’) have chosen to compensate ourselves with Nouns. Every 10th noun for
-          the first 5 years of the project will be sent to our multisig (5/10), where it will be
-          vested and distributed to individual Nounders.
-        </p>
-        <p style={{ textAlign: 'justify' }}>
-          The Nounders reward is intended as compensation for our pre and post-launch contributions
-          to the project, and to help us participate meaningfully in governance as the project
-          matures. Since there are 10 Nounders, after 5 years each Nounder could receive up to 1% of
-          the Noun supply.
+          This team is passionate about building with and off of Nouns. As avid supporters of the
+          project they are always looking for ways to support it. Collectively the team has worked
+          around 10 different projects to extend the Nouns Extended Universe™.{' '}
+          <span className="lost">Lost Nouns</span> is the latest installment of furthering the brand
+          while having fun.
         </p>
       </Col>
     </Section>

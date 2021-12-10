@@ -9,10 +9,15 @@
 
 .navbar .nav-item {
   font-family: 'LONDRINA SOLID' !important;
-  font-size: 1.2rem !important;
+  /* font-size: 1.2rem !important; */
+  font-size: 1rem !important;
 }
 .navbar-toggler-icon {
   filter: invert(99%) sepia(4%) saturate(279%) hue-rotate(355deg) brightness(118%) contrast(100%);
+}
+
+.footerText {
+  margin: 0 5px;
 }
 
 .homeLogo {
@@ -72,4 +77,9 @@
 .row > * {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
+}
+
+.lost {
+  color: var(--lost-red) !important;
+  font-family: 'LONDRINA SOLID' !important;
 }

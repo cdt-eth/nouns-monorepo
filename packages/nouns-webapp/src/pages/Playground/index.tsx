@@ -122,7 +122,7 @@ const Playground: React.FC = () => {
       <Container fluid="lg">
         <Row>
           <Col lg={10} className={classes.headerRow}>
-            <span>Nouns Explorer</span>
+            <span>Found Playground</span>
 
             <p>
               The playground was built using the {nounsProtocolLink}. Noun's traits are determined

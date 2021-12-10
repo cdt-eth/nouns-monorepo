@@ -4,17 +4,19 @@ import classes from './NavBar.module.css';
 // import logo from '../../assets/logo.svg';
 import logo from '../../assets/_lost.png';
 import { useState } from 'react';
-import { useEtherBalance, useEthers } from '@usedapp/core';
+import { useEthers } from '@usedapp/core';
+// import { useEtherBalance, useEthers } from '@usedapp/core';
 import WalletConnectModal from '../WalletConnectModal';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import testnetNoun from '../../assets/testnet-noun.png';
 import clsx from 'clsx';
-import config, { CHAIN_ID } from '../../config';
-import { utils } from 'ethers';
-import { buildEtherscanAddressLink } from '../../utils/etherscan';
-import { ExternalURL, externalURL } from '../../utils/externalURL';
+import { CHAIN_ID } from '../../config';
+// import config, { CHAIN_ID } from '../../config';
+// import { utils } from 'ethers';
+// import { buildEtherscanAddressLink } from '../../utils/etherscan';
+// import { ExternalURL, externalURL } from '../../utils/externalURL';
 
 const NavBar = () => {
   const activeAccount = useAppSelector(state => state.account.activeAccount);
@@ -22,8 +24,8 @@ const NavBar = () => {
 
   const stateBgColor = useAppSelector(state => state.application.stateBackgroundColor);
   const history = useHistory();
-  const treasuryBalance = useEtherBalance(config.addresses.nounsDaoExecutor);
-  const daoEtherscanLink = buildEtherscanAddressLink(config.addresses.nounsDaoExecutor);
+  // const treasuryBalance = useEtherBalance(config.addresses.nounsDaoExecutor);
+  // const daoEtherscanLink = buildEtherscanAddressLink(config.addresses.nounsDaoExecutor);
 
   const [showConnectModal, setShowConnectModal] = useState(false);
 
@@ -97,7 +99,7 @@ const NavBar = () => {
           )}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="justify-content-end">
-            <Nav.Item>
+            {/* <Nav.Item>
               {treasuryBalance && (
                 <Nav.Link
                   href={daoEtherscanLink}
@@ -119,6 +121,9 @@ const NavBar = () => {
               rel="noreferrer"
             >
               DOCS
+            </Nav.Link> */}
+            <Nav.Link as={Link} to="/team" className={classes.nounsNavLink}>
+              TEAM
             </Nav.Link>
             <Nav.Link as={Link} to="/playground" className={classes.nounsNavLink}>
               PLAYGROUND

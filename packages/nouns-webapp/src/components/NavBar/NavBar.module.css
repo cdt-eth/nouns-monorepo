@@ -36,6 +36,7 @@
   padding: 0.5rem 0.8rem !important;
   color: var(--brand-black) !important;
   font-size: 1.2rem;
+  /* font-size: 1rem; */
   color: white !important;
   font-family: 'Londrina solid';
 }
