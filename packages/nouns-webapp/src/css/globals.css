@@ -45,10 +45,12 @@
   .form-floating > .form-select {
     padding-top: 1.25rem !important;
     padding-bottom: 0.25rem !important;
+    cursor: pointer !important;
   }
   .form-floating select {
     font-size: 12px !important;
   }
+
   .homeLogo {
     width: 145px;
     height: 45px;
