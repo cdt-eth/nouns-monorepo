@@ -10,10 +10,11 @@
 
 .noundersPage a {
   color: white;
+  font-family: 'Londrina Solid';
   color: var(--lost-dark) !important;
 }
 .noundersPage a:hover {
-  color: var(--lost-red);
+  color: var(--lost-red) !important;
 }
 
 .bioGroup {
