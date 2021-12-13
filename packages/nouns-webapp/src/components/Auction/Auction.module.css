@@ -8,13 +8,14 @@
 
 .auctionActivityCol {
   padding-top: 2rem;
+  background: var(--lost-tan) !important;
   align-self: start !important; /* maintains auction arrow buttons fixed from auction to auction  */
 }
 
 @media (max-width: 992px) {
   .auctionActivityCol {
     background-color: white;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid var(--lost-tan) !important;
     padding-bottom: 2rem;
   }
 }

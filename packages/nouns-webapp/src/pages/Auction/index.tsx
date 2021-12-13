@@ -1,7 +1,7 @@
 import { BigNumber } from 'ethers';
 import Banner from '../../components/Banner';
 import Auction from '../../components/Auction';
-import Documentation from '../../components/Documentation';
+// import Documentation from '../../components/Documentation';
 import HistoryCollection from '../../components/HistoryCollection';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { setOnDisplayAuctionNounId } from '../../state/slices/onDisplayAuction';
@@ -50,7 +50,7 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
       {lastAuctionNounId && (
         <HistoryCollection latestNounId={BigNumber.from(lastAuctionNounId)} historyCount={10} />
       )}
-      <Documentation />
+      {/* <Documentation /> */}
     </>
   );
 };
