@@ -38,6 +38,7 @@
   font-size: 1.2rem;
   /* font-size: 1rem; */
   color: white !important;
+  color: var(--lost-dark) !important;
   font-family: 'Londrina solid';
 }
 .nounsNavLink:hover {

@@ -5,8 +5,11 @@
   --brand-black: #212529;
 
   /* New Colors */
-  /* --lost-grey: #202124;
+  /* --lost-tan: #202124;
   --lost-red: #ff0c0d; */
-  --lost-grey: #202124;
+  --lost-tan: #f7ddb2;
+  --lost-dark: #161616;
+  /* old */
+  /* --lost-tan: #f7ddb2; */
   --lost-red: #ff0c0d;
 }

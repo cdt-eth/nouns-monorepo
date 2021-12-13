@@ -4,6 +4,7 @@
 .headerRow span {
   color: #8c8d92;
   color: white;
+  color: var(--lost-dark) !important;
   font-size: 34px;
   font-family: 'Londrina Solid';
 }
@@ -15,6 +16,7 @@
 .headerRow p {
   color: #14161b;
   color: white !important;
+  color: var(--lost-dark) !important;
   font-weight: bold;
 }
 .headerRow a {

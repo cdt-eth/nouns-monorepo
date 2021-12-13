@@ -15,6 +15,8 @@
   background-repeat: no-repeat;
   background-color: transparent;
   font-size: xx-large;
+  color: white;
+  color: var(--lost-dark) !important;
 }
 .rightArrow {
   margin-left: 1rem;
@@ -27,6 +29,8 @@
   background-repeat: no-repeat;
   background-color: transparent;
   font-size: xx-large;
+  color: white;
+  color: var(--lost-dark) !important;
 }
 .leftArrow:hover,
 .rightArrow:hover {

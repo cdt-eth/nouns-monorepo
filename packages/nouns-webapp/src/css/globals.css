@@ -11,13 +11,16 @@
   font-family: 'LONDRINA SOLID' !important;
   /* font-size: 1.2rem !important; */
   font-size: 1rem !important;
+  color: var(--lost-dark) !important;
 }
 .navbar-toggler-icon {
   filter: invert(99%) sepia(4%) saturate(279%) hue-rotate(355deg) brightness(118%) contrast(100%);
+  filter: var(--lost-dark) !important;
 }
 
 .footerText {
   margin: 0 5px;
+  color: var(--lost-dark) !important;
 }
 
 .homeLogo {
@@ -67,12 +70,13 @@
 }
 .navbar-light .navbar-toggler {
   color: white !important;
+  color: var(--lost-dark) !important;
 }
 
 .navbar,
 .navbar-expand-lg,
 .navbar-light {
-  background-color: var(--lost-grey) !important;
+  background-color: var(--lost-tan) !important;
 }
 
 /* .container, */
@@ -84,4 +88,22 @@
 .lost {
   color: var(--lost-red) !important;
   font-family: 'LONDRINA SOLID' !important;
+}
+.bg {
+  background: var(--lost-tan) !important;
+}
+.gr {
+  width: 85%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--lost-dark) !important;
+}
+
+footer {
+  color: var(--lost-dark) !important;
 }

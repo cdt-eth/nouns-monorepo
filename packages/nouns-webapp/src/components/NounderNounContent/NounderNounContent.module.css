@@ -10,6 +10,7 @@
 
 .bidRow {
   font-weight: normal !important;
+  color: var(--lost-dark) !important;
 }
 
 .currentBidCol {

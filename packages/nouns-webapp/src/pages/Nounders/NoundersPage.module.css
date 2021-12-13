@@ -10,6 +10,7 @@
 
 .noundersPage a {
   color: white;
+  color: var(--lost-dark) !important;
 }
 .noundersPage a:hover {
   color: var(--lost-red);

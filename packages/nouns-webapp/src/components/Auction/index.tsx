@@ -26,7 +26,8 @@ const Auction: React.FC<AuctionProps> = props => {
 
   const history = useHistory();
   const dispatch = useAppDispatch();
-  let stateBgColor = useAppSelector(state => state.application.stateBackgroundColor);
+  // let stateBgColor = useAppSelector(state => state.application.stateBackgroundColor);
+
   const lastNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
 
   const loadedNounHandler = (seed: INounSeed) => {
@@ -80,7 +81,7 @@ const Auction: React.FC<AuctionProps> = props => {
   );
 
   return (
-    <div style={{ backgroundColor: stateBgColor }}>
+    <div className="bg">
       <Container fluid="lg">
         <Row>
           <Col lg={{ span: 6 }} className={classes.nounContentCol}>

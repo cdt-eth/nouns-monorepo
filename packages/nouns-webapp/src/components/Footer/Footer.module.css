@@ -16,6 +16,7 @@
   text-decoration: none;
   color: black;
   color: white !important;
+  color: var(--lost-dark) !important;
   margin: 0 5px;
 }
 .footerSignature a:hover {

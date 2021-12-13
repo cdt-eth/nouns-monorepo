@@ -14,6 +14,7 @@
 
 @media (min-width: 992px) {
   .wrapper h1 {
-    font-size: 7rem;
+    font-size: 4rem;
+    color: var(--lost-dark) !important;
   }
 }
