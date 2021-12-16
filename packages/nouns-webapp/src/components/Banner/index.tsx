@@ -19,13 +19,6 @@ const Banner = () => {
       </Col>
       <Col lg={12}>
         <div className={classes.wrapper}>
-          {/* <h1>
-            ONE NOUN,
-            <br />
-            EVERY DAY,
-            <br />
-            FOREVER.
-          </h1> */}
           <img className="gr" src={noundersArt} alt="gremplin" />
         </div>
       </Col>
