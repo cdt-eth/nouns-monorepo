@@ -21,7 +21,7 @@ const ProfilePage: React.FC<ProfilePageProps> = props => {
 
   const dispatch = useAppDispatch();
   const lastAuctionNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
-  // let stateBgColor = useAppSelector(state => state.application.stateBackgroundColor);
+  let stateBgColor = useAppSelector(state => state.application.stateBackgroundColor);
 
   const loadedNounHandler = (seed: INounSeed) => {
     dispatch(setStateBackgroundColor(seed.background === 0 ? grey : beige));
@@ -43,8 +43,8 @@ const ProfilePage: React.FC<ProfilePageProps> = props => {
 
   return (
     <>
-      {/* <div style={{ backgroundColor: stateBgColor }}> */}
-      <div className={classes.bg}>
+      <div style={{ backgroundColor: stateBgColor }}>
+        {/* <div className={classes.bg}> */}
         <Container>
           <Row>
             <Col lg={6}>{nounContent}</Col>

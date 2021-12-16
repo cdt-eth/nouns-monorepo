@@ -91,9 +91,10 @@
 }
 .bg {
   background: var(--lost-tan) !important;
+  padding-bottom: 2rem;
 }
 .gr {
-  width: 85%;
+  width: 100%;
 }
 
 h1,

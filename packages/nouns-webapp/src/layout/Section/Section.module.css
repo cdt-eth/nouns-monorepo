@@ -2,6 +2,6 @@
   padding: 2rem 0rem;
 }
 body {
-  background: var(--lost-tan);
+  background: var(--lost-lighttan) !important;
   color: white;
 }

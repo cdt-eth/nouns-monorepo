@@ -21,6 +21,7 @@
 .headerWrapper {
   font-size: 1.3rem;
   background: var(--lost-tan) !important;
+  background: var(--lost-lighttan) !important;
 }
 
 .accordionHeader button:hover {
