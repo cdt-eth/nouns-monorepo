@@ -18,7 +18,6 @@
 pragma solidity ^0.8.6;
 
 import { Ownable } from '@openzeppelin/contracts/access/Ownable.sol';
-import { ERC721Checkpointable } from './base/ERC721Checkpointable.sol';
 import { INounsDescriptor } from './interfaces/INounsDescriptor.sol';
 import { INounsSeeder } from './interfaces/INounsSeeder.sol';
 import { INounsToken } from './interfaces/INounsToken.sol';
@@ -26,9 +25,7 @@ import { ERC721 } from './base/ERC721.sol';
 import { IERC721 } from '@openzeppelin/contracts/token/ERC721/IERC721.sol';
 import { IProxyRegistry } from './external/opensea/IProxyRegistry.sol';
 
-contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
-    // The nounders DAO address (creators org)
-    address public noundersDAO;
+contract NounsToken is INounsToken, Ownable, ERC721 {
 
     // An address who has permissions to mint Nouns
     address public minter;
@@ -85,14 +82,6 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
     }
 
     /**
-     * @notice Require that the sender is the nounders DAO.
-     */
-    modifier onlyNoundersDAO() {
-        require(msg.sender == noundersDAO, 'Sender is not the nounders DAO');
-        _;
-    }
-
-    /**
      * @notice Require that the sender is the minter.
      */
     modifier onlyMinter() {
@@ -107,7 +96,6 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
         INounsSeeder _seeder,
         IProxyRegistry _proxyRegistry
     ) ERC721('Nouns', 'NOUN') {
-        noundersDAO = _noundersDAO;
         minter = _minter;
         descriptor = _descriptor;
         seeder = _seeder;
@@ -147,9 +135,6 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
      * @dev Call _mintTo with the to address(es).
      */
     function mint() public override onlyMinter returns (uint256) {
-        if (_currentNounId <= 1820 && _currentNounId % 10 == 0) {
-            _mintTo(noundersDAO, _currentNounId++);
-        }
         return _mintTo(minter, _currentNounId++);
     }
 
@@ -177,16 +162,6 @@ contract NounsToken is INounsToken, Ownable, ERC721Checkpointable {
     function dataURI(uint256 tokenId) public view override returns (string memory) {
         require(_exists(tokenId), 'NounsToken: URI query for nonexistent token');
         return descriptor.dataURI(tokenId, seeds[tokenId]);
-    }
-
-    /**
-     * @notice Set the nounders DAO.
-     * @dev Only callable by the nounders DAO when not locked.
-     */
-    function setNoundersDAO(address _noundersDAO) external override onlyNoundersDAO {
-        noundersDAO = _noundersDAO;
-
-        emit NoundersDAOUpdated(_noundersDAO);
     }
 
     /**

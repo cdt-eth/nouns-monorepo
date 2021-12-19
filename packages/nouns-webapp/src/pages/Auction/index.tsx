@@ -22,6 +22,8 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+
+    console.log(initialAuctionId, lastAuctionNounId);
     if (!lastAuctionNounId) return;
 
     if (initialAuctionId !== undefined) {
