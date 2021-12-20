@@ -1,27 +1,24 @@
 import classes from './Banner.module.css';
 import Section from '../../layout/Section';
-import { Col } from 'react-bootstrap';
-// import calendar_noun from '../../assets/calendar_noun.png';
-// import Noun from '../Noun';
-// import gremplinImg from '../../assets/gremplin.png';
 import noundersArt from '../../assets/nounders_art.png';
+import noundersDev from '../../assets/nounders_dev.png';
 
 const Banner = () => {
   return (
     <Section fullWidth={false} className={classes.bannerSection}>
-      <Col lg={12}>
-        {/* <div style={{ padding: '2rem' }}>
-          <Noun imgPath={calendar_noun} alt="noun" />
-        </div> */}
-        <div className={classes.wrapper}>
-          <h1>Every artist has their drafts.</h1>
+      <div>
+        <div className="font-nouns">
+          <h1 className="text-center text-8xl">Every artist has their drafts.</h1>
         </div>
-      </Col>
-      <Col lg={12}>
+      </div>
+      <div>
         <div className={classes.wrapper}>
-          <img className="gr" src={noundersArt} alt="gremplin" />
+          <img className="gr w-1/2" src={noundersArt} alt="noundersArt" />
         </div>
-      </Col>
+        <div className={classes.wrapper}>
+          <img className="gr w-1/2" src={noundersDev} alt="noundersDev" />
+        </div>
+      </div>
     </Section>
   );
 };

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -5,6 +9,9 @@
   .container-xxl {
     max-width: 1140px !important;
   }
+}
+.font-nouns {
+  font-family: 'Londrina Solid';
 }
 
 .navbar .nav-item {

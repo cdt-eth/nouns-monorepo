@@ -43,8 +43,9 @@ const ProfilePage: React.FC<ProfilePageProps> = props => {
 
   return (
     <>
-      <div style={{ backgroundColor: stateBgColor }}>
-        {/* <div className={classes.bg}> */}
+      {/* <div style={{ backgroundColor: stateBgColor }}> */}
+
+      <div className="border-10">
         <Container>
           <Row>
             <Col lg={6}>{nounContent}</Col>
