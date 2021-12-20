@@ -135,6 +135,9 @@ contract NounsToken is INounsToken, Ownable, ERC721 {
      * @dev Call _mintTo with the to address(es).
      */
     function mint() public override onlyMinter returns (uint256) {
+        if (_currentNounId <= 1820 && _currentNounId % 10 == 0) {
+            _mintTo(minter, _currentNounId++);
+        }
         return _mintTo(minter, _currentNounId++);
     }
 
