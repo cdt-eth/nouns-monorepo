@@ -3,11 +3,6 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_noundersDAO",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
         "name": "_minter",
         "type": "address"
       },

@@ -90,7 +90,6 @@ contract NounsToken is INounsToken, Ownable, ERC721 {
     }
 
     constructor(
-        address _noundersDAO,
         address _minter,
         INounsDescriptor _descriptor,
         INounsSeeder _seeder,

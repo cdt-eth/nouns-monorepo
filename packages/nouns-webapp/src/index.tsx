@@ -136,6 +136,8 @@ const ChainSubscriber: React.FC = () => {
         setActiveAuction(reduxSafeNewAuction({ nounId, startTime, endTime, settled: false })),
       );
       const nounIdNumber = BigNumber.from(nounId).toNumber();
+
+      console.log("processAuctionCreated", nounIdNumber);
       dispatch(push(nounPath(nounIdNumber)));
       dispatch(setOnDisplayAuctionNounId(nounIdNumber));
       dispatch(setLastAuctionNounId(nounIdNumber));
@@ -149,6 +151,10 @@ const ChainSubscriber: React.FC = () => {
 
     // Fetch the current auction
     const currentAuction = await nounsAuctionHouseContract.auction();
+    console.log("Current Auction", currentAuction);
+    console.log("--------------------------------");
+    console.log("CurrentAuction", currentAuction.nounId.toNumber());
+
     dispatch(setFullAuction(reduxSafeAuction(currentAuction)));
     dispatch(setLastAuctionNounId(currentAuction.nounId.toNumber()));
 

@@ -41,19 +41,29 @@ const useOnDisplayAuction = (): Auction | undefined => {
   const currentAuction = useAppSelector(state => state.auction.activeAuction);
   const pastAuctions = useAppSelector(state => state.pastAuctions.pastAuctions);
 
+  console.log('useOnDisplayAuction');
+  console.log('lastAuctionNounId', lastAuctionNounId);
+  console.log('onDisplayAuctionNounId', onDisplayAuctionNounId);
+  console.log('currentAuction', currentAuction);
+  console.log('pastAuctions', pastAuctions);
+
   if (
     onDisplayAuctionNounId === undefined ||
     lastAuctionNounId === undefined ||
     currentAuction === undefined ||
     !pastAuctions
-  )
+  ) {
+    console.log("xxxx");
     return undefined;
+  }
 
   // current auction
   if (BigNumber.from(onDisplayAuctionNounId).eq(lastAuctionNounId)) {
+    console.log("current auction?");
     return deserializeAuction(currentAuction);
   } else {
     // nounder auction
+    console.log("nounders auction??");
     if (isNounderNoun(BigNumber.from(onDisplayAuctionNounId))) {
       const emptyNounderAuction = generateEmptyNounderAuction(
         BigNumber.from(onDisplayAuctionNounId),

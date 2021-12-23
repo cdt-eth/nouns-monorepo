@@ -19,11 +19,11 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   const onDisplayAuction = useOnDisplayAuction();
   const lastAuctionNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
 
+  console.log("----Initial Auction Id", initialAuctionId, onDisplayAuction);
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-
-    console.log(initialAuctionId, lastAuctionNounId);
     if (!lastAuctionNounId) return;
 
     if (initialAuctionId !== undefined) {

@@ -63,7 +63,6 @@ task('deploy-lost-local', 'Deploy contracts to hardhat')
       NounsSeeder: {},
       NounsToken: {
         args: [
-          args.noundersdao || deployer.address,
           expectedAuctionHouseProxyAddress,
           () => contracts['NounsDescriptor'].instance?.address,
           () => contracts['NounsSeeder'].instance?.address,

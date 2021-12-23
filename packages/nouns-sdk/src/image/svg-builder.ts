@@ -7,6 +7,7 @@ import { DecodedImage } from './types';
 const decodeImage = (image: string): DecodedImage => {
   const data = image.replace(/^0x/, '');
   const paletteIndex = parseInt(data.substring(0, 2), 16);
+
   const bounds = {
     top: parseInt(data.substring(2, 4), 16),
     right: parseInt(data.substring(4, 6), 16),
@@ -14,6 +15,8 @@ const decodeImage = (image: string): DecodedImage => {
     left: parseInt(data.substring(8, 10), 16),
   };
   const rects = data.substring(10);
+
+  console.log(paletteIndex);
 
   return {
     paletteIndex,
@@ -34,19 +37,21 @@ const decodeImage = (image: string): DecodedImage => {
  */
 export const buildSVG = (
   parts: { data: string }[],
-  paletteColors: string[],
+  paletteColors: string[][],
   bgColor: string,
 ): string => {
   const svgWithoutEndTag = parts.reduce((result, part) => {
     const svgRects: string[] = [];
-    const { bounds, rects } = decodeImage(part.data);
+
+    const { bounds, rects, paletteIndex } = decodeImage(part.data);
 
     let currentX = bounds.left;
     let currentY = bounds.top;
 
     rects.forEach(rect => {
       const [length, colorIndex] = rect;
-      const hexColor = paletteColors[colorIndex];
+      const hexColor = paletteColors[paletteIndex][colorIndex];
+      console.log(colorIndex, hexColor);
 
       // Do not push rect if transparent
       if (colorIndex !== 0) {

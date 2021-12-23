@@ -83,7 +83,7 @@ export class PNGCollectionEncoder implements IEncoder {
     if (images.size) {
       data.root = [...images.entries()].map(([filename, data]) => ({
         filename,
-        data,
+        data: `x${data}`
       }));
     }
     return data;
