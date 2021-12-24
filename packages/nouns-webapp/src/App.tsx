@@ -12,15 +12,11 @@ import NavBar from './components/NavBar';
 import NetworkAlert from './components/NetworkAlert';
 import Footer from './components/Footer';
 import AuctionPage from './pages/Auction';
-import GovernancePage from './pages/Governance';
-import CreateProposalPage from './pages/CreateProposal';
-import VotePage from './pages/Vote';
 import NoundersPage from './pages/Nounders';
 import NotFoundPage from './pages/NotFound';
 import Playground from './pages/Playground';
 import { CHAIN_ID } from './config';
 import VerifyPage from './pages/Verify';
-import ProfilePage from './pages/Profile';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
 
@@ -58,15 +54,7 @@ function App() {
           <Route exact path="/team" component={NoundersPage} />
           <Route exact path="/sign" component={VerifyPage} />
           <Route exact path="/verify" component={VerifyPage} />
-          <Route exact path="/create-proposal" component={CreateProposalPage} />
-          <Route exact path="/vote" component={GovernancePage} />
-          <Route exact path="/vote/:id" component={VotePage} />
           <Route exact path="/playground" component={Playground} />
-          <Route
-            exact
-            path="/noun/:id"
-            render={props => <ProfilePage nounId={Number(props.match.params.id)} />}
-          />
           <Route component={NotFoundPage} />
         </Switch>
         <Footer />

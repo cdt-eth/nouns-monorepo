@@ -3,7 +3,6 @@ import {
   NounsAuctionHouseFactory,
   NounsDescriptorFactory,
   NounsSeederFactory,
-  NounsDaoLogicV1Factory,
 } from '@nouns/contracts';
 
 export interface ContractAddresses {
@@ -14,9 +13,6 @@ export interface ContractAddresses {
   nounsAuctionHouse: string;
   nounsAuctionHouseProxy: string;
   nounsAuctionHouseProxyAdmin: string;
-  nounsDaoExecutor: string;
-  nounsDAOProxy: string;
-  nounsDAOLogicV1: string;
 }
 
 export interface Contracts {
@@ -24,7 +20,6 @@ export interface Contracts {
   nounsAuctionHouseContract: ReturnType<typeof NounsAuctionHouseFactory.connect>;
   nounsDescriptorContract: ReturnType<typeof NounsDescriptorFactory.connect>;
   nounsSeederContract: ReturnType<typeof NounsSeederFactory.connect>;
-  nounsDaoContract: ReturnType<typeof NounsDaoLogicV1Factory.connect>;
 }
 
 export enum ChainId {
