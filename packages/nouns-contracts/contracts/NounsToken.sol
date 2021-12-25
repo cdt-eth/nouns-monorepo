@@ -94,7 +94,7 @@ contract NounsToken is INounsToken, Ownable, ERC721 {
         INounsDescriptor _descriptor,
         INounsSeeder _seeder,
         IProxyRegistry _proxyRegistry
-    ) ERC721('Nouns', 'NOUN') {
+    ) ERC721('Lost Nouns', 'LOSTNOUN') {
         minter = _minter;
         descriptor = _descriptor;
         seeder = _seeder;
@@ -134,9 +134,6 @@ contract NounsToken is INounsToken, Ownable, ERC721 {
      * @dev Call _mintTo with the to address(es).
      */
     function mint() public override onlyMinter returns (uint256) {
-        if (_currentNounId == 0) {
-            _mintTo(minter, _currentNounId++);
-        }
         return _mintTo(minter, _currentNounId++);
     }
 

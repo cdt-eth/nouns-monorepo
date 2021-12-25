@@ -60,7 +60,7 @@ const Auction: React.FC<AuctionProps> = props => {
     </div>
   );
 
-  const currentAuctionActivityContent = currentAuction && lastNounId && (
+  const currentAuctionActivityContent = currentAuction && !(lastNounId === undefined || lastNounId === null) && (
     <AuctionActivity
       auction={currentAuction}
       isFirstAuction={currentAuction.nounId.eq(0)}
@@ -70,6 +70,7 @@ const Auction: React.FC<AuctionProps> = props => {
       displayGraphDepComps={true}
     />
   );
+
   const nounderNounContent = currentAuction && lastNounId && (
     <NounderNounContent
       mintTimestamp={currentAuction.startTime}
@@ -89,10 +90,7 @@ const Auction: React.FC<AuctionProps> = props => {
             {currentAuction ? nounContent : loadingNoun}
           </Col>
           <Col lg={{ span: 6 }} className={classes.auctionActivityCol}>
-            {currentAuction &&
-              (isNounderNoun(currentAuction.nounId)
-                ? nounderNounContent
-                : currentAuctionActivityContent)}
+            {currentAuctionActivityContent}
           </Col>
         </Row>
       </Container>

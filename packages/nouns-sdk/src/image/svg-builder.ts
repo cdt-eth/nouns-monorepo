@@ -16,8 +16,6 @@ const decodeImage = (image: string): DecodedImage => {
   };
   const rects = data.substring(10);
 
-  console.log(paletteIndex);
-
   return {
     paletteIndex,
     bounds,
@@ -51,7 +49,6 @@ export const buildSVG = (
     rects.forEach(rect => {
       const [length, colorIndex] = rect;
       const hexColor = paletteColors[paletteIndex][colorIndex];
-      console.log(colorIndex, hexColor);
 
       // Do not push rect if transparent
       if (colorIndex !== 0) {

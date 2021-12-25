@@ -35,17 +35,15 @@ const deserializeBids = (reduxSafeBids: BidEvent[]): Bid[] => {
 
 const useOnDisplayAuction = (): Auction | undefined => {
   const lastAuctionNounId = useAppSelector(state => state.auction.activeAuction?.nounId);
+
   const onDisplayAuctionNounId = useAppSelector(
     state => state.onDisplayAuction.onDisplayAuctionNounId,
   );
+
+  console.log(onDisplayAuctionNounId, 'onDisplayAuctionNounId');
+
   const currentAuction = useAppSelector(state => state.auction.activeAuction);
   const pastAuctions = useAppSelector(state => state.pastAuctions.pastAuctions);
-
-  console.log('useOnDisplayAuction');
-  console.log('lastAuctionNounId', lastAuctionNounId);
-  console.log('onDisplayAuctionNounId', onDisplayAuctionNounId);
-  console.log('currentAuction', currentAuction);
-  console.log('pastAuctions', pastAuctions);
 
   if (
     onDisplayAuctionNounId === undefined ||
@@ -53,23 +51,24 @@ const useOnDisplayAuction = (): Auction | undefined => {
     currentAuction === undefined ||
     !pastAuctions
   ) {
-    console.log("xxxx");
+
+    console.log('empty');
     return undefined;
   }
 
   // current auction
   if (BigNumber.from(onDisplayAuctionNounId).eq(lastAuctionNounId)) {
-    console.log("current auction?");
+    console.log('Basic auction');
     return deserializeAuction(currentAuction);
   } else {
     // nounder auction
-    console.log("nounders auction??");
     if (isNounderNoun(BigNumber.from(onDisplayAuctionNounId))) {
       const emptyNounderAuction = generateEmptyNounderAuction(
         BigNumber.from(onDisplayAuctionNounId),
         pastAuctions,
       );
 
+      console.log('Is noun id');
       return deserializeAuction(emptyNounderAuction);
     } else {
       // past auction

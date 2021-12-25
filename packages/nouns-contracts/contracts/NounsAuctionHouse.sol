@@ -31,7 +31,6 @@ import { IERC20 } from '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import { INounsAuctionHouse } from './interfaces/INounsAuctionHouse.sol';
 import { INounsToken } from './interfaces/INounsToken.sol';
 import { IWETH } from './interfaces/IWETH.sol';
-import 'hardhat/console.sol';
 
 contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, ReentrancyGuardUpgradeable, OwnableUpgradeable {
     // The Nouns ERC721 token contract
@@ -170,6 +169,16 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
     }
 
     /**
+     * @notice Set the auction duration
+     * @dev Only callable by the owner
+     */
+    function setDuration(uint256 _duration) external override onlyOwner {
+        duration = _duration;
+
+        emit AuctionDurationUpdated(_duration);
+    }
+
+    /**
      * @notice Set the auction reserve price.
      * @dev Only callable by the owner.
      */
@@ -200,8 +209,6 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
             uint256 startTime = block.timestamp;
             uint256 endTime = startTime + duration;
 
-            console.log("Auction created");
-
             auction = Auction({
                 nounId: nounId,
                 amount: 0,
@@ -213,8 +220,6 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
 
             emit AuctionCreated(nounId, startTime, endTime);
         } catch Error(string memory) {
-
-            console.log("Auction paused");
             _pause();
         }
     }

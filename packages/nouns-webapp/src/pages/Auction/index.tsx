@@ -19,14 +19,11 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   const onDisplayAuction = useOnDisplayAuction();
   const lastAuctionNounId = useAppSelector(state => state.onDisplayAuction.lastAuctionNounId);
 
-  console.log("----Initial Auction Id", initialAuctionId, onDisplayAuction);
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
 
-    console.log(initialAuctionId, lastAuctionNounId);
-    if (!lastAuctionNounId) return;
+    if (lastAuctionNounId === null || lastAuctionNounId === undefined) return;
 
     if (initialAuctionId !== undefined) {
       // handle out of bounds noun path ids
@@ -41,7 +38,7 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
       }
     } else {
       // no noun path id set
-      if (lastAuctionNounId) {
+      if (lastAuctionNounId >= 0) {
         dispatch(setOnDisplayAuctionNounId(lastAuctionNounId));
       }
     }

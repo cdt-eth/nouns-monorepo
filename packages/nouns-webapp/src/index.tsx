@@ -151,9 +151,8 @@ const ChainSubscriber: React.FC = () => {
 
     // Fetch the current auction
     const currentAuction = await nounsAuctionHouseContract.auction();
-    console.log("Current Auction", currentAuction);
-    console.log("--------------------------------");
-    console.log("CurrentAuction", currentAuction.nounId.toNumber());
+
+    console.log('loadstate');
 
     dispatch(setFullAuction(reduxSafeAuction(currentAuction)));
     dispatch(setLastAuctionNounId(currentAuction.nounId.toNumber()));
