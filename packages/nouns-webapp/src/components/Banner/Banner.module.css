@@ -6,9 +6,19 @@
 .bannerSection {
 }
 
+.copy {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper {
+  margin-bottom: 50px;
+}
+
 @media (max-width: 992px) {
   .wrapper {
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding: 0rem;
   }
 }
 
