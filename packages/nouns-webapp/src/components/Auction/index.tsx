@@ -7,10 +7,10 @@ import { LoadingNoun } from '../Noun';
 import { Auction as IAuction } from '../../wrappers/nounsAuction';
 import classes from './Auction.module.css';
 import { INounSeed } from '../../wrappers/nounToken';
-import NounderNounContent from '../NounderNounContent';
+// import NounderNounContent from '../NounderNounContent';
 import { useHistory } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { isNounderNoun } from '../../utils/nounderNoun';
+// import { isNounderNoun } from '../../utils/nounderNoun';
 import {
   setNextOnDisplayAuctionNounId,
   setPrevOnDisplayAuctionNounId,
@@ -60,36 +60,40 @@ const Auction: React.FC<AuctionProps> = props => {
     </div>
   );
 
-  const currentAuctionActivityContent = currentAuction && !(lastNounId === undefined || lastNounId === null) && (
-    <AuctionActivity
-      auction={currentAuction}
-      isFirstAuction={currentAuction.nounId.eq(0)}
-      isLastAuction={currentAuction.nounId.eq(lastNounId)}
-      onPrevAuctionClick={prevAuctionHandler}
-      onNextAuctionClick={nextAuctionHandler}
-      displayGraphDepComps={true}
-    />
-  );
+  const currentAuctionActivityContent = currentAuction &&
+    !(lastNounId === undefined || lastNounId === null) && (
+      <AuctionActivity
+        auction={currentAuction}
+        isFirstAuction={currentAuction.nounId.eq(0)}
+        isLastAuction={currentAuction.nounId.eq(lastNounId)}
+        onPrevAuctionClick={prevAuctionHandler}
+        onNextAuctionClick={nextAuctionHandler}
+        displayGraphDepComps={true}
+      />
+    );
 
-  const nounderNounContent = currentAuction && lastNounId && (
-    <NounderNounContent
-      mintTimestamp={currentAuction.startTime}
-      nounId={currentAuction.nounId}
-      isFirstAuction={currentAuction.nounId.eq(0)}
-      isLastAuction={currentAuction.nounId.eq(lastNounId)}
-      onPrevAuctionClick={prevAuctionHandler}
-      onNextAuctionClick={nextAuctionHandler}
-    />
-  );
+  // const nounderNounContent = currentAuction && lastNounId && (
+  //   <NounderNounContent
+  //     mintTimestamp={currentAuction.startTime}
+  //     nounId={currentAuction.nounId}
+  //     isFirstAuction={currentAuction.nounId.eq(0)}
+  //     isLastAuction={currentAuction.nounId.eq(lastNounId)}
+  //     onPrevAuctionClick={prevAuctionHandler}
+  //     onNextAuctionClick={nextAuctionHandler}
+  //   />
+  // );
 
   return (
     <div className="bg">
       <Container fluid="lg">
         <Row>
-          <Col lg={{ span: 6 }} className={classes.nounContentCol}>
+          <Col lg={{ span: 5 }} className={classes.nounContentCol}>
             {currentAuction ? nounContent : loadingNoun}
           </Col>
-          <Col lg={{ span: 6 }} className={classes.auctionActivityCol}>
+          <Col lg={{ span: 2 }} className={classes.nounContentCol}>
+            {''}
+          </Col>
+          <Col lg={{ span: 5 }} className={classes.auctionActivityCol}>
             {currentAuctionActivityContent}
           </Col>
         </Row>
