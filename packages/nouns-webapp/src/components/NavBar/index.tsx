@@ -1,8 +1,7 @@
 import { useAppSelector } from '../../hooks';
 import ShortAddress from '../ShortAddress';
 import classes from './NavBar.module.css';
-// import logo from '../../assets/logo.svg';
-// import logo from '../../assets/_lost.png';
+
 import logo from '../../assets/lostnouns.png';
 import { useState } from 'react';
 import { useEthers } from '@usedapp/core';
