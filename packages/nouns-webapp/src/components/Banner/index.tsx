@@ -50,7 +50,7 @@ const Banner = () => {
           <p className={classes.copy}>
             "The snake was an attempt bringing more animal heads into the fold without being
             strictly a head. Leaving a gap in the heads typically doesn't feel good, so I tried a
-            tighter coil here. I think ultimately it was just stylistically not a great fit.""
+            tighter coil here. I think ultimately it was just stylistically not a great fit."
           </p>
         </div>
 
