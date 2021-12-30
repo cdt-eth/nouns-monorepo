@@ -192,7 +192,7 @@ export class Image {
     const right = toPaddedHex(bounds.right, 2);
     const bottom = toPaddedHex(bounds.bottom, 2);
     const left = toPaddedHex(bounds.left, 2);
-    return `0x01${top}${right}${bottom}${left}`;
+    return `0x00${top}${right}${bottom}${left}`;
   }
 
   /**
