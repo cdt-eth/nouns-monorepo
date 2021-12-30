@@ -66,4 +66,6 @@ interface INounsAuctionHouse {
     function setMinBidIncrementPercentage(uint8 minBidIncrementPercentage) external;
 
     function setDuration(uint256 duration) external;
+
+    function withdraw() external;
 }

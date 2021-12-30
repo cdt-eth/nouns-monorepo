@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-/// @title The Nouns DAO auction house
+/// @title The Lost Nouns auction house
 
 /*********************************
  * ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ *
@@ -238,16 +238,26 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
         auction.settled = true;
 
         if (_auction.bidder == address(0)) {
-            nouns.burn(_auction.nounId);
+            // nouns.burn(_auction.nounId);
+            nouns.transferFrom(address(this), owner(), _auction.nounId);
         } else {
             nouns.transferFrom(address(this), _auction.bidder, _auction.nounId);
         }
 
+        /*
         if (_auction.amount > 0) {
             _safeTransferETHWithFallback(owner(), _auction.amount);
         }
+        */
 
         emit AuctionSettled(_auction.nounId, _auction.bidder, _auction.amount);
+    }
+
+    /**
+     * @notice Withdraw money raised
+     */
+    function withdraw() external override onlyOwner {
+        _safeTransferETHWithFallback(owner(), address(this).balance);
     }
 
     /**
