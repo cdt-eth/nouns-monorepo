@@ -15,7 +15,7 @@ const Banner = () => {
     <Section fullWidth={false} className={classes.bannerSection}>
       {/* Art Nounders */}
       <div className="">
-        <h1 className="font-nouns text-center text-8xl">Even work of art begins as a draft.</h1>
+        <h1 className="font-nouns text-center text-8xl">Every work of art begins as a draft.</h1>
         <p className={classes.copy}>
           In the summer of 2021, a group of artists came together to create this idea they had
           called "Nouns", but what would they look like? What would tie them together? What would
