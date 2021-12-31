@@ -87,13 +87,13 @@ const Auction: React.FC<AuctionProps> = props => {
     <div className="bg">
       <Container fluid="lg">
         <Row>
-          <Col lg={{ span: 5 }} className={classes.nounContentCol}>
+          <Col lg={{ span: 6 }} className={classes.nounContentCol}>
             {currentAuction ? nounContent : loadingNoun}
           </Col>
-          <Col lg={{ span: 2 }} className={classes.nounContentCol}>
+          {/* <Col lg={{ span: 2 }} className={classes.nounContentCol}>
             {''}
-          </Col>
-          <Col lg={{ span: 5 }} className={classes.auctionActivityCol}>
+          </Col> */}
+          <Col lg={{ span: 6 }} className={classes.auctionActivityCol}>
             {currentAuctionActivityContent}
           </Col>
         </Row>

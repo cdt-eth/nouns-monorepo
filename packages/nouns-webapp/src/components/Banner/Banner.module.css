@@ -3,22 +3,16 @@
   font-size: 5rem;
 }
 
-.bannerSection {
-}
-
 .copy {
   font-size: 20px;
   font-weight: 500;
+  font-weight: bold;
 }
 .subcopy {
   font-size: 16px;
   font-weight: 300;
   font-style: italic;
   text-align: center;
-}
-
-.wrapper {
-  margin-bottom: 50px;
 }
 
 @media (max-width: 992px) {
@@ -29,10 +23,61 @@
 }
 
 @media (min-width: 992px) {
+  .wrapper {
+    margin-bottom: 50px;
+  }
   .wrapper h1 {
     font-size: 4rem;
     color: var(--lost-dark) !important;
   }
+}
+
+.wrapperGrid2 {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 50%;
+}
+.wrapperGrid2 img {
+  /* width: 25%; */
+  height: 200px;
+  width: auto;
+}
+.quote2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 100%;
+}
+.wrapperGrid2 p {
+  font-size: 14px;
+}
+.wrap {
+  display: flex;
+  gap: 50px;
+  padding: 0px 50px;
+  padding: 0px 0px;
+}
+.both {
+  background: #f7ddb2;
+  padding: 50px 100px;
+  padding: 50px 0px !important;
+}
+
+.credit {
+  /* font-weight: nrom; */
+  font-size: 32px;
+  /* font-style: italic; */
+  float: left;
+  padding-top: 5px;
+  font-family: 'Londrina Solid';
+  /* padding-left: 40px; */
+}
+.notes {
+  text-align: center;
+  font-family: 'Londrina Solid';
+  font-size: 3rem;
+  padding-bottom: 30px;
 }
 
 .wrapperGrid {
@@ -69,6 +114,10 @@
   /* font-style: italic; */
   margin-bottom: 0rem;
 }
+.spacerDiv {
+  height: 20px;
+  margin-top: 20px !important;
+}
 @media (max-width: 991px) {
   .wrapperGrid {
     border-radius: 0px;
@@ -90,4 +139,51 @@
     margin-bottom: 0px !important;
     padding-top: 20px !important;
   }
+
+  .quote2 {
+    flex-direction: column;
+  }
+  .wrap {
+    gap: 25px !important;
+    padding: 0px 0px;
+    padding: 0px !important;
+    flex-direction: column;
+  }
+  .wrapperGrid2 {
+    width: 90%;
+    margin: auto;
+  }
+  .wrapperGrid2 img {
+    height: auto;
+    margin: auto;
+    width: 75%;
+  }
+  .copy {
+    font-size: 16px !important;
+  }
+  .wrapperGrid2 .copy {
+    font-weight: 400;
+    font-size: 16px !important;
+  }
+  .credit {
+    padding: 0px;
+    font-size: 26px;
+  }
+  .spacerDiv {
+    height: 0px;
+    margin-top: 0px !important;
+  }
+  .bannerSection {
+    padding-bottom: 0px !important;
+  }
+  .noundersDev {
+    padding-top: 40px !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+}
+
+.noundersDev {
+  padding: 0;
 }

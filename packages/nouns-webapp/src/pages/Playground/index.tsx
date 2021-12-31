@@ -72,11 +72,8 @@ const Playground: React.FC = () => {
       }),
     ];
 
-    console.log('traitTitles', traitNames);
-
     setTraits(
       traitTitles.map((value, index) => {
-        console.log('traitNames', traitNames[index]);
         return {
           title: value,
           traitNames: traitNames[index],

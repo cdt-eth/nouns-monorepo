@@ -93,7 +93,7 @@
 }
 .bg {
   background: var(--lost-tan) !important;
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
   padding-top: 3rem;
 }
 @media (max-width: 767px) {
