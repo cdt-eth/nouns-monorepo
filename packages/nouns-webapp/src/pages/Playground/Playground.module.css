@@ -8,6 +8,7 @@
   font-size: 34px;
   font-family: 'Londrina Solid';
 }
+
 .headerRow h1 {
   color: #14161b;
   font-size: 56px;
@@ -50,7 +51,7 @@
   /* background-color: var(--lost-red) !important; */
   background-color: #ff0c0d !important;
   opacity: 85%;
-  opacity: 100%;
+  opacity: 100% !important;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -138,5 +139,5 @@
 }
 
 .generateBtn:active {
-  opacity: 100%;
+  opacity: 100% !important;
 }
