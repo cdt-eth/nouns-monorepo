@@ -1,6 +1,6 @@
 import classes from './Banner.module.css';
 import Section from '../../layout/Section';
-import noundersArt from '../../assets/nounders_art.png';
+import noundersArt from '../../assets/nounders_art2.png';
 import noundersDev from '../../assets/nounders_dev.png';
 import mug from '../../assets/mug.png';
 import snake from '../../assets/highlight/snake.png';
