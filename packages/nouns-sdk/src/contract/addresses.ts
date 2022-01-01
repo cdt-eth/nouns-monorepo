@@ -11,13 +11,13 @@ const chainIdToAddresses: { [chainId: number]: ContractAddresses } = {
     nounsAuctionHouseProxyAdmin: '0xC1C119932d78aB9080862C5fcb964029f086401e',
   },
   [ChainId.Rinkeby]: {
-    nounsToken: '0x632f34c3aee991b10D4b421Bc05413a03d7a37eB',
+    nounsToken: '0x2c69738e1492C866Cec0b61Af58498A4A8ED1cE5',
     nounsSeeder: '0xA98A1b1Cc4f5746A753167BAf8e0C26AcBe42F2E',
-    nounsDescriptor: '0x53cB482c73655D2287AE3282AD1395F82e6a402F',
+    nounsDescriptor: '0xeB609d050Af5D2369C27E4F9972846dA309640CD',
     nftDescriptor: '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B',
-    nounsAuctionHouse: '0xfAB74e535409A3ad1F7C2858dd2E5Da1eAAc6cE7',
-    nounsAuctionHouseProxy: '0x7cb0384b923280269b3BD85f0a7fEaB776588382',
-    nounsAuctionHouseProxyAdmin: '0x04d0e5a8ADB5076C098f49F39B01A774c313597d',
+    nounsAuctionHouse: '0x4a65cbcB20EcCD27E379dE98fB0872b085790a78',
+    nounsAuctionHouseProxy: '0x5165AC1cff7B23B8764b1c95fd57738E94165899',
+    nounsAuctionHouseProxyAdmin: '0x414E33e4cFCb0Fb1A04262C9030Ac15Ef8497BeD',
   },
   [ChainId.Local]: {
     nounsToken: '0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9',

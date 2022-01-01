@@ -11,10 +11,20 @@ task(
 
   const contracts = await run('deploy-lost-local');
 
+  
   await run('populate-descriptor', {
     nftDescriptor: contracts.NFTDescriptor.instance.address,
     nounsDescriptor: contracts.NounsDescriptor.instance.address,
   });
+
+  /*
+  const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
+  const error = await nounAuctionHouse.attach('0xa513E6E4b8f2a923D98304ec87F64353C4D5C853')
+  .unpause({
+    gasLimit: 1_000_000
+  });
+
+  */
 
   await contracts.NounsAuctionHouse.instance
     .attach(contracts.NounsAuctionHouseProxy.instance.address)
@@ -45,8 +55,8 @@ task(
   console.log(
     `Noun contracts deployed to local node at http://localhost:8545 (Chain ID: ${chainId})`,
   );
-  console.log(`Auction House Proxy address: ${contracts.NounsAuctionHouseProxy.instance.address}`);
-  console.log(`Nouns ERC721 address: ${contracts.NounsToken.instance.address}`);
+  //console.log(`Auction House Proxy address: ${contracts.NounsAuctionHouseProxy.instance.address}`);
+  //console.log(`Nouns ERC721 address: ${contracts.NounsToken.instance.address}`);
   // console.log(`Nouns DAO Executor address: ${contracts.NounsDAOExecutor.instance.address}`);
   // console.log(`Nouns DAO Proxy address: ${contracts.NounsDAOProxy.instance.address}`);
 

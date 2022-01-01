@@ -1,4 +1,4 @@
-import { Account, Delegate, Proposal, Governance, Vote } from '../types/schema';
+import { Account } from '../types/schema';
 import { ZERO_ADDRESS, BIGINT_ZERO, BIGINT_ONE } from './constants';
 
 export function getOrCreateAccount(
@@ -24,6 +24,7 @@ export function getOrCreateAccount(
   return tokenHolder as Account;
 }
 
+/*
 export function getOrCreateDelegate(
   id: string,
   createIfNotFound: boolean = true,
@@ -110,3 +111,4 @@ export function getGovernanceEntity(): Governance {
 
   return governance as Governance;
 }
+*/

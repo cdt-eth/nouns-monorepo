@@ -8,3 +8,5 @@ export * from './populate-descriptor';
 export * from './run-local';
 export * from './verify-etherscan';
 export * from './deploy-lost-local';
+export * from './deploy-mainnet';
+export * from './run-mainnet';

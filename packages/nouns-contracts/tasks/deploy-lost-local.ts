@@ -52,6 +52,8 @@ task('deploy-lost-local', 'Deploy contracts to hardhat')
       from: deployer.address,
       nonce: nonce + AUCTION_HOUSE_PROXY_NONCE_OFFSET,
     });
+
+    console.log(expectedAuctionHouseProxyAddress);
     const contracts: Record<ContractName, Contract> = {
       WETH: {},
       NFTDescriptor: {},

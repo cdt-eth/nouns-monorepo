@@ -1,13 +1,11 @@
 import { log } from '@graphprotocol/graph-ts';
 import {
-  DelegateChanged,
-  DelegateVotesChanged,
   NounCreated,
   Transfer,
 } from './types/NounsToken/NounsToken';
 import { Noun, Seed } from './types/schema';
 import { BIGINT_ONE, BIGINT_ZERO, ZERO_ADDRESS } from './utils/constants';
-import { getGovernanceEntity, getOrCreateDelegate, getOrCreateAccount } from './utils/helpers';
+import { getOrCreateAccount } from './utils/helpers';
 
 export function handleNounCreated(event: NounCreated): void {
   let nounId = event.params.tokenId.toString();
@@ -34,6 +32,7 @@ export function handleNounCreated(event: NounCreated): void {
 }
 
 let accountNouns: string[] = []; // Use WebAssembly global due to lack of closure support
+/*
 export function handleDelegateChanged(event: DelegateChanged): void {
   let tokenHolder = getOrCreateAccount(event.params.delegator.toHexString());
   let previousDelegate = getOrCreateDelegate(event.params.fromDelegate.toHexString());
@@ -170,3 +169,4 @@ export function handleTransfer(event: Transfer): void {
 
   toHolder.save();
 }
+*/

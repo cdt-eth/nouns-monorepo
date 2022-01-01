@@ -27,9 +27,8 @@ interface Contract {
   waitForConfirmation?: boolean;
 }
 
-task('deploy', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and NounsToken')
-  .addParam('noundersdao', 'The nounders DAO contract address', undefined, types.string)
-  .addParam('weth', 'The WETH contract address', weth, types.string)
+task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and NounsToken')
+  .addOptionalParam('weth', 'The WETH contract address', weth, types.string)
   .addOptionalParam('auctionTimeBuffer', 'The auction time buffer (seconds)', 5 * 60, types.int)
   .addOptionalParam('auctionReservePrice', 'The auction reserve price (wei)', 1, types.int)
   .addOptionalParam(
@@ -40,13 +39,16 @@ task('deploy', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and NounsTo
   )
   .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 60 * 1, types.int) // Default: 24 hours
   .setAction(async (args, { ethers }) => {
+
     const network = await ethers.provider.getNetwork();
+
+    //console.log(network);
     const proxyRegistryAddress =
       network.chainId === 1
         ? '0xa5409ec958c83c3f309868babaca7c86dcb077c1'
         : '0xf57b2c51ded3a29e6891aba85459d600256cf317';
 
-    const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 6;
+    const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 4;
 
     const [deployer] = await ethers.getSigners();
     const nonce = await deployer.getTransactionCount();
@@ -54,6 +56,8 @@ task('deploy', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and NounsTo
       from: deployer.address,
       nonce: nonce + AUCTION_HOUSE_PROXY_NONCE_OFFSET,
     });
+
+    console.log(expectedAuctionHouseProxyAddress);
 
     const contracts: Record<ContractName, Contract> = {
       NounsDescriptor: {
@@ -88,6 +92,7 @@ task('deploy', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and NounsTo
               args.auctionDuration,
             ]),
         ],
+        waitForConfirmation: true,
       },
     };
 
