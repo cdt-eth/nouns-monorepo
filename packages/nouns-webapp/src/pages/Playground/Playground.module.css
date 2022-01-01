@@ -62,8 +62,8 @@
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 0.3s;
-  opacity: 85%;
   background-color: #ff0c0d !important;
+  opacity: 100% !important;
 }
 .traitForm {
   height: 4rem;
@@ -135,4 +135,8 @@
 }
 .nounWrapper {
   margin-bottom: 1rem;
+}
+
+.generateBtn:active {
+  opacity: 100%;
 }
