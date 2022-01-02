@@ -135,3 +135,7 @@ footer {
     padding-top: 20px !important;
   }
 }
+
+.generateBtn .generateBtn:hover .generateBtn:focus .generateBtn:active {
+  opacity: 100% !important;
+}

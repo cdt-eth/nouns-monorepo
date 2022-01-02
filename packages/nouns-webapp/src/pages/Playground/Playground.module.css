@@ -138,6 +138,6 @@
   margin-bottom: 1rem;
 }
 
-.generateBtn:active {
+.generateBtn .generateBtn:hover .generateBtn:focus .generateBtn:active {
   opacity: 100% !important;
 }
