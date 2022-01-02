@@ -44,7 +44,7 @@
 .nounsNavLink:hover {
   color: var(--lost-red) !important;
   color: #ff1f1f !important;
-  opacity: 85%;
+  /* opacity: 85%; */
 }
 
 .testnetImg {

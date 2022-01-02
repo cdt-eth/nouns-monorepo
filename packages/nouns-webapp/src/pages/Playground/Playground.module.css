@@ -50,21 +50,21 @@
 .generateBtn:hover {
   /* background-color: var(--lost-red) !important; */
   background-color: #ff0c0d !important;
-  opacity: 85%;
-  opacity: 100% !important;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+  /* opacity: 85%; */
+  /* opacity: 100% !important; */
+  /* transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.3s;
+  transition-duration: 0.3s; */
 }
 .generateBtn:active {
   /* background-color: var(--lost-red) !important; */
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
+  /* transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow,
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.3s;
+  transition-duration: 0.3s; */
   background-color: #ff0c0d !important;
-  opacity: 100% !important;
+  /* opacity: 100% !important; */
 }
 .traitForm {
   height: 4rem;
@@ -138,6 +138,6 @@
   margin-bottom: 1rem;
 }
 
-.generateBtn .generateBtn:hover .generateBtn:focus .generateBtn:active {
+/* .generateBtn .generateBtn:hover .generateBtn:focus .generateBtn:active {
   opacity: 100% !important;
-}
+} */
