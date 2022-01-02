@@ -197,3 +197,8 @@
 .wrapperGrid2 {
   width: 47% !important;
 }
+@media (max-width: 991px) {
+  .wrapperGrid2 {
+    width: 85% !important;
+  }
+}
