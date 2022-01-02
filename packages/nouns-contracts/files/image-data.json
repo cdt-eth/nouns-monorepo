@@ -706,40 +706,40 @@
   "images": {
     "bodies": [
       {
-        "filename": "body-blue-sky",
+        "filename": "body-Blue Sky",
         "data": "0x0015171f090e020e020e020e02020201000b02020201000b02020201000b02020201000b02020201000b02020201000b02020201000b02"
       },
       {
-        "filename": "body-darkbrown",
+        "filename": "body-Dark Brown",
         "data": "0x0015171f090e030e030e030e03020301000b03020301000b03020301000b03020301000b03020301000b03020301000b03020301000b03"
       },
       {
-        "filename": "body-grayscale-1",
-        "data": "0x0015171f090e040e040e040e04020401000b04020401000b04020401000b04020401000b04020401000b04020401000b04020401000b04"
-      },
-      {
-        "filename": "body-grayscale-9",
+        "filename": "body-Dark Gray",
         "data": "0x0015171f090e050e050e050e05020501000b05020501000b05020501000b05020501000b05020501000b05020501000b05020501000b05"
       },
       {
-        "filename": "body-pitstain",
+        "filename": "body-Pit Stain",
         "data": "0x0015171f090406070703060e06010602070b06010602070b060106010701000b06020601000b06020601000b06020601000b06020601000b06020601000b06020601000b06"
       },
       {
-        "filename": "body-purple",
+        "filename": "body-Purple",
         "data": "0x0015171f090e080e080e080e08020801000b08020801000b08020801000b08020801000b08020801000b08020801000b08020801000b08"
       },
       {
-        "filename": "body-rust",
+        "filename": "body-Rust",
         "data": "0x0015171f090e090e090e090e09020901000b09020901000b09020901000b09020901000b09020901000b09020901000b09020901000b09"
       },
       {
-        "filename": "body-sweat",
+        "filename": "body-Sweat",
         "data": "0x0015171f09050a050b040a0e0a020a010b080a010b020a010a020b080a020b010a010a010b0100080a020b010a020a01000b0a020a01000b0a020a01000b0a020a01000b0a020a01000b0a020a01000b0a"
       },
       {
-        "filename": "body-teal",
+        "filename": "body-Teal",
         "data": "0x0015171f090e0c0e0c0e0c0e0c020c01000b0c020c01000b0c020c01000b0c020c01000b0c020c01000b0c020c01000b0c020c01000b0c"
+      },
+      {
+        "filename": "body-White",
+        "data": "0x0015171f090e040e040e040e04020401000b04020401000b04020401000b04020401000b04020401000b04020401000b04020401000b04"
       }
     ],
     "accessories": [
