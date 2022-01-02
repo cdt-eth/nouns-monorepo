@@ -117,7 +117,7 @@ const Banner = () => {
 
         <div className={classes.both}>
           <div className="container-lg container-lg2">
-            <p className={classes.notes}>Founder's Notes</p>
+            <p className={classes.notes}>Nounder's Notes</p>
             <div className={classes.wrap}>
               <div className={classes.wrapperGrid2}>
                 <div className={classes.quote2}>
