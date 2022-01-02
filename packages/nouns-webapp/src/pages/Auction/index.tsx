@@ -9,6 +9,7 @@ import { push } from 'connected-react-router';
 import { nounPath } from '../../utils/history';
 import useOnDisplayAuction from '../../wrappers/onDisplayAuction';
 import { useEffect } from 'react';
+import nounsHero from '../../assets/nouns.png';
 
 interface AuctionPageProps {
   initialAuctionId?: number;
@@ -22,7 +23,6 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-
     if (lastAuctionNounId === null || lastAuctionNounId === undefined) return;
 
     if (initialAuctionId !== undefined) {
@@ -46,7 +46,9 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
 
   return (
     <>
-      <Auction auction={onDisplayAuction} />
+      {/* <Auction auction={onDisplayAuction} /> */}
+
+      <img src={nounsHero} alt="nouns-hero-banner" />
       <Banner />
       {lastAuctionNounId && (
         <HistoryCollection latestNounId={BigNumber.from(lastAuctionNounId)} historyCount={10} />
