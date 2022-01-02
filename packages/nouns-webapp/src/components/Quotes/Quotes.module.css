@@ -37,7 +37,6 @@
   flex-direction: column;
   /* border: 2px solid red; */
   width: 100%;
-  width: 47%;
 }
 .wrapperGrid2 img {
   /* width: 25%; */
@@ -190,15 +189,6 @@
 .noundersDev {
   padding: 0;
 }
-
-.wrap {
-  display: flex !important;
-  flex-wrap: wrap !important;
-}
-.wrapperGrid2 {
-  width: 100%;
-}
-
 .wrap {
   display: flex !important;
   width: 100% !important;
@@ -206,9 +196,4 @@
 }
 .wrapperGrid2 {
   width: 47% !important;
-}
-@media (max-width: 991px) {
-  .wrapperGrid2 {
-    width: 85% !important;
-  }
 }
