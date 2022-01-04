@@ -77,26 +77,26 @@ const gitLog = [
   {
     hash: 'commit 4ea1037e55b51dff0a462b0dcc116b8aeb9289f0',
     nounder: 'Author: solimander <soli@nouns.wtf>',
-    date: 'Date: Sun Jan 2 10:39:03 2022 -0500',
+    date: 'Date: Sun Jan 2 10:39:03 2021 -0500',
     message: '_',
   },
   {
     hash: 'commit 33e717133cf65c2228f4ddd97bc6d696ee733843',
     nounder: 'Author: cryptoseneca <seneca@nouns.wtf>',
-    date: 'Date: Sun Aug 8 10:07:35 2022 -0500',
+    date: 'Date: Sun Aug 8 10:07:35 2021 -0500',
     message: 'internal tooling for artists, nouns.wtf frontend',
   },
   {
     hash: 'commit 85e8da5231dbecca77d92fb67e041b43ce5bcb4b',
     nounder: 'Author: vapeape <vape@nouns.wtf>',
-    date: 'Date: Sun Jun 3 06:21:27 2022 -0500',
+    date: 'Date: Sun Jun 3 06:21:27 2021 -0500',
     message: 'protocol & auction house contracts, subgraphs, twitter + discord bots',
   },
   {
-    hash: 'commit 24bc0b38de88cfd06e7cfe779752b816780c074c',
+    hash: 'commit 4c78e07f6667b5c2879b29c0b5872ff3d9e4a068',
     nounder: 'Author: gitblamecarrot <carrot@nouns.wtf>',
-    date: 'Date: Sat Jan 1 22:41:54 2022 -0500',
-    message: '_',
+    date: 'Date: Sat Jun 5 22:41:54 2021 -0500',
+    message: 'backend infrastructure, deployment, developer tooling',
   },
   {
     hash: 'commit fd8654ebe739fdbbd908e6f157fa45641de2073e',
@@ -107,7 +107,7 @@ const gitLog = [
   {
     hash: 'commit 24bc0b38de88cfd06e7cfe779752b816780c074c',
     nounder: 'Author: lastpunk9999 <9999@nouns.wtf>',
-    date: 'Date: Sat Jan 1 21:30:31 2022 -0500',
+    date: 'Date: Sat Jan 1 21:30:31 2021 -0500',
     message: '_',
   },
 ];
