@@ -1,0 +1,33 @@
+.commit {
+  display: block;
+}
+.commit:not(:last-child) {
+  margin-bottom: 20px;
+}
+.commit p {
+  color: white !important;
+  font-family: 'Prima Sans Mono';
+  font-size: 12px;
+}
+@media (max-width: 991px) {
+  .commit p {
+    font-size: 10px;
+  }
+}
+.commit p:not(:last-child) {
+  margin: 0;
+}
+.commit p:first-child {
+  color: yellow !important;
+  /* color: #27b797 !important; */
+}
+.commit p:last-child {
+  padding-top: 12px;
+  padding-left: 17px;
+  /* color: yellow !important; */
+}
+@media (min-width: 991px) {
+  .commit {
+    width: 400px;
+  }
+}

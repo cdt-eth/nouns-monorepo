@@ -16,6 +16,9 @@
 }
 
 @media (max-width: 992px) {
+  .subcopy {
+    font-size: 10px;
+  }
   .wrapper {
     /* padding: 2rem; */
     padding: 0rem;
@@ -64,7 +67,7 @@
 .both {
   background: #f7ddb2;
   padding: 50px 100px;
-  padding: 50px 0px !important;
+  padding: 30px 0px !important;
 }
 
 .credit {
@@ -72,6 +75,7 @@
   font-size: 32px;
   /* font-style: italic; */
   float: left;
+
   padding-top: 5px;
   font-family: 'Londrina Solid';
   /* padding-left: 40px; */
@@ -80,6 +84,7 @@
   text-align: center;
   font-family: 'Londrina Solid';
   font-size: 3rem;
+  font-size: 2.5rem !important;
   padding-bottom: 30px;
 }
 
@@ -165,7 +170,7 @@
     font-size: 16px !important;
   }
   .wrapperGrid2 .copy {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px !important;
   }
   .credit {
@@ -210,5 +215,39 @@
 @media (max-width: 991px) {
   .wrapperGrid2 {
     width: 85% !important;
+  }
+}
+
+.logWrapper {
+  background: #161616;
+  padding: 50px !important;
+  padding-bottom: 20px !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+h1 {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .logWrapper {
+    margin-top: 25px !important;
+    grid-template-columns: 1fr !important;
+    padding: 30px !important;
+  }
+  h1 {
+    text-align: left !important;
+  }
+}
+
+@media (min-width: 992px) {
+  /* .noundersDev .copy { */
+  .copy {
+    margin: auto;
+    text-align: center;
+    width: 85%;
+  }
+  .noundersDev .copy {
+    width: 65%;
   }
 }

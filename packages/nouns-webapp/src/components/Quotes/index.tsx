@@ -6,7 +6,7 @@ interface QuotesProps {
 }
 
 const Quotes = ({ name, quote }: QuotesProps) => {
-  console.log('quote', quote);
+  // console.log('quote', quote);
   return (
     <div className={classes.wrapperGrid2}>
       <div className={classes.quote2}>

@@ -139,3 +139,7 @@ footer {
 .generateBtn .generateBtn:hover .generateBtn:focus .generateBtn:active {
   opacity: 100% !important;
 } */
+
+p {
+  font-family: 'PT Root UI';
+}
