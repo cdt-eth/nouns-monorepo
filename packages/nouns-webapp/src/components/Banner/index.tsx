@@ -75,9 +75,9 @@ const quoteData = [
 
 const gitLog = [
   {
-    hash: 'commit 4ea1037e55b51dff0a462b0dcc116b8aeb9289f0',
+    hash: 'commit d4316460a6e3b3b7a2b80c746123199a53bf8cb5',
     nounder: 'Author: solimander <soli@nouns.wtf>',
-    date: 'Date: Sun Jan 2 10:39:03 2021 -0500',
+    date: 'Date: Sat Aug 7 10:39:03 2021 -0500',
     message: 'smart contracts: auction house, seeder, token, rle-to-svg lib',
   },
   {
@@ -105,9 +105,9 @@ const gitLog = [
     message: 'optimize run-length encoding to svg',
   },
   {
-    hash: 'commit 24bc0b38de88cfd06e7cfe779752b816780c074c',
+    hash: 'commit f4d97bbf6827443c084ed76c46e50c89e4152004',
     nounder: 'Author: lastpunk9999 <9999@nouns.wtf>',
-    date: 'Date: Sat Jan 1 21:30:31 2021 -0500',
+    date: 'Date: Mon Jul 26 21:30:31 2021 -0500',
     message: 'compound governance fork, erc721checkpointable',
   },
 ];

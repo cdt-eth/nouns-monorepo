@@ -15,6 +15,7 @@ import AuctionPage from './pages/Auction';
 import NoundersPage from './pages/Nounders';
 import NotFoundPage from './pages/NotFound';
 import Playground from './pages/Playground';
+import Traits from './pages/Traits';
 import { CHAIN_ID } from './config';
 import VerifyPage from './pages/Verify';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -54,6 +55,7 @@ function App() {
           <Route exact path="/team" component={NoundersPage} />
           <Route exact path="/sign" component={VerifyPage} />
           <Route exact path="/verify" component={VerifyPage} />
+          <Route exact path="/traits" component={Traits} />
           <Route exact path="/playground" component={Playground} />
           <Route component={NotFoundPage} />
         </Switch>
