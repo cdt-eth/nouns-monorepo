@@ -78,7 +78,7 @@ const gitLog = [
     hash: 'commit 4ea1037e55b51dff0a462b0dcc116b8aeb9289f0',
     nounder: 'Author: solimander <soli@nouns.wtf>',
     date: 'Date: Sun Jan 2 10:39:03 2021 -0500',
-    message: '_',
+    message: 'smart contracts: auction house, seeder, token, rle-to-svg lib',
   },
   {
     hash: 'commit 33e717133cf65c2228f4ddd97bc6d696ee733843',
@@ -108,7 +108,7 @@ const gitLog = [
     hash: 'commit 24bc0b38de88cfd06e7cfe779752b816780c074c',
     nounder: 'Author: lastpunk9999 <9999@nouns.wtf>',
     date: 'Date: Sat Jan 1 21:30:31 2021 -0500',
-    message: '_',
+    message: 'compound governance fork, erc721checkpointable',
   },
 ];
 
