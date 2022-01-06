@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './NoundersPage.module.css';
+import classes from '../Nounders/NoundersPage.module.css';
 import Section from '../../layout/Section';
 import { Col, Row, Card } from 'react-bootstrap';
 import pfp12bnoun from '../../assets/nounder-pfps/12bnoun.png';
