@@ -121,6 +121,9 @@ const NavBar = () => {
             >
               DOCS
             </Nav.Link> */}
+            <Nav.Link as={Link} to="/traits" className={classes.nounsNavLink}>
+              TRAITS
+            </Nav.Link>
             <Nav.Link as={Link} to="/team" className={classes.nounsNavLink}>
               TEAM
             </Nav.Link>
