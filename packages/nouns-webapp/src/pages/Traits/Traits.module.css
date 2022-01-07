@@ -23,7 +23,7 @@
 }
 @media (max-width: 640px) {
   .traitsGrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
