@@ -1,0 +1,54 @@
+.traitGroup:not(:first-child) {
+  margin-top: 50px;
+}
+
+.traitsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .traitsGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 765px) and (max-width: 900px) {
+  .traitsGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 641px) and (max-width: 764px) {
+  .traitsGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .traitsGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.title {
+  font-family: 'Londrina Solid';
+}
+
+.imageGrid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0px 5px !important;
+}
+
+.imageGrid p {
+  font-family: 'PT Root UI';
+  font-family: 'Prima Sans Mono';
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.imageGrid img {
+  width: 100%;
+  padding-bottom: 10px;
+}

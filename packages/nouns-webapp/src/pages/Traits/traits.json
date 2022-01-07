@@ -1,0 +1,932 @@
+{
+  "bodies": [
+    {
+      "name": "Blue Sky",
+      "image": "body-blue-sky"
+    },
+    {
+      "name": "Dark Brown",
+      "image": "body-darkbrown"
+    },
+    {
+      "name": "Dark Gray",
+      "image": "body-grayscale-9"
+    },
+    {
+      "name": "Pit Stain",
+      "image": "body-pitstain"
+    },
+    {
+      "name": "Purple",
+      "image": "body-purple"
+    },
+    {
+      "name": "Rust",
+      "image": "body-rust"
+    },
+    {
+      "name": "Sweat",
+      "image": "body-sweat"
+    },
+    {
+      "name": "Teal",
+      "image": "body-teal (3)"
+    },
+    {
+      "name": "White",
+      "image": "body-grayscale-1"
+    }
+  ],
+  "accessories": [
+    {
+      "name": "Barista Apron",
+      "image": "accessory-apron-barista"
+    },
+    {
+      "name": "Barista Apron 2",
+      "image": "accessory-apron-barista 2"
+    },
+    {
+      "name": "Baseball Mitt",
+      "image": "accessory-bball-mitt"
+    },
+    {
+      "name": "Cheshire Cat",
+      "image": "accessory-body-decal"
+    },
+    {
+      "name": "Bolt",
+      "image": "accessory-bolt"
+    },
+    {
+      "name": "Camera",
+      "image": "accessory-camera"
+    },
+    {
+      "name": "Candlesticks",
+      "image": "accessory-candlesticks"
+    },
+    {
+      "name": "Chain Logo",
+      "image": "accessory-chain-logo"
+    },
+    {
+      "name": "Clown Overalls",
+      "image": "accessory-overall-clown"
+    },
+    {
+      "name": "Clown Overalls",
+      "image": "accessory-overall-clown 2"
+    },
+    {
+      "name": "Clown Straps",
+      "image": "accessory-straps-clown"
+    },
+    {
+      "name": "Cold",
+      "image": "accessory-cold"
+    },
+    {
+      "name": "Cube",
+      "image": "accessory-cube"
+    },
+    {
+      "name": "Dagger",
+      "image": "accessory-dagger"
+    },
+    {
+      "name": "Delivery",
+      "image": "accessory-delivery"
+    },
+    {
+      "name": "Delivery 2",
+      "image": "accessory-delivery-green"
+    },
+    {
+      "name": "Eye",
+      "image": "accessory-eye"
+    },
+    {
+      "name": "Farmer Overalls",
+      "image": "accessory-overall-farmers"
+    },
+    {
+      "name": "Flash",
+      "image": "accessory-flash"
+    },
+    {
+      "name": "Fried Shrimp",
+      "image": "accessory-friedshrimp"
+    },
+    {
+      "name": "Four Squares",
+      "image": "accessory-squares-4"
+    },
+    {
+      "name": "Gavel",
+      "image": "accessory-gavel"
+    },
+    {
+      "name": "Hockey",
+      "image": "accessory-hockey"
+    },
+    {
+      "name": "Letter G",
+      "image": "accessory-letter-g"
+    },
+    {
+      "name": "Letter H",
+      "image": "accessory-h"
+    },
+    {
+      "name": "Lipstick Reflex",
+      "image": "accessory-lipstick-reflex"
+    },
+    {
+      "name": "List",
+      "image": "accessory-list"
+    },
+    {
+      "name": "Log",
+      "image": "accessory-log"
+    },
+    {
+      "name": "Log Mini",
+      "image": "accessory-log-mini"
+    },
+    {
+      "name": "Lucky Cat",
+      "image": "accessory-luckycat"
+    },
+    {
+      "name": "LP",
+      "image": "nouns-lp"
+    },
+    {
+      "name": "Lumberjack Collar",
+      "image": "accessory-collar-lumberjack."
+    },
+    {
+      "name": "Mars Face",
+      "image": "accessory-marsface"
+    },
+    {
+      "name": "Mouth",
+      "image": "accessory-mouth"
+    },
+    {
+      "name": "Music Note",
+      "image": "accessory-music-note"
+    },
+    {
+      "name": "Music Note 2",
+      "image": "accessory-music-note 2"
+    },
+    {
+      "name": "Noun",
+      "image": "accessory-noun"
+    },
+    {
+      "name": "Old Band Shirt",
+      "image": "accessory-oldbandshirt-A"
+    },
+    {
+      "name": "Old Band Shirt 2",
+      "image": "accessory-oldbandshirt-B"
+    },
+    {
+      "name": "Pearl",
+      "image": "accessory-pearl"
+    },
+    {
+      "name": "Plug",
+      "image": "accessory-plug"
+    },
+    {
+      "name": "Plug 2",
+      "image": "accessory-plug 2"
+    },
+    {
+      "name": "Pig",
+      "image": "accessory-decal-pig"
+    },
+    {
+      "name": "Polo Blue Collar",
+      "image": "accessory-polo-tee-collar-blue"
+    },
+    {
+      "name": "Rainbow",
+      "image": "accessory-rainbow"
+    },
+    {
+      "name": "RCSA Icon",
+      "image": "accessory-rcsa-icon"
+    },
+    {
+      "name": "RCSA Text",
+      "image": "accessory-rcsa-text"
+    },
+    {
+      "name": "Retro",
+      "image": "body-stripe-retro3-bright"
+    },
+    {
+      "name": "Retro 2",
+      "image": "body-stripe-retro3-desat"
+    },
+    {
+      "name": "Robot",
+      "image": "accessory-robothead"
+    },
+    {
+      "name": "Robot Body",
+      "image": "accessory-robot"
+    },
+    {
+      "name": "Ruby",
+      "image": "accessory-ruby"
+    },
+    {
+      "name": "Ruby 2",
+      "image": "accessory-ruby 2"
+    },
+    {
+      "name": "Sad Face",
+      "image": "accessory-face-sad"
+    },
+    {
+      "name": "Shark Belly",
+      "image": "accessory-belly-shark"
+    },
+    {
+      "name": "Shirtless",
+      "image": "accessory-shirtless"
+    },
+    {
+      "name": "Snake Hiss",
+      "image": "accessory-snake-hiss"
+    },
+    {
+      "name": "Square Buttons",
+      "image": "accessory-buttons-squares-2"
+    },
+    {
+      "name": "Staple",
+      "image": "accessory-staple"
+    },
+    {
+      "name": "Surfboard",
+      "image": "accessory-surfboard"
+    },
+    {
+      "name": "Sweat",
+      "image": "accessory-sweat"
+    },
+    {
+      "name": "Sweat-Meister",
+      "image": "body-sweatmeister"
+    },
+    {
+      "name": "Team",
+      "image": "accessory-team"
+    },
+    {
+      "name": "Text Fake",
+      "image": "accessory-fake-brown"
+    },
+    {
+      "name": "Text-ICO",
+      "image": "accessory-txt-ico"
+    },
+    {
+      "name": "Text Pop",
+      "image": "accessory-pop"
+    },
+    {
+      "name": "Text Pop 2",
+      "image": "accessory-pop 2"
+    },
+    {
+      "name": "Text-YOLO",
+      "image": "accessory-text-yolo"
+    },
+    {
+      "name": "Treasure Chest",
+      "image": "accessory-treasurechest"
+    },
+    {
+      "name": "Treasure Chest Open",
+      "image": "accessory-treasurechest-open"
+    },
+    {
+      "name": "Two Arms Purple",
+      "image": "body_001"
+    },
+    {
+      "name": "Two Arms Checkerboard",
+      "image": "body_004"
+    },
+    {
+      "name": "Two Arms Checkerboard 2",
+      "image": "body_005"
+    },
+    {
+      "name": "Two Arms Checkerboard 3",
+      "image": "body_006"
+    },
+    {
+      "name": "Two Arms Checkerboard 4",
+      "image": "body_007"
+    },
+    {
+      "name": "Two Arms Polo Light Blue",
+      "image": "accessory-body-009"
+    },
+    {
+      "name": "Two Arms Polo Dark Blue",
+      "image": "accessory-body-010"
+    },
+    {
+      "name": "Two Arms Stripes Deepfried",
+      "image": "body_thinstripe_deepfried"
+    },
+    {
+      "name": "Two Arms Stripes Lumberjack",
+      "image": "lumberjack-horizontals"
+    },
+    {
+      "name": "Two Arms Stripes Blue",
+      "image": "accessory-strip-blue"
+    },
+    {
+      "name": "Two Arms Stripes Red",
+      "image": "accessory-strip-red"
+    },
+    {
+      "name": "Two Arms Stripes Thick",
+      "image": "body_003"
+    },
+    {
+      "name": "Two Arms Suit Black",
+      "image": "black-suit"
+    },
+    {
+      "name": "Two Arms Suit Pink",
+      "image": "accessory-pink-suit"
+    },
+    {
+      "name": "Two Arms Suit Red",
+      "image": "accessory-red-suit"
+    },
+    {
+      "name": "Two Arms Summer Shirt",
+      "image": "accessory-summer-vacation"
+    },
+    {
+      "name": "Two Arms Summer Shirt 2",
+      "image": "accessory-summer-vaccation"
+    },
+    {
+      "name": "V-Neck",
+      "image": "accessory-v-neck"
+    },
+    {
+      "name": "V-Neck 2",
+      "image": "accessory-v-neck 2"
+    },
+    {
+      "name": "WTF Zombie",
+      "image": "accessory-wtf-zombi"
+    },
+    {
+      "name": "Waffle Knit",
+      "image": "waffleknit"
+    }
+  ],
+  "heads": [
+    {
+      "name": "Ace Of Diamonds",
+      "image": "head-acediamonds"
+    },
+    {
+      "name": "Alien",
+      "image": "head-alien"
+    },
+    {
+      "name": "Alien 2",
+      "image": "head-alien-two"
+    },
+    {
+      "name": "Ape",
+      "image": "head-ape (1)"
+    },
+    {
+      "name": "Asteroid",
+      "image": "head-asteroid"
+    },
+    {
+      "name": "Bag",
+      "image": "head-bag-a"
+    },
+    {
+      "name": "Baseball",
+      "image": "head-baseball"
+    },
+    {
+      "name": "Big Glasses",
+      "image": "glasses-3"
+    },
+    {
+      "name": "Big Glasses 2",
+      "image": "head-big-glasses"
+    },
+    {
+      "name": "Birdhouse",
+      "image": "head-birdhouse"
+    },
+    {
+      "name": "Birdhouse 2",
+      "image": "head-birdhouse-two"
+    },
+    {
+      "name": "Blue Diamond",
+      "image": "head-blue-diamond"
+    },
+    {
+      "name": "Burger",
+      "image": "head-burger"
+    },
+    {
+      "name": "Calculator",
+      "image": "head-calculator"
+    },
+    {
+      "name": "Calculator 2",
+      "image": "head-girl-calculator"
+    },
+    {
+      "name": "Canned Ham",
+      "image": "head-canned-ham"
+    },
+    {
+      "name": "Cappucin",
+      "image": "head-cappucin"
+    },
+    {
+      "name": "Car",
+      "image": "head-car"
+    },
+    {
+      "name": "Cassette Tape",
+      "image": "head-cassettepe"
+    },
+    {
+      "name": "Cassette Tape 2",
+      "image": "head-cassettetape-c"
+    },
+    {
+      "name": "Chainsaw",
+      "image": "head-chainsaw"
+    },
+    {
+      "name": "Cinderblock",
+      "image": "head-cinderblock"
+    },
+    {
+      "name": "Cat",
+      "image": "head-cat"
+    },
+    {
+      "name": "Clown",
+      "image": "head-clown"
+    },
+    {
+      "name": "Cordless Phone",
+      "image": "head-cordless-phone"
+    },
+    {
+      "name": "Cordless Phone 2",
+      "image": "head-cordlessphone"
+    },
+    {
+      "name": "Cordless Phone 3",
+      "image": "head-purple-cordless-phone"
+    },
+    {
+      "name": "CRT",
+      "image": "head-crt"
+    },
+    {
+      "name": "Duck",
+      "image": "head-duck"
+    },
+    {
+      "name": "Duck 2",
+      "image": "head-duck-b"
+    },
+    {
+      "name": "Duck 3",
+      "image": "head-duck-c"
+    },
+    {
+      "name": "Finger Brown",
+      "image": "head-brown-finger"
+    },
+    {
+      "name": "Finger Rose",
+      "image": "head-finger-rose"
+    },
+    {
+      "name": "Finger Yellow",
+      "image": "head-finger-yellow"
+    },
+    {
+      "name": "Finger Zombie",
+      "image": "head-finger-zombie"
+    },
+    {
+      "name": "Ghost",
+      "image": "head-ghost"
+    },
+    {
+      "name": "Gnome",
+      "image": "head-gnome"
+    },
+    {
+      "name": "Goat",
+      "image": "head-goat-b"
+    },
+    {
+      "name": "Grid",
+      "image": "head-grid"
+    },
+    {
+      "name": "Hat",
+      "image": "head-hat (1)"
+    },
+    {
+      "name": "Hat 2",
+      "image": "head-hat"
+    },
+    {
+      "name": "Hat 3",
+      "image": "head-blue-hat"
+    },
+    {
+      "name": "Hat 4",
+      "image": "head-hat-green"
+    },
+    {
+      "name": "Hockey Puck",
+      "image": "head-hockey-puck"
+    },
+    {
+      "name": "Horse",
+      "image": "head-horse"
+    },
+    {
+      "name": "Ice Pop",
+      "image": "head-icepop"
+    },
+    {
+      "name": "Inline Skate",
+      "image": "head-inline-skate"
+    },
+    {
+      "name": "Jellyfish",
+      "image": "head-jellyfish"
+    },
+    {
+      "name": "Joker",
+      "image": "head-joker"
+    },
+    {
+      "name": "Ketchup",
+      "image": "head-ketchup"
+    },
+    {
+      "name": "Lipstick",
+      "image": "head-lipstick"
+    },
+    {
+      "name": "Log",
+      "image": "head-log"
+    },
+    {
+      "name": "Long Nose Monkey",
+      "image": "head-long-nose-monkey"
+    },
+    {
+      "name": "Mars",
+      "image": "head-mars"
+    },
+    {
+      "name": "Microfiche",
+      "image": "head-microfiche"
+    },
+    {
+      "name": "Microphone",
+      "image": "head-microphone"
+    },
+    {
+      "name": "Mug Circular",
+      "image": "head-mug-circular"
+    },
+    {
+      "name": "Mug Early",
+      "image": "head-mug-early"
+    },
+    {
+      "name": "Mug Square",
+      "image": "head-mug-square"
+    },
+    {
+      "name": "Mushroom",
+      "image": "head-mushroom (1)"
+    },
+    {
+      "name": "Mushroom 2",
+      "image": "head_mushroom-updated"
+    },
+    {
+      "name": "Mushroom Trippy",
+      "image": "head-trippy-mushroom"
+    },
+    {
+      "name": "Mustard",
+      "image": "head-mustard"
+    },
+    {
+      "name": "Noodles",
+      "image": "head-noodles"
+    },
+    {
+      "name": "Onion",
+      "image": "head-onion"
+    },
+    {
+      "name": "Orange",
+      "image": "head-orange"
+    },
+    {
+      "name": "Orangutan",
+      "image": "head-orangutan"
+    },
+    {
+      "name": "Pencil",
+      "image": "head-pencil"
+    },
+    {
+      "name": "Pencil 2",
+      "image": "head-pencil-tip"
+    },
+    {
+      "name": "Piano Mahogany",
+      "image": "head-piano-mahgony"
+    },
+    {
+      "name": "Piggybank",
+      "image": "head-piggybank"
+    },
+    {
+      "name": "Pop",
+      "image": "head-pop"
+    },
+    {
+      "name": "Popcan",
+      "image": "head-popcan"
+    },
+    {
+      "name": "Pufferfish",
+      "image": "head-pufferfish"
+    },
+    {
+      "name": "Rabbit",
+      "image": "head-rabbit"
+    },
+    {
+      "name": "Rocket",
+      "image": "head-rocket"
+    },
+    {
+      "name": "Skeleton Open",
+      "image": "head-open-skeleton"
+    },
+    {
+      "name": "Skeleton Ribbon",
+      "image": "head-skeleton-ribbon"
+    },
+    {
+      "name": "Skateboard",
+      "image": "head-skateboard"
+    },
+    {
+      "name": "Ski Lift",
+      "image": "head-skilift"
+    },
+    {
+      "name": "Snake",
+      "image": "head-snake"
+    },
+
+    {
+      "name": "Snake Basket",
+      "image": "head-basket-snake"
+    },
+    {
+      "name": "Tardigrade",
+      "image": "head-tardigrade"
+    },
+    {
+      "name": "Toilet Paper",
+      "image": "head-toilet-paper"
+    },
+    {
+      "name": "Tooth",
+      "image": "head-tooth"
+    },
+    {
+      "name": "Toothbrush",
+      "image": "head-toothbrush-e"
+    },
+    {
+      "name": "Toothbrush 2",
+      "image": "head-toothbrush"
+    },
+    {
+      "name": "Toothbush 3",
+      "image": "head-toothbush-b"
+    },
+    {
+      "name": "Toothbrush Unfresh",
+      "image": "head-unfresh-toothbrush"
+    },
+    {
+      "name": "Trout",
+      "image": "head-trout"
+    },
+    {
+      "name": "Vampire",
+      "image": "head-vampire"
+    },
+    {
+      "name": "Vent",
+      "image": "head-vent"
+    },
+    {
+      "name": "Washing Machine",
+      "image": "head-washingmachine"
+    },
+    {
+      "name": "Watch",
+      "image": "head-watch"
+    },
+    {
+      "name": "Watch Black",
+      "image": "head-watch-black"
+    },
+    {
+      "name": "Watch Red",
+      "image": "head-watch-redplus"
+    },
+    {
+      "name": "Watch Red Plus Time",
+      "image": "head-watch-redplus-time"
+    },
+    {
+      "name": "Watermelon",
+      "image": "head-watermelon"
+    },
+    {
+      "name": "Werewolf",
+      "image": "head-werewolf"
+    },
+    {
+      "name": "Werewolf Hungry",
+      "image": "head-werewolf-hungry"
+    },
+    {
+      "name": "Whale Alive",
+      "image": "head-whale-alive"
+    },
+    {
+      "name": "Wine",
+      "image": "head-wine"
+    },
+    {
+      "name": "Yolk",
+      "image": "head-yolk"
+    },
+    {
+      "name": "Yolk 2",
+      "image": "head-yolk-horizontal"
+    }
+  ],
+  "glasses": [
+    {
+      "name": "Band Blue",
+      "image": "glasses-band-blue"
+    },
+    {
+      "name": "Band Pink",
+      "image": "glasses-band-pink"
+    },
+
+    {
+      "name": "Black Eyes Green",
+      "image": "glasses-square-black-eyes-green-saturated"
+    },
+    {
+      "name": "Black Eyes Grey/White",
+      "image": "glasses-square-black-eyes-grey-white"
+    },
+    {
+      "name": "Blue Eyes Green",
+      "image": "glasses-square-blue-eyes-green"
+    },
+    {
+      "name": "Contacts",
+      "image": "glasses-contacts"
+    },
+    {
+      "name": "Designers Gigolo",
+      "image": "glasses-designers-gigolo"
+    },
+    {
+      "name": "Gold",
+      "image": "glasses-square-gold-b"
+    },
+    {
+      "name": "Green Blue Red Eyes",
+      "image": "lost-glasses-square-green-blue-red-eyes"
+    },
+    {
+      "name": "Hip Bat",
+      "image": "glasses-hip-bat"
+    },
+    {
+      "name": "Icy",
+      "image": "glasses-icy"
+    },
+    {
+      "name": "Loverboy",
+      "image": "glasses-loverboy"
+    },
+    {
+      "name": "Magenta Eyes Blue Pupil",
+      "image": "glasses-square-magenta-eyes-blue-pupil"
+    },
+    {
+      "name": "Mars",
+      "image": "glasses-square-mars"
+    },
+    {
+      "name": "Murder Orange",
+      "image": "glasses-murder-orange"
+    },
+    {
+      "name": "Nightmare",
+      "image": "glasses-square-nightmare"
+    },
+    {
+      "name": "Red",
+      "image": "glasses-square-red"
+    },
+    {
+      "name": "Round Blue Eyes",
+      "image": "lost-glasses-round-blueeyes"
+    },
+    {
+      "name": "Round Green",
+      "image": "glasses-round-green"
+    },
+    {
+      "name": "Slim Agent",
+      "image": "glasses-slim-agent"
+    },
+    {
+      "name": "Stereo",
+      "image": "glasses-stereo"
+    },
+    {
+      "name": "Stereo See-Through",
+      "image": "glasses-stereo-seethrough"
+    },
+    {
+      "name": "Sunset",
+      "image": "glasses-square-sunset"
+    },
+    {
+      "name": "Thick Glass",
+      "image": "glasses-square-glass-thick"
+    },
+    {
+      "name": "VR",
+      "image": "glasses-vr"
+    },
+    {
+      "name": "White Is Cyan",
+      "image": "glasses-white-is-cyan"
+    }
+  ]
+}
