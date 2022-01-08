@@ -37,7 +37,7 @@ const Traits = () => {
         </Row>
       </Col>
       <Col lg={12} className={classes.traitGroup}>
-        <h1 className={classes.title}>Heads</h1>
+        <h1 className={classes.title}>Bodies</h1>
         <Row className={classes.traitsGrid}>
           {bodies &&
             bodies.map(body => (
