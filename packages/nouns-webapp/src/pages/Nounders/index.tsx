@@ -89,8 +89,8 @@ const NoundersPage = () => {
             12bnoun reached out to Christian back in September to help him testing an idea he had,
             to bring back the Nouns traits that were lost to drawing board. Time went on and the
             idea was paused until November rolled around and they picked it back up together. Midway
-            through development they brought on Messhup to create some artwork to help tell the
-            story of the project's history.
+            through development they brought on Messhup to create artwork to help tell the story of
+            the project's history.
           </p>
           <p style={{ textAlign: 'justify' }}>
             This project is a cross between a love letter and an homage. The hope is that buying a
