@@ -37,11 +37,13 @@ const quoteData = [
     quotes: [
       {
         noun: alien,
-        quote: 'Alien quote.',
+        quote:
+          "The alien head wasn't quite on  brand with the Nouns as the head looked quite human-like. The way the head didn't fully meet the shoulders was something we aimed to stay away from.",
       },
       {
         noun: log,
-        quote: 'Log quote.',
+        quote:
+          "The log wasn't used due to the perspective where we can see the top of the head. We wanted to keep Nouns mostly flat/front-on. If we did this with the log it wouldn't look as distinguishable.",
       },
     ],
   },
