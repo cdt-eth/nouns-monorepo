@@ -5,6 +5,7 @@ import { Col, Row, Card } from 'react-bootstrap';
 import pfp12bnoun from '../../assets/nounder-pfps/12bnoun.png';
 import pfpCdt from '../../assets/nounder-pfps/cdt.png';
 import pfpMesshup from '../../assets/nounder-pfps/messhup.png';
+import discord from '../../assets/start.png';
 
 const bios = [
   {
@@ -79,14 +80,39 @@ const BioCards: React.FC<{ min: number; max: number }> = props => {
 const NoundersPage = () => {
   return (
     <Section fullWidth={true} className={classes.noundersPage}>
-      <Col lg={{ span: 6, offset: 3 }}>
+      {/* Story */}
+      <Col lg={9} className={classes.center2}>
+        <Col lg={6} className={classes.center3}>
+          <h2 style={{ marginBottom: '2rem' }}>History</h2>
+
+          <p style={{ textAlign: 'justify' }}>
+            12bnoun reached out to Christian back in September to help him testing an idea he had,
+            to bring back the Nouns traits that were lost to drawing board. Time went on and the
+            idea was paused until November rolled around and they picked it back up together. Midway
+            through development they brought on Messhup to create some artwork to help tell the
+            story of the project's history.
+          </p>
+          <p style={{ textAlign: 'justify' }}>
+            This project is a cross between a love letter and an homage. The hope is that buying a
+            Lost Noun could be a small totem of representation to the people priced out of Nouns.
+            With this site we wanted to create a fun vision of what the genesis of Nouns could've
+            been like, and we hope that ultimately the community enjoys it and this deepens the lore
+            of Nouns.
+          </p>
+        </Col>
+        <Col lg={6} className={classes.center3}>
+          <img src={discord} alt="discord" />
+        </Col>
+      </Col>
+
+      {/* TEAM */}
+      <Col lg={9} className={classes.center}>
         <h2 style={{ marginBottom: '2rem' }}>The Team</h2>
         <h3 style={{ marginBottom: '2rem' }}>1 artist, 2 technologists</h3>
         <Row style={{ marginBottom: '0rem' }}>
           <BioCards min={0} max={5} />
           <BioCards min={5} max={10} />
         </Row>
-        {/* <h3>Nounders' Reward</h3> */}
         <p style={{ textAlign: 'justify' }}>
           This team is passionate about building with and off of Nouns. As avid supporters of the
           project they are always looking for ways to support it. Collectively the team has worked
@@ -94,6 +120,42 @@ const NoundersPage = () => {
           <span className="lost">Lost Nouns</span> is the latest installment of furthering the brand
           while having fun.
         </p>
+      </Col>
+
+      {/* FAQ */}
+      <Col lg={9} className={classes.center}>
+        <h2 style={{ marginBottom: '2rem' }}>FAQ</h2>
+
+        <div className={classes.questionGrid}>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>What is the cost?</p>
+            <p>It will be an auction</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>What is the supply?</p>
+            <p>404 Lost Nouns</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Is there a Discord?</p>
+            <p>Nope</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Will there be a DAO?</p>
+            <p>Nope</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Can you buy on secondary?</p>
+            <p>{`{insert OpenSea link}`}</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Extra Question?</p>
+            <p>Answer</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Another Question?</p>
+            <p>Another Answer</p>
+          </div>
+        </div>
       </Col>
     </Section>
   );

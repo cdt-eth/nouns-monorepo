@@ -1,3 +1,20 @@
+.center {
+  margin: auto;
+}
+.center2 {
+  margin: auto;
+  display: flex;
+  gap: 45px;
+  margin-bottom: 50px;
+}
+.center {
+  margin-bottom: 50px;
+}
+.center,
+.center2 p {
+  font-size: 18px;
+  font-weight: bold;
+}
 .noundersPage h1,
 .noundersPage h2,
 .noundersPage h3 {
@@ -78,4 +95,33 @@
   .twitterIcon {
     width: 15px;
   }
+}
+
+.center2 img {
+  border-radius: inherit !important;
+  width: 100%;
+}
+.questionGrid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.question {
+  display: flex;
+  border: 1px solid #161616;
+  padding: 10px;
+  gap: 25px;
+  gap: 25px;
+  border-radius: 12px;
+  flex-direction: column;
+  /* width: 25%; */
+}
+.questionTop {
+  font-family: 'Londrina Solid';
+  letter-spacing: 0.05rem;
+  font-size: 22px;
+}
+
+.question p {
+  margin-bottom: 0;
 }

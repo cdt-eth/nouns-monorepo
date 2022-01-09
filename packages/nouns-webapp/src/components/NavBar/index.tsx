@@ -124,8 +124,8 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/traits" className={classes.nounsNavLink}>
               TRAITS
             </Nav.Link>
-            <Nav.Link as={Link} to="/team" className={classes.nounsNavLink}>
-              TEAM
+            <Nav.Link as={Link} to="/about" className={classes.nounsNavLink}>
+              ABOUT
             </Nav.Link>
 
             <Nav.Link as={Link} to="/playground" className={classes.nounsNavLink}>

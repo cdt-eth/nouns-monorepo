@@ -88,8 +88,9 @@
 }
 
 .lost {
-  color: var(--lost-red) !important;
+  /* color: var(--lost-red) !important; */
   font-family: 'LONDRINA SOLID' !important;
+  letter-spacing: 0.05rem;
 }
 .bg {
   background: var(--lost-tan) !important;
