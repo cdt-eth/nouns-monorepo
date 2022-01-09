@@ -199,6 +199,9 @@ const Banner = () => {
           </p>
           <div className={classes.wrapper}>
             <img className="gr" src={noundersDev} alt="noundersDev" />
+            <p className={classes.subcopy}>
+              from left to right: Vape Ape, Solimander, 9999, Seneca, Dom, and Dev Carrot
+            </p>
           </div>
         </div>
 

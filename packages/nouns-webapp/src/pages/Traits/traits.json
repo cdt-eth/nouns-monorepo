@@ -131,12 +131,108 @@
       "image": "accessory-hockey"
     },
     {
+      "name": "Letter A",
+      "image": "accessory-letter-a"
+    },
+    {
+      "name": "Letter B",
+      "image": "accessory-letter-b"
+    },
+    {
+      "name": "Letter C",
+      "image": "accessory-letter-c"
+    },
+    {
+      "name": "Letter D",
+      "image": "accessory-letter-d"
+    },
+    {
+      "name": "Letter E",
+      "image": "accessory-letter-e"
+    },
+    {
+      "name": "Letter F",
+      "image": "accessory-letter-f"
+    },
+    {
       "name": "Letter G",
       "image": "accessory-letter-g"
     },
     {
       "name": "Letter H",
-      "image": "accessory-h"
+      "image": "accessory-letter-h"
+    },
+    {
+      "name": "Letter I",
+      "image": "accessory-letter-i"
+    },
+    {
+      "name": "Letter J",
+      "image": "accessory-letter-j"
+    },
+    {
+      "name": "Letter K",
+      "image": "accessory-letter-k"
+    },
+    {
+      "name": "Letter L",
+      "image": "accessory-letter-l"
+    },
+    {
+      "name": "Letter M",
+      "image": "accessory-letter-m"
+    },
+    {
+      "name": "Letter N",
+      "image": "accessory-letter-n"
+    },
+    {
+      "name": "Letter O",
+      "image": "accessory-letter-o"
+    },
+    {
+      "name": "Letter P",
+      "image": "accessory-letter-p"
+    },
+    {
+      "name": "Letter Q",
+      "image": "accessory-letter-q"
+    },
+    {
+      "name": "Letter R",
+      "image": "accessory-letter-r"
+    },
+    {
+      "name": "Letter S",
+      "image": "accessory-letter-s"
+    },
+    {
+      "name": "Letter T",
+      "image": "accessory-letter-t"
+    },
+    {
+      "name": "Letter U",
+      "image": "accessory-letter-u"
+    },
+    {
+      "name": "Letter V",
+      "image": "accessory-letter-v"
+    },
+    {
+      "name": "Letter W",
+      "image": "accessory-letter-w"
+    },
+    {
+      "name": "Letter X",
+      "image": "accessory-letter-x"
+    },
+    {
+      "name": "Letter Y",
+      "image": "accessory-letter-y"
+    },
+    {
+      "name": "Letter Z",
+      "image": "accessory-letter-z"
     },
     {
       "name": "Lipstick Reflex",
@@ -401,6 +497,14 @@
     {
       "name": "Waffle Knit",
       "image": "waffleknit"
+    },
+    {
+      "name": "Zag Dark",
+      "image": "accessory-zag-dark"
+    },
+    {
+      "name": "Zag Green",
+      "image": "accessory-zag-green"
     }
   ],
   "heads": [
@@ -418,6 +522,10 @@
     },
     {
       "name": "Ape",
+      "image": "head-ape"
+    },
+    {
+      "name": "Ape 2",
       "image": "head-ape (1)"
     },
     {
@@ -439,6 +547,10 @@
     {
       "name": "Big Glasses 2",
       "image": "head-big-glasses"
+    },
+    {
+      "name": "Big Glasses 3",
+      "image": "head-big-glasses 3"
     },
     {
       "name": "Birdhouse",
@@ -463,6 +575,10 @@
     {
       "name": "Calculator 2",
       "image": "head-girl-calculator"
+    },
+    {
+      "name": "Camcorder",
+      "image": "head-camcorder"
     },
     {
       "name": "Canned Ham",
@@ -657,6 +773,10 @@
       "image": "head-mustard"
     },
     {
+      "name": "Mustard 2",
+      "image": "head-mustard 2"
+    },
+    {
       "name": "Noodles",
       "image": "head-noodles"
     },
@@ -709,6 +829,10 @@
       "image": "head-rocket"
     },
     {
+      "name": "Saguaro",
+      "image": "head-saguaro"
+    },
+    {
       "name": "Skeleton Open",
       "image": "head-open-skeleton"
     },
@@ -728,7 +852,6 @@
       "name": "Snake",
       "image": "head-snake"
     },
-
     {
       "name": "Snake Basket",
       "image": "head-basket-snake"
@@ -772,6 +895,10 @@
     {
       "name": "Vent",
       "image": "head-vent"
+    },
+    {
+      "name": "Wallsafe",
+      "image": "head-wallsafe"
     },
     {
       "name": "Washing Machine",
@@ -854,7 +981,7 @@
     },
     {
       "name": "Gold",
-      "image": "glasses-square-gold-b"
+      "image": "glasses-square-gold"
     },
     {
       "name": "Green Blue Red Eyes",
