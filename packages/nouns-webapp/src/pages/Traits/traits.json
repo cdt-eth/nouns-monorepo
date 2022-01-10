@@ -127,6 +127,10 @@
       "image": "accessory-gavel"
     },
     {
+      "name": "Gradient Ice",
+      "image": "body-gradient-ice"
+    },
+    {
       "name": "Hockey",
       "image": "accessory-hockey"
     },

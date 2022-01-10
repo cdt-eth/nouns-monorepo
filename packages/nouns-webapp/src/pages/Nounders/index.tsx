@@ -129,11 +129,29 @@ const NoundersPage = () => {
         <div className={classes.questionGrid}>
           <div className={classes.question}>
             <p className={classes.questionTop}>What is the cost?</p>
-            <p>It will be an auction</p>
+            <p>They will be auctioned off daily, sometimes multiple auctions a day.</p>
           </div>
           <div className={classes.question}>
             <p className={classes.questionTop}>What is the supply?</p>
             <p>404 Lost Nouns</p>
+          </div>
+
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Where can I find the assets?</p>
+            <p>
+              Right{' '}
+              <a type="button" className={classes.download} download href="/LostNounsAssets.zip">
+                here.
+              </a>
+            </p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Can you buy on secondary?</p>
+            <p>Yes, here's the link to buy on OpenSea. {`{insert OpenSea link}`}</p>
+          </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Are Lost Nouns CC0?</p>
+            <p>Yes. They were created by the Nounders and fall under the CC0 license.</p>
           </div>
           <div className={classes.question}>
             <p className={classes.questionTop}>Is there a Discord?</p>
@@ -144,16 +162,8 @@ const NoundersPage = () => {
             <p>Nope</p>
           </div>
           <div className={classes.question}>
-            <p className={classes.questionTop}>Can you buy on secondary?</p>
-            <p>{`{insert OpenSea link}`}</p>
-          </div>
-          <div className={classes.question}>
-            <p className={classes.questionTop}>Extra Question?</p>
-            <p>Answer</p>
-          </div>
-          <div className={classes.question}>
-            <p className={classes.questionTop}>Another Question?</p>
-            <p>Another Answer</p>
+            <p className={classes.questionTop}>Do Lost Nouns get a vote in NounsDAO?</p>
+            <p>Nope</p>
           </div>
         </div>
       </Col>
