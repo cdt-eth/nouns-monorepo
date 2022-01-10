@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import AuctionPage from './pages/Auction';
 import NoundersPage from './pages/Nounders';
 import NotFoundPage from './pages/NotFound';
+import CrystalBall from './pages/Crystal Ball';
 import Playground from './pages/Playground';
 import Traits from './pages/Traits';
 import { CHAIN_ID } from './config';
@@ -56,6 +57,7 @@ function App() {
           <Route exact path="/sign" component={VerifyPage} />
           <Route exact path="/verify" component={VerifyPage} />
           <Route exact path="/traits" component={Traits} />
+          <Route exact path="/crystal-ball" component={CrystalBall} />
           <Route exact path="/playground" component={Playground} />
           <Route component={NotFoundPage} />
         </Switch>

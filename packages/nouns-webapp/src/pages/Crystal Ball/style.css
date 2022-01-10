@@ -1,0 +1,231 @@
+.observablehq--inspect {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.observablehq {
+  position: absolute;
+}
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrap .svg {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  animation: float 3s infinite linear;
+}
+
+.svg svg {
+  width: auto;
+  height: 28vh;
+  z-index: 20;
+  position: relative;
+  bottom: -1vh;
+}
+
+.wrap .img {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.wrap .img.shadow {
+  z-index: 25;
+}
+
+.wrap .img.platform {
+  z-index: 30;
+}
+
+.wrap .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% bottom;
+  image-rendering: pixelated;
+}
+
+.wrap .img.bg {
+  z-index: -1;
+}
+.wrap .img.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+svg rect:first-of-type {
+  display: none;
+}
+
+@keyframes float {
+  from {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(16px);
+  }
+  to {
+    transform: translatey(0);
+  }
+}
+
+#target-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+  z-index: 99;
+}
+#target-content:target {
+  pointer-events: all;
+  opacity: 1;
+}
+#target-content #target-inner {
+  position: absolute;
+  font-size: 1.2rem;
+  display: block;
+  padding: 48px;
+  line-height: 1.6;
+  max-width: 70%;
+  width: 720px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 16px 26px rgba(0, 0, 0, 0.3);
+  background: white;
+  color: #1D1B33;
+  border-radius: 16px;
+}
+#target-content #target-inner h1 {
+  margin-top: 0;
+}
+
+#target-content a.close {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #020635;
+  opacity: 0.8;
+  transition: opacity 200ms;
+}
+/* #target-content a.close:hover {
+  opacity: 0.4;
+} */
+
+#button {
+  z-index: 50;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  background: rgba(0 0 0 / 0.4);
+  text-align: center;
+  font-weight: 100;
+  transition: box-shadow background 200ms ease-in-out;
+  line-height: 0;
+}
+
+#button:hover {
+  background: rgba(0 0 0 / 0.7);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+a, a:hover, a:visited {
+  color: #24199B;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+strong {
+  font-weight: 500;
+}
+
+@media (max-width: 816px) {
+
+  html {
+    font-size: 92.5%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .wrap .img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: 50% bottom;
+    image-rendering: pixelated;
+  }
+
+  .svg {
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+
+  .svg svg {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    margin-top: 40%;
+    top: 0;
+    bottom: auto;
+  }
+
+  .wrap .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 100px;
+    image-rendering: pixelated;
+    transform: scale(2);
+  }
+}

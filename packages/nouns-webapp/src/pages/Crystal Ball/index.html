@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Noun Crystal Ball</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@propernouuns_nft" />
+<meta name="twitter:creator" content="@propernouuns_nft" />
+<meta name="twitter:title" content="Nouns Crystal Ball" />
+<meta
+  name="twitter:description"
+  content="Look into the Crystal Ball and guess what the next Noun will be."
+/>
+<meta name="twitter:image" content="https://nouns-crystal-ball.netlify.app/noun-crystal-ball.png" />
+<body>
+  <script type="module">
+    import define from './index.js';
+    import { Runtime, Library, Inspector } from './runtime.js';
+
+    const runtime = new Runtime();
+    const main = runtime.module(define, Inspector.into(document.body));
+  </script>
+</body>

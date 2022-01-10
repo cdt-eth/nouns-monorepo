@@ -136,6 +136,9 @@
   .questionTop {
     font-size: 20px;
   }
+  /* .question p {
+    justify-content: start;
+  } */
 }
 .question p {
   margin-bottom: 0;
