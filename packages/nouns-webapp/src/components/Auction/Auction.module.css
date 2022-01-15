@@ -9,6 +9,7 @@
 .auctionActivityCol {
   padding-top: 2rem;
   background: var(--lost-tan) !important;
+  /* background: var(--auction) !important; */
   align-self: start !important; /* maintains auction arrow buttons fixed from auction to auction  */
 }
 

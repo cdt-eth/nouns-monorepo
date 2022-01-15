@@ -11,12 +11,18 @@
   /* --lost-tan: #ffebcd; */
   /* // messhup */
   --lost-tan: #f7ddb2;
-  --lost-tan: #f1dfbe;
+  --lost-lighttan: #d3d3d3;
+  /* dark: #B0B0B0
+mid: #D3D3D3
+light: #E8E8E8 */
 
   /* --lost-tan: #dec499; */
 
   /* --lost-tan: #e0d0b2; */
   --lost-lighttan: #f9e7c7;
+  /* --lost-lighttan: #f0f0f0; */
+  --auction: #fbfbfd;
+  --auction-mid: #f3f3f3;
 
   --lost-dark: #161616;
   /* old */
