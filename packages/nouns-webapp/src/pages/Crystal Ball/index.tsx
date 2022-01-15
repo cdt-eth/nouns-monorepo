@@ -15,7 +15,7 @@ const Traits = () => {
   return (
     <Section fullWidth={true}>
       <h1>hi</h1>
-      {main && main}
+      {main}
     </Section>
   );
 };

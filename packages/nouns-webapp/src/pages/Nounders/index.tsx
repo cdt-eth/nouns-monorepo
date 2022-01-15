@@ -106,20 +106,22 @@ const NoundersPage = () => {
       </Col>
 
       {/* TEAM */}
-      <Col lg={9} className={classes.center}>
-        <h2 style={{ marginBottom: '2rem' }}>The Team</h2>
-        <h3 style={{ marginBottom: '2rem' }}>1 artist, 2 technologists</h3>
-        <Row style={{ marginBottom: '0rem' }}>
-          <BioCards min={0} max={5} />
-          <BioCards min={5} max={10} />
-        </Row>
-        <p style={{ textAlign: 'justify' }}>
-          This team is passionate about building with and off of Nouns. As avid supporters of the
-          project they are always looking for ways to support it. Collectively the team has worked
-          around 10 different projects to extend the Nouns Extended Universe™.{' '}
-          <span className="lost">Lost Nouns</span> is the latest installment of furthering the brand
-          while having fun.
-        </p>
+      <Col lg={12} className={classes.center4}>
+        <Col lg={9} className={classes.teamCenter}>
+          <h2 style={{ marginBottom: '2rem' }}>The Team</h2>
+          <h3 style={{ marginBottom: '2rem' }}>1 artist, 2 technologists</h3>
+          <Row style={{ marginBottom: '0rem' }}>
+            <BioCards min={0} max={5} />
+            <BioCards min={5} max={10} />
+          </Row>
+          <p style={{ textAlign: 'justify' }}>
+            This team is passionate about building with and off of Nouns. As avid supporters of the
+            project they are always looking for ways to support it. Collectively the team has worked
+            around 10 different projects to extend the Nouns Extended Universe™.{' '}
+            <span className="lost">Lost Nouns</span> is the latest installment of furthering the
+            brand while having fun.
+          </p>
+        </Col>
       </Col>
 
       {/* FAQ */}

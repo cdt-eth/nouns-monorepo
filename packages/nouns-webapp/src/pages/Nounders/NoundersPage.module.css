@@ -13,11 +13,13 @@
     gap: 5px;
   }
 }
-.center {
+.center,
+.center4 {
   margin-bottom: 50px;
 }
 .center,
-.center2 p {
+.center2,
+.center4 p {
   font-size: 18px;
   font-weight: bold;
 }
@@ -146,4 +148,14 @@
 .download {
   text-direction: underline;
   pointer-events: cursor;
+}
+
+.center4 {
+  background: var(--lost-tan) !important;
+}
+
+.teamCenter {
+  background: var(--lost-tan) !important;
+  margin: auto;
+  padding: 25px 0px;
 }
