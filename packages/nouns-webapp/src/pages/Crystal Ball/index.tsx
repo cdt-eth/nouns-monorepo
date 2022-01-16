@@ -7,15 +7,16 @@ import { Runtime, Inspector } from './runtime.js';
 
 const Traits = () => {
   // @ts-ignore
-  const runtime = new Runtime();
+  //const runtime = new Runtime();
 
+  console.log('main');
+  console.log('traits??');
   // @ts-ignore
-  const main = runtime.module(define, Inspector.into(document.body));
+  // const main = runtime.module(define, Inspector.into(document.body));
 
   return (
     <Section fullWidth={true}>
       <h1>hi</h1>
-      {main}
     </Section>
   );
 };

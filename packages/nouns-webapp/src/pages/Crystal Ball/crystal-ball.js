@@ -2,6 +2,8 @@
 import nouns from './nouns-data.js';
 
 export default function define(runtime, observer) {
+
+  console.log('Runtime', runtime);
   const main = runtime.module();
 
   main

@@ -5,7 +5,6 @@ import promptjs from 'prompt';
 
 // Rinkeby
 const nftDescriptor: string = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
-const nounsSeeder: string = '0xA98A1b1Cc4f5746A753167BAf8e0C26AcBe42F2E';
 const weth: string = '0xc778417e063141139fce010982780140aa0cd5ab';
 
 
@@ -15,6 +14,7 @@ promptjs.delimiter = '';
 
 type ContractName =
   | 'NounsDescriptor'
+  | 'NounsSeeder'
   | 'NounsToken'
   | 'NounsAuctionHouse'
   | 'NounsAuctionHouseProxyAdmin'
@@ -48,7 +48,7 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
         ? '0xa5409ec958c83c3f309868babaca7c86dcb077c1'
         : '0xf57b2c51ded3a29e6891aba85459d600256cf317';
 
-    const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 4;
+    const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 5;
 
     const [deployer] = await ethers.getSigners();
     const nonce = await deployer.getTransactionCount();
@@ -65,12 +65,13 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
           NFTDescriptor: nftDescriptor as string,
         }),
       },
+      NounsSeeder: {},
       NounsToken: {
         args: [
           // args.noundersdao,
           expectedAuctionHouseProxyAddress,
           () => contracts['NounsDescriptor'].address,
-          () => nounsSeeder,
+          () => contracts['NounsSeeder'].address,
           proxyRegistryAddress,
         ],
       },

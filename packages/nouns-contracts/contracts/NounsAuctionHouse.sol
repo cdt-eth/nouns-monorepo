@@ -54,6 +54,17 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
     // The active auction
     INounsAuctionHouse.Auction public auction;
 
+    // Multi-sig address
+    address public trio = 0x133960675FDCBe8A7FDEd6007e200bC60519d5A1;
+
+    /**
+     * @notice Require that the sender is the minter.
+     */
+    modifier onlyTrio() {
+        require(msg.sender == trio, 'Sender is not the trio');
+        _;
+    }
+
     /**
      * @notice Initialize the auction house and base contracts,
      * populate configuration values, and pause the contract.
@@ -133,6 +144,14 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
         if (extended) {
             emit AuctionExtended(_auction.nounId, _auction.endTime);
         }
+    }
+
+    /**
+     * @notice Set the trio DAO.
+     * @dev Only callable by the trio DAO when not locked.
+     */
+    function setTrioAddress(address _trio) external override onlyTrio {
+        trio = _trio;
     }
 
     /**
@@ -256,8 +275,8 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
     /**
      * @notice Withdraw money raised
      */
-    function withdraw() external override onlyOwner {
-        _safeTransferETHWithFallback(owner(), address(this).balance);
+    function withdraw() external override onlyTrio {
+        _safeTransferETHWithFallback(trio, address(this).balance);
     }
 
     /**

@@ -42,12 +42,15 @@ export const buildSVG = (
     const svgRects: string[] = [];
 
     const { bounds, rects, paletteIndex } = decodeImage(part.data);
+    console.log(paletteIndex);
+    console.log(paletteColors.length);
 
     let currentX = bounds.left;
     let currentY = bounds.top;
 
     rects.forEach(rect => {
       const [length, colorIndex] = rect;
+      console.log(paletteColors[paletteIndex]);
       const hexColor = paletteColors[paletteIndex][colorIndex];
 
       // Do not push rect if transparent

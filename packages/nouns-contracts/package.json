@@ -20,6 +20,7 @@
     "task:populate-descriptor": "npx hardhat populate-descriptor",
     "task:run-local": "npx hardhat run-local",
     "task:run-mainnet": "npx hardhat run-mainnet --network rinkeby",
+    "task:update-duration": "npx hardhat update-duration --network rinkeby",
     "test": "npx hardhat test",
     "coverage": "npx hardhat coverage",
     "prepare": "yarn build"

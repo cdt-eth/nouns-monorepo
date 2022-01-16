@@ -18,9 +18,12 @@ export function handleNounCreated(event: NounCreated): void {
   seed.glasses = event.params.seed.glasses;
   seed.save();
 
+  log.error('[seed] Seed# {}', [
+  ]);
+
   let noun = Noun.load(nounId);
   if (noun == null) {
-    log.error('[handleNounCreated] Noun #{} not found. Hash: {}', [
+    log.error('[handleNounCreated] Noun #{} not founded. Hash: {}', [
       nounId,
       event.transaction.hash.toHex(),
     ]);

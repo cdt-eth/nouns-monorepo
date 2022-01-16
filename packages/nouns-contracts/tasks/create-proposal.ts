@@ -1,6 +1,19 @@
 import { utils } from 'ethers';
 import { task, types } from 'hardhat/config';
 
+task('update-duration', 'Update duration time')
+  .setAction(async (_, { ethers })=> {
+
+    const [deployer] = await ethers.getSigners();
+    console.log(deployer)
+    const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
+    const error = await nounAuctionHouse.attach('0x5165AC1cff7B23B8764b1c95fd57738E94165899')
+    .setDuration(5 * 5);
+  
+    console.log(error);
+  });
+
+/*
 task('create-proposal', 'Create a governance proposal')
   .addOptionalParam(
     'nounsDaoProxy',
@@ -29,3 +42,4 @@ task('create-proposal', 'Create a governance proposal')
     }
     console.log('Proposal created');
   });
+  */
