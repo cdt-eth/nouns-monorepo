@@ -9,3 +9,6 @@ dist
 .DS_Store
 *.tsbuildinfo
 *.log
+.env.example
+*.env.example
+*.example
