@@ -18,9 +18,6 @@ export function handleNounCreated(event: NounCreated): void {
   seed.glasses = event.params.seed.glasses;
   seed.save();
 
-  log.error('[seed] Seed# {}', [
-  ]);
-
   let noun = Noun.load(nounId);
   if (noun == null) {
     log.error('[handleNounCreated] Noun #{} not founded. Hash: {}', [
@@ -80,6 +77,8 @@ export function handleDelegateVotesChanged(event: DelegateVotesChanged): void {
   governance.delegatedVotes = governance.delegatedVotesRaw;
   governance.save();
 }
+
+/*
 
 let transferredNounId: string; // Use WebAssembly global due to lack of closure support
 export function handleTransfer(event: Transfer): void {
@@ -173,3 +172,21 @@ export function handleTransfer(event: Transfer): void {
   toHolder.save();
 }
 */
+
+let transferredNounId: string; // Use WebAssembly global due to lack of closure support
+export function handleTransfer(event: Transfer): void {
+  let fromHolder = getOrCreateAccount(event.params.from.toHexString());
+  let toHolder = getOrCreateAccount(event.params.to.toHexString());
+
+  transferredNounId = event.params.tokenId.toString();
+
+  let noun = Noun.load(transferredNounId);
+  if (noun == null) {
+    noun = new Noun(transferredNounId);
+  }
+
+  noun.owner = toHolder.id;
+  noun.save();
+
+  toHolder.save();
+}

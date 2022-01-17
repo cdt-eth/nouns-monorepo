@@ -25,6 +25,8 @@ dataSources:
       eventHandlers:
         - event: NounCreated(indexed uint256,(uint48,uint48,uint48,uint48,uint48))
           handler: handleNounCreated
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
   - kind: ethereum/contract
     name: NounsAuctionHouse
     network: {{network}}

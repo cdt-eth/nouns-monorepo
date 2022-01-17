@@ -9,23 +9,22 @@ task(
   'run-mainnet',
   'Start a hardhat node, deploy contracts, and execute setup transactions',
 ).setAction(async (_, { ethers, run }) => {
-  //await run(TASK_COMPILE);
+  await run(TASK_COMPILE);
 
   //await Promise.race([run(TASK_NODE), new Promise(resolve => setTimeout(resolve, 2_000))]);
 
-  //const contracts = await run('deploy-mainnet');
+  const contracts = await run('deploy-mainnet');
 
   /*
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
-  const error = await nounAuctionHouse.attach('0x50773217CFaFC45ac68747E3A859a1f90744B7e8').setDuration(25);
+  const error = await nounAuctionHouse.attach('0xb6CCF9f11b0E4b01c4F9Eb3B7E73dfEadE069146').setDuration(5 * 60 * 1);
 
   console.log(error);
-  
   
   /*
   await run('populate-descriptor', {
     nftDescriptor: nftDescriptor,
-    nounsDescriptor: '0xecB8366920AAd14bB85afBa7ecAcDaf064Ae6e6c'//contracts.NounsDescriptor.address,
+    nounsDescriptor: '0x5Cce351D430Ef8bdbd1780139945b46E6A7372D8'//contracts.NounsDescriptor.address,
   });
 
   /*
@@ -37,8 +36,9 @@ task(
   */
   
   
+  /*
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
-  const error = await nounAuctionHouse.attach('0x50773217CFaFC45ac68747E3A859a1f90744B7e8')
+  const error = await nounAuctionHouse.attach('0xb6CCF9f11b0E4b01c4F9Eb3B7E73dfEadE069146')
   .unpause({
     gasLimit: 1_000_000
   }); 
