@@ -127,9 +127,9 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/about" className={classes.nounsNavLink}>
               ABOUT
             </Nav.Link>
-            <Nav.Link as={Link} to="/crystal-ball" className={classes.nounsNavLink}>
+            {/* <Nav.Link as={Link} to="/crystal-ball" className={classes.nounsNavLink}>
               CRYSTAL BALL
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/playground" className={classes.nounsNavLink}>
               PLAYGROUND
             </Nav.Link>
