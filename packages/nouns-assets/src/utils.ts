@@ -27,13 +27,23 @@ export const getNounData = (seed: NounSeed): NounData => {
  */
 export const getRandomNounSeed = (): NounSeed => {
   return {
-    background: Math.floor(Math.random() * bgcolors.length),
-    body: Math.floor(Math.random() * bodies.length),
-    accessory: Math.floor(Math.random() * accessories.length),
-    head: Math.floor(Math.random() * heads.length),
-    glasses: Math.floor(Math.random() * glasses.length),
+    background: 2, // Math.floor(Math.random() * bgcolors.length),
+    body: getRandomDoubleOffset(bodies.length), //Math.floor(Math.random() * bodies.length),
+    accessory: getRandomOffsetNone(accessories.length),
+    head: getRandomDoubleOffset(heads.length),
+    glasses: getRandomOffsetNone(glasses.length),
   };
 };
+
+const getRandomOffsetNone = (length: number): number => {
+  let min = 1;
+  return Math.floor(Math.random() * (length - min) + min);
+}
+
+const getRandomDoubleOffset = (length: number): number => {
+  let min = 2;
+  return Math.floor(Math.random() * (length - min) + min);
+}
 
 /**
  * Emulate bitwise right shift and uint cast

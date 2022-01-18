@@ -27,7 +27,7 @@ contract NounsSeeder is INounsSeeder {
     // prettier-ignore
     function generateSeed(uint256 nounId, INounsDescriptor descriptor) external view override returns (Seed memory) {
 
-        if (nounId == 10) {
+        if (nounId == 62) {
             // Tardigrade 1/1
             return Seed({
                 background: uint48(1),
@@ -38,7 +38,7 @@ contract NounsSeeder is INounsSeeder {
             });
         }
 
-        if (nounId == 7) {
+        if (nounId == 88) {
 
             // Proto Noun 1/1
             return Seed({
