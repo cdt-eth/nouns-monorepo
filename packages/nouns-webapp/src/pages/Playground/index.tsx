@@ -74,17 +74,36 @@ const Playground: React.FC = () => {
 
     setTraits(
       traitTitles.map((value, index) => {
-        return {
-          title: value,
-          traitNames: traitNames[index],
-        };
+        if (index === 3) {
+          return {
+            title: value,
+            traitNames: traitNames[index]
+              .filter(t => t !== 'head-Proto')
+              .filter(t => t !== 'head-Tardigrade 2'),
+          };
+        } else if (index === 1) {
+          return {
+            title: value,
+            traitNames: traitNames[index]
+              .filter(t => t !== 'body-proto')
+              .filter(t => t !== 'body-tardigrade-2'),
+          };
+        } else {
+          return {
+            title: value,
+            traitNames: traitNames[index],
+          };
+        }
       }),
     );
+
+    traits && console.log('ttt', traits);
 
     if (initLoad) {
       generateNounSvg(8);
       setInitLoad(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [generateNounSvg, initLoad]);
 
   const traitOptions = (trait: Trait) => {
