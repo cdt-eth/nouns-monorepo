@@ -55,13 +55,15 @@
 }
 .wrapperGrid2 p {
   font-size: 14px;
+  font-size: 18px !important;
 }
 .wrap {
   display: flex;
-  gap: 50px;
+  /* gap: 50px; */
   padding: 0px 50px;
   padding: 0px 0px;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 47%;
 }
 .both {
@@ -119,6 +121,8 @@
 }
 .quote p {
   font-size: 14px;
+  font-size: 18px !important;
+
   font-weight: 700;
   /* font-style: italic; */
   margin-bottom: 0rem;
@@ -142,6 +146,7 @@
   }
   .quote p {
     font-size: 14px;
+    font-size: 18px !important;
   }
   .quotes {
     background: var(--lost-tan) !important;
@@ -168,7 +173,7 @@
     width: 75%;
   }
   .copy {
-    font-size: 16px !important;
+    font-size: 16px;
   }
   .wrapperGrid2 .copy {
     font-weight: 600;
@@ -218,6 +223,9 @@
   .wrapperGrid2 {
     width: 85% !important;
   }
+  .wrapperGrid3 {
+    width: 85% !important;
+  }
 }
 
 .logWrapper {
@@ -255,4 +263,54 @@ h1 {
 }
 .bannerSection {
   padding-bottom: 0px !important;
+}
+.container-lg2 {
+  margin-bottom: 40px;
+}
+.textLeft {
+  text-align: left !important;
+  font-size: 18px !important;
+}
+.wrapperGrid3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+.wrapperGrid3 img {
+  height: 200px;
+  width: auto;
+}
+
+.wrapperGrid3 p {
+  font-size: 14px;
+  font-size: 18px !important;
+}
+
+@media (max-width: 991px) {
+  .wrapperGrid3 {
+    width: 90%;
+    margin: auto;
+  }
+  .wrapperGrid3 img {
+    height: auto;
+    margin: auto;
+    width: 75%;
+  }
+
+  .wrapperGrid3 .copy {
+    /* font-weight: 600;
+    font-size: 16px !important; */
+    font-weight: 400;
+    font-size: 16px !important;
+  }
+  .wrapperGrid3 p {
+    font-size: 16px;
+  }
+}
+.wrapperGrid3 {
+  margin-top: 40px;
+}
+.q3 .copy {
+  margin-top: 0;
 }

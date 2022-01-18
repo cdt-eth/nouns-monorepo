@@ -12,7 +12,7 @@ import log from '../../assets/highlight/log.png';
 import clown from '../../assets/highlight/clown.png';
 import orange from '../../assets/highlight/orange.png';
 import cinderblock from '../../assets/highlight/cinderblock.png';
-import diamond from '../../assets/highlight/diamond.png';
+import horse from '../../assets/highlight/horse.png';
 import Quotes from '../Quotes';
 import Commit from '../Commit';
 
@@ -65,11 +65,13 @@ const quoteData = [
     quotes: [
       {
         noun: cinderblock,
-        quote: 'Cinderblock quote.',
+        quote:
+          "As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads.",
       },
       {
-        noun: diamond,
-        quote: 'Diamond quote.',
+        noun: horse,
+        quote:
+          "As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads.",
       },
     ],
   },
@@ -182,9 +184,22 @@ const Banner = () => {
             {/* <h1 className=" font-nouns text-center text-8xl">Nounder's Notes</h1> */}
             <p className={classes.notes}>Nounder's Notes</p>
             <div className={classes.wrap}>
-              {quoteData.map(nounder => (
-                <Quotes name={nounder.name} quote={nounder.quotes[getRandomIdx()]} />
-              ))}
+              <Quotes name={quoteData[0].name} quote={quoteData[0].quotes[getRandomIdx()]} />
+              <Quotes name={quoteData[1].name} quote={quoteData[1].quotes[getRandomIdx()]} />
+            </div>
+          </div>
+
+          <div className="container-lg container-lg2 q3">
+            {/* <Quotes name={quoteData[3].name} quote={quoteData[3].quotes[getRandomIdx()]} /> */}
+
+            <div className={classes.wrapperGrid3}>
+              <div className={classes.quote2}>
+                <img className="gr" src={quoteData[3].quotes[getRandomIdx()].noun} alt="snake" />
+                <p className={classes.copy}>
+                  <p className={classes.textLeft}>{quoteData[3].quotes[0].quote}</p>
+                  <span className={classes.credit}>{quoteData[3].name}</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
