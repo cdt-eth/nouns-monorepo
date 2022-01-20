@@ -74,21 +74,21 @@ const Playground: React.FC = () => {
 
     setTraits(
       traitTitles.map((value, index) => {
-        if (index === 4) {
+        if (index === 3) {
           return {
             title: value,
             traitNames: traitNames[index]
               .filter(t => t !== 'glasses-none')
           };
         }
-        else if (index === 3) {
+        else if (index === 2) {
           return {
             title: value,
             traitNames: traitNames[index]
               .filter(t => t !== 'head-Proto')
               .filter(t => t !== 'head-Tardigrade 2'),
           };
-        } else if (index === 1) {
+        } else if (index === 0) {
           return {
             title: value,
             traitNames: traitNames[index]
@@ -179,7 +179,7 @@ const Playground: React.FC = () => {
                       <FloatingLabel
                         controlId="floatingSelect"
                         label={capitalizeFirstLetter(trait.title)}
-                        key={index}
+                        key={capitalizeFirstLetter(trait.title)+index}
                         className={classes.floatingLabel}
                       >
                         <Form.Select

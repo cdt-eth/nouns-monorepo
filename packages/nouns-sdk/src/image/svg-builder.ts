@@ -48,7 +48,6 @@ export const buildSVG = (
 
     rects.forEach(rect => {
       const [length, colorIndex] = rect;
-      console.log(paletteColors[paletteIndex]);
       const hexColor = paletteColors[paletteIndex][colorIndex];
 
       // Do not push rect if transparent
