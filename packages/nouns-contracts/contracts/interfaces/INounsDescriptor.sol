@@ -44,9 +44,9 @@ interface INounsDescriptor {
 
     function glasses(uint256 index) external view returns (bytes memory);
 
-    function backgroundCount() external view returns (uint256);
+    function customCount() external view returns (uint256);
 
-    function lookupCount() external view returns (uint256);
+    function backgroundCount() external view returns (uint256);
 
     function bodyCount() external view returns (uint256);
 
@@ -78,7 +78,7 @@ interface INounsDescriptor {
 
     function addHead(bytes calldata head) external;
 
-    function addSeed(uint256 nounId, INounsSeeder.Seed memory seed) external;
+    function addCustomSeed(uint256 nounId, INounsSeeder.Seed memory seed) external;
 
     function addGlasses(bytes calldata glasses) external;
 
@@ -100,5 +100,5 @@ interface INounsDescriptor {
 
     function generateSVGImage(INounsSeeder.Seed memory seed) external view returns (string memory);
 
-    function lookupSeed(uint256 nounId) external view returns (INounsSeeder.Seed memory);
+    function lookupCustomSeed(uint256 nounId) external view returns (INounsSeeder.Seed memory);
 }

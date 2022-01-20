@@ -60,7 +60,7 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
 
     // The noun 1/1 seeds
     mapping(uint256 => INounsSeeder.Seed) public preCalcSeeds;
-    uint256 public lookup;
+    uint256 public override customCount;
 
     /**
      * @notice Require that the parts have not been locked.
@@ -75,13 +75,6 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
      */
     function backgroundCount() external view override returns (uint256) {
         return backgrounds.length;
-    }
-
-    /**
-     * @notice Get the pre-calculated Seeds
-     */
-    function lookupCount() external view override returns (uint256) {
-        return lookup;
     }
 
     /**
@@ -309,15 +302,15 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
     /**
      * @notice Add 1/1 seeds
      */
-    function addSeed(uint256 nounId, INounsSeeder.Seed memory seed) external override onlyOwner whenPartsNotLocked {
+    function addCustomSeed(uint256 nounId, INounsSeeder.Seed memory seed) external override onlyOwner whenPartsNotLocked {
         preCalcSeeds[nounId] = seed;
-        lookup++;
+        customCount++;
     }
 
     /**
     * @notice Get lookup seed
     */
-    function lookupSeed(uint256 nounId) external view override returns (INounsSeeder.Seed memory) {
+    function lookupCustomSeed(uint256 nounId) public view override returns (INounsSeeder.Seed memory) {
         return preCalcSeeds[nounId];
     }
 

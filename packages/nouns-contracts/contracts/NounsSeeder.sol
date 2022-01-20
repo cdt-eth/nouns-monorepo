@@ -27,7 +27,7 @@ contract NounsSeeder is INounsSeeder {
     // prettier-ignore
     function generateSeed(uint256 nounId, INounsDescriptor descriptor) external view override returns (Seed memory) {
 
-        Seed memory seed = descriptor.lookupSeed(nounId);
+        Seed memory seed = descriptor.lookupCustomSeed(nounId);
 
         if (seed.head != 0) {
             return seed;
@@ -37,7 +37,7 @@ contract NounsSeeder is INounsSeeder {
             keccak256(abi.encodePacked(blockhash(block.number - 1), nounId))
         );
 
-        uint256 offset = descriptor.lookupCount();
+        uint256 offset = descriptor.customCount();
         uint256 backgroundCount = descriptor.backgroundCount() - offset;
         uint256 bodyCount = descriptor.bodyCount() - offset;
         uint256 accessoryCount = descriptor.accessoryCount() - offset;
