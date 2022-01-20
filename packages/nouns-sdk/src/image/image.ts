@@ -76,10 +76,6 @@ export class Image {
         const { r, g, b, a } = getRgbaAt(x, y);
         const hexColor = rgbToHex(r, g, b);
 
-        if (hexColor == '#815F47') {
-          console.log('Print');
-        }
-
         // Insert the color if it does not yet exist
         if (!colors.has(hexColor)) {
           colors.set(hexColor, colors.size);

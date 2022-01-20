@@ -38,7 +38,7 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
     5,
     types.int,
   )
-  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 60 * 1, types.int) // Default: 24 hours
+  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 0.1 * 1, types.int) // Default: 24 hours
   .setAction(async (args, { ethers }) => {
 
     const network = await ethers.provider.getNetwork();
@@ -72,7 +72,7 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
           // args.noundersdao,
           expectedAuctionHouseProxyAddress,
           () => contracts['NounsDescriptor'].address,
-          () => nounSeeder,
+          () => contracts['NounsSeeder'].address,
           proxyRegistryAddress,
         ],
       },

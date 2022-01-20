@@ -31,7 +31,6 @@ import { IERC20 } from '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import { INounsAuctionHouse } from './interfaces/INounsAuctionHouse.sol';
 import { INounsToken } from './interfaces/INounsToken.sol';
 import { IWETH } from './interfaces/IWETH.sol';
-import 'hardhat/console.sol';
 
 contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, ReentrancyGuardUpgradeable, OwnableUpgradeable {
     // The Nouns ERC721 token contract
@@ -54,17 +53,6 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
 
     // The active auction
     INounsAuctionHouse.Auction public auction;
-
-    // Multi-sig address
-    address public trio;
-
-    /**
-     * @notice Require that the sender is the minter.
-     */
-    modifier onlyTrio() {
-        require(msg.sender == trio, 'Sender is not the trio');
-        _;
-    }
 
     /**
      * @notice Initialize the auction house and base contracts,
@@ -91,7 +79,6 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
         reservePrice = _reservePrice;
         minBidIncrementPercentage = _minBidIncrementPercentage;
         duration = _duration;
-        trio = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
     }
 
     /**
@@ -149,14 +136,6 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
     }
 
     /**
-     * @notice Set the trio DAO.
-     * @dev Only callable by the trio DAO when not locked.
-     */
-    function setTrioAddress(address _trio) external override onlyOwner {
-        trio = _trio;
-    }
-
-    /**
      * @notice Pause the Nouns auction house.
      * @dev This function can only be called by the owner when the
      * contract is unpaused. While no new auctions can be started when paused,
@@ -191,7 +170,7 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
 
     /**
      * @notice Set the auction duration
-     * @dev Only callable by the owner
+     * @dev Only callable by the owner 62/88
      */
     function setDuration(uint256 _duration) external override onlyOwner {
         duration = _duration;
@@ -277,8 +256,8 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
     /**
      * @notice Withdraw money raised
      */
-    function withdraw() external override onlyTrio {
-        _safeTransferETHWithFallback(trio, address(this).balance);
+    function withdraw() external override onlyOwner {
+        _safeTransferETHWithFallback(owner(), address(this).balance);
     }
 
     /**

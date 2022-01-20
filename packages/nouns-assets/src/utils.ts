@@ -27,22 +27,17 @@ export const getNounData = (seed: NounSeed): NounData => {
  */
 export const getRandomNounSeed = (): NounSeed => {
   return {
-    background: 2, // Math.floor(Math.random() * bgcolors.length),
+    background: 0, // Math.floor(Math.random() * bgcolors.length),
     body: getRandomDoubleOffset(bodies.length), //Math.floor(Math.random() * bodies.length),
-    accessory: getRandomOffsetNone(accessories.length),
+    accessory: getRandomDoubleOffset(accessories.length),
     head: getRandomDoubleOffset(heads.length),
-    glasses: getRandomOffsetNone(glasses.length),
+    glasses: getRandomDoubleOffset(glasses.length),
   };
 };
 
-const getRandomOffsetNone = (length: number): number => {
-  let min = 1;
-  return Math.floor(Math.random() * (length - min) + min);
-}
-
 const getRandomDoubleOffset = (length: number): number => {
-  let min = 2;
-  return Math.floor(Math.random() * (length - min) + min);
+  let min = 0;
+  return Math.floor(Math.random() * (length - 2) + min);
 }
 
 /**

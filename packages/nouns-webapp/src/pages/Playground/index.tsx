@@ -74,7 +74,14 @@ const Playground: React.FC = () => {
 
     setTraits(
       traitTitles.map((value, index) => {
-        if (index === 3) {
+        if (index === 4) {
+          return {
+            title: value,
+            traitNames: traitNames[index]
+              .filter(t => t !== 'glasses-none')
+          };
+        }
+        else if (index === 3) {
           return {
             title: value,
             traitNames: traitNames[index]
@@ -86,7 +93,7 @@ const Playground: React.FC = () => {
             title: value,
             traitNames: traitNames[index]
               .filter(t => t !== 'body-proto')
-              .filter(t => t !== 'body-tardigrade-2'),
+              .filter(t => t !== 'body-tardigrade'),
           };
         } else {
           return {

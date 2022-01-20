@@ -261,19 +261,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "fu",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "contract INounsToken",
@@ -438,19 +425,6 @@
       }
     ],
     "name": "setTimeBuffer",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_trio",
-        "type": "address"
-      }
-    ],
-    "name": "setTrioAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

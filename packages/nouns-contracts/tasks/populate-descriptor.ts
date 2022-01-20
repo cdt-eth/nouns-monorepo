@@ -47,5 +47,8 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
 
     await descriptorContract.addManyGlasses(glasses.map(({ data }) => data));
 
+    await descriptorContract.addSeed(62, [2, bodies.length - 1, accessories.length - 1, heads.length - 1, glasses.length - 1]);
+    await descriptorContract.addSeed(88, [1, bodies.length - 2, accessories.length - 2, heads.length - 2, glasses.length - 2]);
+
     console.log('Descriptor populated with palettes and parts');
   });

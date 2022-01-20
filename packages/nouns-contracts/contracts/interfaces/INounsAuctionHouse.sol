@@ -68,6 +68,4 @@ interface INounsAuctionHouse {
     function setDuration(uint256 duration) external;
 
     function withdraw() external;
-
-    function setTrioAddress(address trio) external;
 }

@@ -58,6 +58,10 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
     // Noun Glasses (Custom RLE)
     bytes[] public override glasses;
 
+    // The noun 1/1 seeds
+    mapping(uint256 => INounsSeeder.Seed) public preCalcSeeds;
+    uint256 public lookup;
+
     /**
      * @notice Require that the parts have not been locked.
      */
@@ -71,6 +75,13 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
      */
     function backgroundCount() external view override returns (uint256) {
         return backgrounds.length;
+    }
+
+    /**
+     * @notice Get the pre-calculated Seeds
+     */
+    function lookupCount() external view override returns (uint256) {
+        return lookup;
     }
 
     /**
@@ -261,8 +272,8 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
      */
     function dataURI(uint256 tokenId, INounsSeeder.Seed memory seed) public view override returns (string memory) {
         string memory nounId = tokenId.toString();
-        string memory name = string(abi.encodePacked('Noun ', nounId));
-        string memory description = string(abi.encodePacked('Noun ', nounId, ' is not a member of the Nouns DAO'));
+        string memory name = string(abi.encodePacked('Lost Noun ', nounId));
+        string memory description = string(abi.encodePacked('Lost Noun ', nounId, ' is not a member of the Nouns DAO'));
 
         return genericDataURI(name, description, seed);
     }
@@ -293,6 +304,21 @@ contract NounsDescriptor is INounsDescriptor, Ownable {
             background: backgrounds[seed.background]
         });
         return NFTDescriptor.generateSVGImage(params, palettes);
+    }
+
+    /**
+     * @notice Add 1/1 seeds
+     */
+    function addSeed(uint256 nounId, INounsSeeder.Seed memory seed) external override onlyOwner whenPartsNotLocked {
+        preCalcSeeds[nounId] = seed;
+        lookup++;
+    }
+
+    /**
+    * @notice Get lookup seed
+    */
+    function lookupSeed(uint256 nounId) external view override returns (INounsSeeder.Seed memory) {
+        return preCalcSeeds[nounId];
     }
 
     /**

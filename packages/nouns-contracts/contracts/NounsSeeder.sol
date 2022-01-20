@@ -27,56 +27,38 @@ contract NounsSeeder is INounsSeeder {
     // prettier-ignore
     function generateSeed(uint256 nounId, INounsDescriptor descriptor) external view override returns (Seed memory) {
 
-        if (nounId == 62) {
-            // Tardigrade 1/1
-            return Seed({
-                background: uint48(1),
-                body: uint48(1),
-                accessory: uint48(0),
-                head: uint48(1),
-                glasses: uint48(0)
-            });
-        }
+        Seed memory seed = descriptor.lookupSeed(nounId);
 
-        if (nounId == 88) {
-
-            // Proto Noun 1/1
-            return Seed({
-                background: uint48(0),
-                body: uint48(0),
-                accessory: uint48(0),
-                head: uint48(0),
-                glasses: uint48(0)
-            });
+        if (seed.head != 0) {
+            return seed;
         }
 
         uint256 pseudorandomness = uint256(
             keccak256(abi.encodePacked(blockhash(block.number - 1), nounId))
         );
 
-        uint8 noneOffset = 1;
-        uint8 assetOffset = 2;
-        uint256 backgroundCount = 2;
-        uint256 bodyCount = descriptor.bodyCount() - assetOffset;
-        uint256 accessoryCount = descriptor.accessoryCount() - noneOffset;
-        uint256 headCount = descriptor.headCount() - assetOffset;
-        uint256 glassesCount = descriptor.glassesCount() - noneOffset;
+        uint256 offset = descriptor.lookupCount();
+        uint256 backgroundCount = descriptor.backgroundCount() - offset;
+        uint256 bodyCount = descriptor.bodyCount() - offset;
+        uint256 accessoryCount = descriptor.accessoryCount() - offset;
+        uint256 headCount = descriptor.headCount() - offset;
+        uint256 glassesCount = descriptor.glassesCount() - offset;
 
         return Seed({
             background: uint48(
-                backgroundCount
+                uint48(pseudorandomness) % backgroundCount
             ),
             body: uint48(
-                (uint48(pseudorandomness >> 48) % (bodyCount)) + assetOffset
+                uint48(pseudorandomness >> 48) % bodyCount
             ),
             accessory: uint48(
-                (uint48(pseudorandomness >> 96) % (accessoryCount)) + noneOffset
+                uint48(pseudorandomness >> 96) % accessoryCount
             ),
             head: uint48(
-                (uint48(pseudorandomness >> 144) % (headCount)) + assetOffset
+                uint48(pseudorandomness >> 144) % headCount
             ),
             glasses: uint48(
-                (uint48(pseudorandomness >> 192) % (glassesCount)) + noneOffset
+                uint48(pseudorandomness >> 192) % glassesCount
             )
         });
     }
