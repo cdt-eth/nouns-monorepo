@@ -257,7 +257,13 @@ contract NounsAuctionHouse is INounsAuctionHouse, PausableUpgradeable, Reentranc
      * @notice Withdraw money raised
      */
     function withdraw() external override onlyOwner {
-        _safeTransferETHWithFallback(owner(), address(this).balance);
+        INounsAuctionHouse.Auction memory _auction = auction;
+
+        if (_auction.endTime < block.timestamp) {
+            _safeTransferETHWithFallback(owner(), address(this).balance);
+        } else {
+            _safeTransferETHWithFallback(owner(), address(this).balance - _auction.amount);
+        }
     }
 
     /**

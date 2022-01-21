@@ -174,9 +174,14 @@ export function handleTransfer(event: Transfer): void {
 */
 
 let transferredNounId: string; // Use WebAssembly global due to lack of closure support
+
 export function handleTransfer(event: Transfer): void {
-  let fromHolder = getOrCreateAccount(event.params.from.toHexString());
+  // let fromHolder = getOrCreateAccount(event.params.from.toHexString());
   let toHolder = getOrCreateAccount(event.params.to.toHexString());
+
+  log.error('[handleNounCreated] Noun #{} not founded.', [
+    transferredNounId,
+  ]);
 
   transferredNounId = event.params.tokenId.toString();
 

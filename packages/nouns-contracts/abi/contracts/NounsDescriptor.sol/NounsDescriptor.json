@@ -142,6 +142,51 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "nounId",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint48",
+            "name": "background",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "body",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "accessory",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "head",
+            "type": "uint48"
+          },
+          {
+            "internalType": "uint48",
+            "name": "glasses",
+            "type": "uint48"
+          }
+        ],
+        "internalType": "struct INounsSeeder.Seed",
+        "name": "seed",
+        "type": "tuple"
+      }
+    ],
+    "name": "addCustomSeed",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes",
         "name": "_glasses",
         "type": "bytes"
@@ -249,51 +294,6 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nounId",
-        "type": "uint256"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint48",
-            "name": "background",
-            "type": "uint48"
-          },
-          {
-            "internalType": "uint48",
-            "name": "body",
-            "type": "uint48"
-          },
-          {
-            "internalType": "uint48",
-            "name": "accessory",
-            "type": "uint48"
-          },
-          {
-            "internalType": "uint48",
-            "name": "head",
-            "type": "uint48"
-          },
-          {
-            "internalType": "uint48",
-            "name": "glasses",
-            "type": "uint48"
-          }
-        ],
-        "internalType": "struct INounsSeeder.Seed",
-        "name": "seed",
-        "type": "tuple"
-      }
-    ],
-    "name": "addSeed",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "arePartsLocked",
     "outputs": [
@@ -373,6 +373,19 @@
   {
     "inputs": [],
     "name": "bodyCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "customCount",
     "outputs": [
       {
         "internalType": "uint256",
@@ -621,32 +634,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "lookup",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "lookupCount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -654,7 +641,7 @@
         "type": "uint256"
       }
     ],
-    "name": "lookupSeed",
+    "name": "lookupCustomSeed",
     "outputs": [
       {
         "components": [

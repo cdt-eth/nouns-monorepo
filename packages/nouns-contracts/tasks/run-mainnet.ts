@@ -10,15 +10,15 @@ task(
   'run-mainnet',
   'Start a hardhat node, deploy contracts, and execute setup transactions',
 ).setAction(async (_, { ethers, run }) => {
-  //await run(TASK_COMPILE);
+  await run(TASK_COMPILE);
 
   //await Promise.race([run(TASK_NODE), new Promise(resolve => setTimeout(resolve, 2_000))]);
 
-  //const contracts = await run('deploy-mainnet');
+  const contracts = await run('deploy-mainnet');
 
   //console.log(contracts);
 
-  /*
+  
   await run('populate-descriptor', {
     nftDescriptor: nftDescriptor,
     nounsDescriptor: contracts.NounsDescriptor.address,
@@ -30,21 +30,20 @@ task(
   .unpause({
     gasLimit: 1_000_000,
   });
-  */
 
   
-  const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
+  // const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
   //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
   //.transferOwnership("0x4DA6C87956199DBe04B4E0864211FC887C786506");
 
   
-  await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
-  .setDuration(60*0.1*1);
+  //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
+  //.setDuration(60*0.1*1);
 
   
   setInterval(async () => {
     await nounAuctionHouse
-    .attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
+    .attach(contracts.NounsAuctionHouseProxy.address)
     .settleCurrentAndCreateNewAuction({
       gasLimit: 1_000_000
     });

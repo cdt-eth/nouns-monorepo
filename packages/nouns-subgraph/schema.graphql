@@ -25,7 +25,6 @@ type Noun @entity {
   "The seed used to determine the Noun's traits"
   seed: Seed
 
-  "The owner of the Noun"
   owner: Account!
 }
 

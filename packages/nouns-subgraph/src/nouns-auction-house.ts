@@ -18,7 +18,10 @@ export function handleAuctionCreated(event: AuctionCreated): void {
       event.transaction.hash.toHex(),
     ]);
     return;
+    // return;
+    // noun = new Noun(nounId);
   }
+  // noun.save();
 
   let auction = new Auction(nounId);
   auction.noun = noun.id;
