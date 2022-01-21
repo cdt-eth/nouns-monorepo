@@ -11,6 +11,10 @@ import { getOrCreateAccount } from './utils/helpers';
 export function handleAuctionCreated(event: AuctionCreated): void {
   let nounId = event.params.nounId.toString();
 
+  log.info('[handleAuctionCreated] Noun ${}', [
+    nounId,
+  ]);
+
   let noun = Noun.load(nounId);
   if (noun == null) {
     log.error('[handleAuctionCreated] Noun #{} not found. Hash: {}', [
@@ -87,6 +91,10 @@ export function handleAuctionExtended(event: AuctionExtended): void {
 
 export function handleAuctionSettled(event: AuctionSettled): void {
   let nounId = event.params.nounId.toString();
+
+  log.info('[handleAuctionSettled] Noun ${}', [
+    nounId,
+  ]);
 
   let auction = Auction.load(nounId);
   if (auction == null) {

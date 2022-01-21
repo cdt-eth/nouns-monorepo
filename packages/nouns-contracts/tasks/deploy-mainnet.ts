@@ -6,7 +6,6 @@ import promptjs from 'prompt';
 // Rinkeby
 const nftDescriptor: string = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
 const weth: string = '0xc778417e063141139fce010982780140aa0cd5ab';
-const nounSeeder: string = '0xA98A1b1Cc4f5746A753167BAf8e0C26AcBe42F2E';
 
 
 promptjs.colors = false;
@@ -38,7 +37,7 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
     5,
     types.int,
   )
-  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 0.1 * 1, types.int) // Default: 24 hours
+  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 2 * 1, types.int) // Default: 24 hours
   .setAction(async (args, { ethers }) => {
 
     const network = await ethers.provider.getNetwork();

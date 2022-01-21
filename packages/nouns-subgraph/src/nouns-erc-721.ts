@@ -179,11 +179,12 @@ export function handleTransfer(event: Transfer): void {
   // let fromHolder = getOrCreateAccount(event.params.from.toHexString());
   let toHolder = getOrCreateAccount(event.params.to.toHexString());
 
-  log.error('[handleNounCreated] Noun #{} not founded.', [
+  transferredNounId = event.params.tokenId.toString();
+
+  log.info('[handleTransfer] Noun #{} not founded.', [
     transferredNounId,
   ]);
 
-  transferredNounId = event.params.tokenId.toString();
 
   let noun = Noun.load(transferredNounId);
   if (noun == null) {
