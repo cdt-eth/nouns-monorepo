@@ -77,11 +77,9 @@ const Playground: React.FC = () => {
         if (index === 3) {
           return {
             title: value,
-            traitNames: traitNames[index]
-              .filter(t => t !== 'glasses-none')
+            traitNames: traitNames[index].filter(t => t !== 'glasses-none'),
           };
-        }
-        else if (index === 2) {
+        } else if (index === 2) {
           return {
             title: value,
             traitNames: traitNames[index]
@@ -149,7 +147,7 @@ const Playground: React.FC = () => {
       <Container fluid="lg">
         <Row>
           <Col lg={10} className={classes.headerRow}>
-            <span>Found Playground</span>
+            <span>Lost Playground</span>
 
             <p>
               The playground was built using the {nounsProtocolLink}. Noun's traits are determined
@@ -179,7 +177,7 @@ const Playground: React.FC = () => {
                       <FloatingLabel
                         controlId="floatingSelect"
                         label={capitalizeFirstLetter(trait.title)}
-                        key={capitalizeFirstLetter(trait.title)+index}
+                        key={capitalizeFirstLetter(trait.title) + index}
                         className={classes.floatingLabel}
                       >
                         <Form.Select
