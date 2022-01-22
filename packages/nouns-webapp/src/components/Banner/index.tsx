@@ -127,7 +127,7 @@ const getRandomIdx = () => {
 };
 
 const Banner = () => {
-  const PlaygroundLink = <Link text="the Playground" url="/playground" leavesPage={false} />;
+  const TraitsLink = <Link text="the Traits page" url="/traits" leavesPage={false} />;
   const TweetLink = (
     <Link
       text="a tweet"
@@ -161,7 +161,7 @@ const Banner = () => {
         <div className={classes.wrapper}>
           <img className="gr" src={noundersArt} alt="noundersArt" />
           <p className={classes.subcopy}>
-            from left to right: 4156, Kai from EBoy, Gremplin, and Timpers
+            from left to right: 4156, Kai from eBoy, Gremplin, and Timpers
           </p>
         </div>
 
@@ -171,7 +171,7 @@ const Banner = () => {
             <p className={classes.copy}>
               When the project began many ideas were iterated upon. Some heads went through several
               redesigns until it they were just right, some just one draft, and others were
-              discarded altogether. You can check them all out on {PlaygroundLink}.
+              discarded altogether. You can check them all out on {TraitsLink}.
             </p>
             <img className="gr" src={mug} alt="mug" />
           </div>
