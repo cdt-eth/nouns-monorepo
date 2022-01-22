@@ -152,10 +152,10 @@ const Banner = () => {
         <div className="">
           <h1 className="font-nouns text-8xl">Every work of art begins as a draft.</h1>
           <p className={classes.copy}>
-            In the summer of 2021, a group of artists came together to create this idea they had
-            called "Nouns", but what would they look like? What would tie them together? What would
-            set them apart? Later that summer, the iconic glasses were defined and the traits were
-            refined.
+            In the summer of 2021, a group of 3.4156 artists came together to create this idea they
+            had called "Nouns", but what would they look like? What would tie them together? What
+            would set them apart? Later that summer, the iconic glasses were defined and the traits
+            were refined.
           </p>
         </div>
         <div className={classes.wrapper}>
