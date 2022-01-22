@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { TASK_COMPILE, TASK_NODE } from 'hardhat/builtin-tasks/task-names';
 import { task } from 'hardhat/config';
-import { NounsAuctionHouse } from '../typechain';
+// import { NounsAuctionHouse } from '../typechain';
 
 // Rinkeby
-const nftDescriptor: string = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
-const nounsDescriptor: string = '0x5cf3A398ED839b2d7805Ab8f9bbA4EcE10140990';
+const nftDescriptor = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
+const nounsDescriptor = '0x5cf3A398ED839b2d7805Ab8f9bbA4EcE10140990';
 
 task(
   'run-mainnet',
@@ -18,7 +19,6 @@ task(
 
   //console.log(contracts);
 
-  
   await run('populate-descriptor', {
     nftDescriptor: nftDescriptor,
     nounsDescriptor: contracts.NounsDescriptor.address,
@@ -26,30 +26,25 @@ task(
 
   // await contracts.NounsAuctionHouse
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
-  await nounAuctionHouse.attach(contracts.NounsAuctionHouseProxy.address)
-  .unpause({
+  await nounAuctionHouse.attach(contracts.NounsAuctionHouseProxy.address).unpause({
     gasLimit: 1_000_000,
   });
 
-  
   // const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
   //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
   //.transferOwnership("0x4DA6C87956199DBe04B4E0864211FC887C786506");
 
-  
   //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
   //.setDuration(60*0.1*1);
 
-  
   setInterval(async () => {
     await nounAuctionHouse
-    .attach(contracts.NounsAuctionHouseProxy.address)
-    .settleCurrentAndCreateNewAuction({
-      gasLimit: 1_000_000
-    });
+      .attach(contracts.NounsAuctionHouseProxy.address)
+      .settleCurrentAndCreateNewAuction({
+        gasLimit: 1_000_000,
+      });
+  }, 12000);
 
-  }, 12000)
-  
   /*
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
   await nounAuctionHouse
@@ -88,8 +83,7 @@ task(
   });
 
   */
-  
-  
+
   /*
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
   const error = await nounAuctionHouse.attach('0xb6CCF9f11b0E4b01c4F9Eb3B7E73dfEadE069146')
@@ -105,7 +99,6 @@ task(
   console.log(
     `Noun contracts deployed to local node at http://localhost:8545 (Chain ID: ${chainId})`,
   );
-
 
   //console.log(`Auction House Proxy address: ${contracts.NounsAuctionHouseProxy.address}`);
   //console.log(`Nouns ERC721 address: ${contracts.NounsToken.address}`);
