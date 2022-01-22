@@ -95,14 +95,6 @@
       "image": "accessory-dagger"
     },
     {
-      "name": "Delivery",
-      "image": "accessory-delivery"
-    },
-    {
-      "name": "Delivery 2",
-      "image": "accessory-delivery-green"
-    },
-    {
       "name": "Eye",
       "image": "accessory-eye"
     },
@@ -359,10 +351,6 @@
       "image": "accessory-belly-shark"
     },
     {
-      "name": "Shirtless",
-      "image": "accessory-shirtless"
-    },
-    {
       "name": "Snake Hiss",
       "image": "accessory-snake-hiss"
     },
@@ -381,10 +369,6 @@
     {
       "name": "Sweat",
       "image": "accessory-sweat"
-    },
-    {
-      "name": "Sweat-Meister",
-      "image": "body-sweatmeister"
     },
     {
       "name": "Team",
@@ -419,8 +403,12 @@
       "image": "accessory-treasurechest-open"
     },
     {
-      "name": "Two Arms Purple",
-      "image": "body_001"
+      "name": "Two Arms Delivery",
+      "image": "accessory-delivery"
+    },
+    {
+      "name": "Two Arms Delivery 2",
+      "image": "accessory-delivery-green"
     },
     {
       "name": "Two Arms Checkerboard",
@@ -445,6 +433,14 @@
     {
       "name": "Two Arms Polo Dark Blue",
       "image": "accessory-body-010"
+    },
+    {
+      "name": "Two Arms Purple",
+      "image": "body_001"
+    },
+    {
+      "name": "Two Arms Shirtless",
+      "image": "accessory-shirtless"
     },
     {
       "name": "Two Arms Stripes Deepfried",
@@ -487,6 +483,14 @@
       "image": "accessory-summer-vaccation"
     },
     {
+      "name": "Two Sweat-Meister",
+      "image": "body-sweatmeister"
+    },
+    {
+      "name": "Two Arms Waffle Knit",
+      "image": "waffleknit"
+    },
+    {
       "name": "V-Neck",
       "image": "accessory-v-neck"
     },
@@ -497,10 +501,6 @@
     {
       "name": "WTF Zombie",
       "image": "accessory-wtf-zombi"
-    },
-    {
-      "name": "Waffle Knit",
-      "image": "waffleknit"
     },
     {
       "name": "Zag Dark",
@@ -526,10 +526,6 @@
     },
     {
       "name": "Ape",
-      "image": "head-ape"
-    },
-    {
-      "name": "Ape 2",
       "image": "head-ape (1)"
     },
     {
@@ -701,6 +697,10 @@
       "image": "head-hockey-puck"
     },
     {
+      "name": "Hockey Puck 2",
+      "image": "head-hockey-puck 2"
+    },
+    {
       "name": "Horse",
       "image": "head-horse"
     },
@@ -749,16 +749,16 @@
       "image": "head-microphone"
     },
     {
-      "name": "Mug Circular",
-      "image": "head-mug-circular"
+      "name": "Mug",
+      "image": "head-mug-square"
     },
     {
-      "name": "Mug Early",
+      "name": "Mug 2",
       "image": "head-mug-early"
     },
     {
-      "name": "Mug Square",
-      "image": "head-mug-square"
+      "name": "Mug 3",
+      "image": "head-mug-circular"
     },
     {
       "name": "Mushroom",
@@ -799,10 +799,6 @@
     {
       "name": "Pencil",
       "image": "head-pencil"
-    },
-    {
-      "name": "Pencil 2",
-      "image": "head-pencil-tip"
     },
     {
       "name": "Piano Mahogany",
@@ -857,6 +853,10 @@
       "image": "head-snake"
     },
     {
+      "name": "Snake 2",
+      "image": "head-snake2"
+    },
+    {
       "name": "Snake Basket",
       "image": "head-basket-snake"
     },
@@ -881,8 +881,8 @@
       "image": "head-toothbrush"
     },
     {
-      "name": "Toothbush 3",
-      "image": "head-toothbush-b"
+      "name": "Toothbrush 3",
+      "image": "head-toothbrush-b"
     },
     {
       "name": "Toothbrush Unfresh",
@@ -901,10 +901,6 @@
       "image": "head-vent"
     },
     {
-      "name": "Wallsafe",
-      "image": "head-wallsafe"
-    },
-    {
       "name": "Washing Machine",
       "image": "head-washingmachine"
     },
@@ -913,15 +909,11 @@
       "image": "head-watch"
     },
     {
-      "name": "Watch Black",
-      "image": "head-watch-black"
-    },
-    {
-      "name": "Watch Red",
+      "name": "Watch 2",
       "image": "head-watch-redplus"
     },
     {
-      "name": "Watch Red Plus Time",
+      "name": "Watch 3",
       "image": "head-watch-redplus-time"
     },
     {
@@ -1018,10 +1010,6 @@
     {
       "name": "Nightmare",
       "image": "glasses-square-nightmare"
-    },
-    {
-      "name": "Red",
-      "image": "glasses-square-red"
     },
     {
       "name": "Round Blue Eyes",
