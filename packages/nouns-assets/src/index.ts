@@ -5,4 +5,5 @@ export {
   shiftRightAndCast,
   getPseudorandomPart,
   getNounSeedFromBlockHash,
+  getPartName,
 } from './utils';

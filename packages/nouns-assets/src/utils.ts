@@ -22,6 +22,20 @@ export const getNounData = (seed: NounSeed): NounData => {
 };
 
 /**
+ * Get part-name
+ * @returns { body, accessory, heads, glasses } Noun parts
+ */
+export const getPartName = (seed: NounSeed): any => {
+  
+  return {
+    body: (bodies[seed.body].filename).split("-")[1],
+    accessory: (accessories[seed.accessory].filename).split("-")[1],
+    head: (heads[seed.head].filename).split("-")[1],
+    glasses: (glasses[seed.glasses].filename).split("-")[1]
+  }
+}
+
+/**
  * Generate a random Noun seed
  * @param seed The Noun seed
  */

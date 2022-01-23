@@ -1,3 +1,7 @@
 .clickableNoun {
   cursor: pointer;
 }
+
+.hover {
+  color: black;
+}

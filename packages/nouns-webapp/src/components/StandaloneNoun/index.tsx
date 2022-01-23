@@ -1,4 +1,4 @@
-import { ImageData as data, getNounData } from '@nouns/assets';
+import { ImageData as data, getNounData, getPartName } from '@nouns/assets';
 import { buildSVG } from '@nouns/sdk';
 import { BigNumber as EthersBN } from 'ethers';
 import { INounSeed, useNounSeed } from '../../wrappers/nounToken';
@@ -55,8 +55,19 @@ export const StandaloneNounWithSeed: React.FC<StandaloneNounWithSeedProps> = (
   onLoadSeed(seed);
 
   const { image, description } = getNoun(nounId, seed);
+  const { body, head, accessory, glasses } = getPartName(seed);
 
-  const noun = <Noun imgPath={image} alt={description} />;
+  const noun = (
+    <div>
+      <Noun imgPath={image} alt={description} />
+      <div className={`${classes.hover}`}>
+        <div>Head: {head}</div>
+        <div>Glasses: {glasses}</div>
+        <div>Body: {body}</div>
+        <div>Accessory: {accessory}</div>
+      </div>
+    </div>
+  );
   const nounWithLink = (
     // <Link to={'/noun/' + nounId.toString()} className={classes.clickableNoun}>
     <Link to={'/auction/' + nounId.toString()} className={classes.clickableNoun}>
