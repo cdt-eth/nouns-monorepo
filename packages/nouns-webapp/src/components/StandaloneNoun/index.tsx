@@ -5,6 +5,11 @@ import { INounSeed, useNounSeed } from '../../wrappers/nounToken';
 import Noun from '../Noun';
 import { Link } from 'react-router-dom';
 import classes from './StandaloneNoun.module.css';
+import ReactTooltip from 'react-tooltip';
+import Body from '../../assets/_traits/icon_body.svg';
+import Glasses from '../../assets/_traits/icon_glasses.svg';
+import Head from '../../assets/_traits/icon_head.svg';
+import Accessory from '../../assets/_traits/icon_accessory.svg';
 
 interface StandaloneNounProps {
   nounId: EthersBN;
@@ -59,13 +64,34 @@ export const StandaloneNounWithSeed: React.FC<StandaloneNounWithSeedProps> = (
 
   const noun = (
     <div>
-      <Noun imgPath={image} alt={description} />
-      <div className={`${classes.hover}`}>
-        <div>Head: {head}</div>
-        <div>Glasses: {glasses}</div>
-        <div>Body: {body}</div>
-        <div>Accessory: {accessory}</div>
+      <div data-tip data-for="nounTraits">
+        <Noun imgPath={image} alt={description} />
       </div>
+
+      <ReactTooltip className={classes.opacity} id="nounTraits" type="light">
+        <div className={`${classes.hover}`}>
+          <div className={classes.traitGroup}>
+            {/* <p className={classes.traitTitle}>Head:</p> */}
+            <img src={Head} alt="trait" />
+            <p className={classes.trait}> {head}</p>
+          </div>
+          <div className={classes.traitGroup}>
+            {/* <p className={classes.traitTitle}>Glasses:</p> */}
+            <img src={Glasses} alt="trait" />
+            <p className={classes.trait}> {glasses}</p>
+          </div>
+          <div className={classes.traitGroup}>
+            {/* <p className={classes.traitTitle}>Body:</p> */}
+            <img src={Body} alt="trait" />
+            <p className={classes.trait}> {body}</p>
+          </div>
+          <div className={classes.traitGroup}>
+            {/* <p className={classes.traitTitle}>Accessory:</p> */}
+            <img src={Accessory} alt="trait" />
+            <p className={classes.trait}> {accessory}</p>
+          </div>
+        </div>
+      </ReactTooltip>
     </div>
   );
   const nounWithLink = (

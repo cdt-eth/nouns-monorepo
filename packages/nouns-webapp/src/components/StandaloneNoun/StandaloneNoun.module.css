@@ -4,4 +4,45 @@
 
 .hover {
   color: black;
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
+  font-size: 16px;
+}
+.traitGroup {
+  font-family: 'Londrina Solid' !important;
+  font-size: 16px;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  align-self: center;
+}
+.traitGroup img {
+  width: 28px;
+  height: 28px;
+}
+.traitGroup {
+  margin-bottom: 10px !important;
+}
+.traitGroup p {
+  margin-bottom: 0 !important;
+}
+.traitTitle {
+  font-family: 'Londrina Solid' !important;
+  /* background-color: #ed1c24 !important;
+  color: white !important; */
+  /* padding: 0px 5px; */
+  /* text-align: right; */
+}
+.trait {
+  font-family: 'Londrina Solid' !important;
+  align-self: center;
+}
+#nounTraits {
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
+}
+.opacity {
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
 }
