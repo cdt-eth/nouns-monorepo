@@ -13,3 +13,26 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
+  background: #fefefe !important;
+  color: #161616 !important;
+  border-radius: 15px !important;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%),
+    0 -12px 36px -8px rgb(0 0 0 / 3%) !important;
+}
+.__react_component_tooltip {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 200ms !important;
+}
+
+.__react_component_tooltip:hover {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 200ms !important;
+}

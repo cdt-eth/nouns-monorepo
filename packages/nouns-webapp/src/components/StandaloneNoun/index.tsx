@@ -72,22 +72,30 @@ export const StandaloneNounWithSeed: React.FC<StandaloneNounWithSeedProps> = (
         <div className={`${classes.hover}`}>
           <div className={classes.traitGroup}>
             {/* <p className={classes.traitTitle}>Head:</p> */}
-            <img src={Head} alt="trait" />
+            <div className={classes.Img}>
+              <img src={Head} alt="trait" />
+            </div>
             <p className={classes.trait}> {head}</p>
           </div>
           <div className={classes.traitGroup}>
             {/* <p className={classes.traitTitle}>Glasses:</p> */}
-            <img src={Glasses} alt="trait" />
+            <div className={classes.Img}>
+              <img src={Glasses} alt="trait" />
+            </div>
             <p className={classes.trait}> {glasses}</p>
           </div>
           <div className={classes.traitGroup}>
             {/* <p className={classes.traitTitle}>Body:</p> */}
-            <img src={Body} alt="trait" />
+            <div className={classes.Img}>
+              <img src={Body} alt="trait" />
+            </div>
             <p className={classes.trait}> {body}</p>
           </div>
           <div className={classes.traitGroup}>
             {/* <p className={classes.traitTitle}>Accessory:</p> */}
-            <img src={Accessory} alt="trait" />
+            <div className={classes.Img}>
+              <img src={Accessory} alt="trait" />
+            </div>
             <p className={classes.trait}> {accessory}</p>
           </div>
         </div>

@@ -7,21 +7,23 @@
   opacity: 1 !important;
   font-family: 'Londrina Solid' !important;
   font-size: 16px;
+  padding: 10px 35px;
 }
 .traitGroup {
   font-family: 'Londrina Solid' !important;
-  font-size: 16px;
+  font-size: 24px;
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 1fr 3fr;
-  gap: 15px;
-  align-self: center;
+  /* gap: 15px; */
+  /* align-items: center; */
 }
-.traitGroup img {
+.Img {
   width: 28px;
   height: 28px;
 }
-.traitGroup {
+
+.traitGroup:not(:last-child) {
   margin-bottom: 10px !important;
 }
 .traitGroup p {
@@ -29,10 +31,6 @@
 }
 .traitTitle {
   font-family: 'Londrina Solid' !important;
-  /* background-color: #ed1c24 !important;
-  color: white !important; */
-  /* padding: 0px 5px; */
-  /* text-align: right; */
 }
 .trait {
   font-family: 'Londrina Solid' !important;
@@ -41,8 +39,41 @@
 #nounTraits {
   opacity: 1 !important;
   font-family: 'Londrina Solid' !important;
+  background: #fefefe !important;
+  color: #161616 !important;
+  border-radius: 15px !important;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%),
+    0 -12px 36px -8px rgb(0 0 0 / 3%) !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
+  background: #fefefe !important;
+  color: #161616 !important;
+  border-radius: 15px !important;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%),
+    0 -12px 36px -8px rgb(0 0 0 / 3%) !important;
+}
+.type-light {
+  opacity: 1 !important;
+  font-family: 'Londrina Solid' !important;
+  background: #fefefe !important;
+  color: #161616 !important;
+  border-radius: 15px !important;
+  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%),
+    0 -12px 36px -8px rgb(0 0 0 / 3%) !important;
 }
 .opacity {
   opacity: 1 !important;
   font-family: 'Londrina Solid' !important;
+}
+
+@media (max-width: 991px) {
+  .hover {
+    padding: 5px 10px !important;
+  }
+  .traitGroup {
+    font-size: 18px !important;
+    gap: 12px !important;
+  }
 }
