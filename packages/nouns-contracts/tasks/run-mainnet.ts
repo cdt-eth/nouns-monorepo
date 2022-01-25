@@ -11,14 +11,28 @@ task(
   'run-mainnet',
   'Start a hardhat node, deploy contracts, and execute setup transactions',
 ).setAction(async (_, { ethers, run }) => {
-  await run(TASK_COMPILE);
+ // await run(TASK_COMPILE);
+
+ const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
+
+ await nounAuctionHouse.attach('0x0b09DA0Fd259FbAC0FFc05f23c1d29112e0E6F75')
+  .setDuration(60*0.1*1);
+
+ setInterval(async () => {
+  await nounAuctionHouse
+    .attach('0x0b09DA0Fd259FbAC0FFc05f23c1d29112e0E6F75')
+    .settleCurrentAndCreateNewAuction({
+      gasLimit: 1_000_000,
+    });
+}, 12000);
 
   //await Promise.race([run(TASK_NODE), new Promise(resolve => setTimeout(resolve, 2_000))]);
 
-  const contracts = await run('deploy-mainnet');
+  // const contracts = await run('deploy-mainnet');
 
   //console.log(contracts);
 
+  /*
   await run('populate-descriptor', {
     nftDescriptor: nftDescriptor,
     nounsDescriptor: contracts.NounsDescriptor.address,
