@@ -383,14 +383,6 @@
       "image": "accessory-txt-ico"
     },
     {
-      "name": "Text Pop",
-      "image": "accessory-pop"
-    },
-    {
-      "name": "Text Pop 2",
-      "image": "accessory-pop 2"
-    },
-    {
       "name": "Text-YOLO",
       "image": "accessory-text-yolo"
     },
@@ -919,6 +911,10 @@
     {
       "name": "Watermelon",
       "image": "head-watermelon"
+    },
+    {
+      "name": "Weed",
+      "image": "head-weed"
     },
     {
       "name": "Werewolf",
