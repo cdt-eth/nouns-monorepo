@@ -15,12 +15,13 @@ task(
 
  const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
 
- await nounAuctionHouse.attach('0x0b09DA0Fd259FbAC0FFc05f23c1d29112e0E6F75')
-  .setDuration(60*0.1*1);
+ //await nounAuctionHouse.attach('0xc49600f2aFCBC7770c1e3eE53D17f27339bf1D0D')
+  //.setDuration(60*0.1*1);
 
+  
  setInterval(async () => {
   await nounAuctionHouse
-    .attach('0x0b09DA0Fd259FbAC0FFc05f23c1d29112e0E6F75')
+    .attach('0xc49600f2aFCBC7770c1e3eE53D17f27339bf1D0D')
     .settleCurrentAndCreateNewAuction({
       gasLimit: 1_000_000,
     });
@@ -37,12 +38,13 @@ task(
     nftDescriptor: nftDescriptor,
     nounsDescriptor: contracts.NounsDescriptor.address,
   });
+  */
 
   // await contracts.NounsAuctionHouse
-  const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
-  await nounAuctionHouse.attach(contracts.NounsAuctionHouseProxy.address).unpause({
-    gasLimit: 1_000_000,
-  });
+  // const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
+  // await nounAuctionHouse.attach(contracts.NounsAuctionHouseProxy.address).unpause({
+    // gasLimit: 1_000_000,
+  //});
 
   // const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');
   //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
@@ -51,6 +53,7 @@ task(
   //await nounAuctionHouse.attach('0x7a59b9a739fC09552dB8eF406ed4df0f52d58ED5')
   //.setDuration(60*0.1*1);
 
+  /*
   setInterval(async () => {
     await nounAuctionHouse
       .attach(contracts.NounsAuctionHouseProxy.address)
@@ -58,6 +61,7 @@ task(
         gasLimit: 1_000_000,
       });
   }, 12000);
+  */
 
   /*
   const nounAuctionHouse = await ethers.getContractFactory('NounsAuctionHouse');

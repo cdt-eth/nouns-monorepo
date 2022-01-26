@@ -54,7 +54,7 @@ contract NounsToken is INounsToken, Ownable, ERC721Enumerable {
     uint256 private _currentNounId;
 
     // IPFS content hash of contract-level metadata
-    string private _contractURIHash = 'QmNb3uDGDzFRBJFPkRjDVXtjHgggYPAJtCeoLzZcmR1cWd';
+    string private _contractURI = 'ipfs://QmNb3uDGDzFRBJFPkRjDVXtjHgggYPAJtCeoLzZcmR1cWd';
 
     // OpenSea's Proxy Registry
     IProxyRegistry public immutable proxyRegistry;
@@ -107,15 +107,15 @@ contract NounsToken is INounsToken, Ownable, ERC721Enumerable {
      * @notice The IPFS URI of contract-level metadata.
      */
     function contractURI() public view returns (string memory) {
-        return string(abi.encodePacked('ipfs://', _contractURIHash));
+        return _contractURI;
     }
 
     /**
      * @notice Set the _contractURIHash.
      * @dev Only callable by the owner.
      */
-    function setContractURIHash(string memory newContractURIHash) external onlyOwner {
-        _contractURIHash = newContractURIHash;
+    function setContractURI(string memory newContractURI) external onlyOwner {
+        _contractURI = newContractURI;
     }
 
     /**
