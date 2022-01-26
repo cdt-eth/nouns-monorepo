@@ -86,6 +86,11 @@ const Playground: React.FC = () => {
               .filter(t => t !== 'head-Proto')
               .filter(t => t !== 'head-Tardigrade 2'),
           };
+        } else if (index === 1) {
+          return {
+            title: value,
+            traitNames: traitNames[index].filter(t => t !== 'accessory-none'),
+          };
         } else if (index === 0) {
           return {
             title: value,
