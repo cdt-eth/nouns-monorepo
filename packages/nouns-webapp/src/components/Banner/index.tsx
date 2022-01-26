@@ -22,13 +22,11 @@ const quoteData = [
     quotes: [
       {
         noun: snake,
-        quote:
-          "The snake was an attempt bringing more animal heads into the fold without being strictly a head. Leaving a gap in the heads typically doesn't feel good, so I tried a tighter coil here. I think ultimately it was just stylistically not a great fit.",
+        quote: `"The snake was an attempt bringing more animal heads into the fold without being strictly a head. Leaving a gap in the heads typically doesn't feel good, so I tried a tighter coil here. I think ultimately it was just stylistically not a great fit."`,
       },
       {
         noun: phone,
-        quote:
-          "The cordless phone eventually found its way in as a more straightforward rectangle, but this one is much closer to one I had myself. I gravitate toward the nostalgic nouns even though nouns are a bridge to the future. This one's major flaw is that it leaves shoulder corners exposed, which is weird for us.",
+        quote: ` "The cordless phone eventually found its way in as a more straightforward rectangle, but this one is much closer to one I had myself. I gravitate toward the nostalgic nouns even though nouns are a bridge to the future. This one's major flaw is that it leaves shoulder corners exposed, which is weird for us."`,
       },
     ],
   },
@@ -37,13 +35,11 @@ const quoteData = [
     quotes: [
       {
         noun: alien,
-        quote:
-          "The alien head wasn't quite on  brand with the Nouns as the head looked quite human-like. The way the head didn't fully meet the shoulders was something we aimed to stay away from.",
+        quote: `"The alien head wasn't quite on  brand with the Nouns as the head looked quite human-like. The way the head didn't fully meet the shoulders was something we aimed to stay away from."`,
       },
       {
         noun: log,
-        quote:
-          "The log wasn't used due to the perspective where we can see the top of the head. We wanted to keep Nouns mostly flat/front-on. If we did this with the log it wouldn't look as distinguishable.",
+        quote: `"The log wasn't used due to the perspective where we can see the top of the head. We wanted to keep Nouns mostly flat/front-on. If we did this with the log it wouldn't look as distinguishable."`,
       },
     ],
   },
@@ -65,13 +61,11 @@ const quoteData = [
     quotes: [
       {
         noun: cinderblock,
-        quote:
-          "As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads.",
+        quote: `"As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads."`,
       },
       {
         noun: horse,
-        quote:
-          "As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads.",
+        quote: `"As we continued to refine the artwork, I started thinking about the idea of 'aesthetic volatility' in generative art collections. When aesthetic volatility is too low, a collection might feel boring because the individual pieces aren't differentiated enough. When aesthetic volatility is too high, a collection won't feel cohesive. Different heads on every Noun meant the aesthetic volatility of the collection was very high by default. We had to constrain the glasses to protect the heads."`,
       },
     ],
   },
@@ -197,7 +191,7 @@ const Banner = () => {
                 <img className="gr" src={quoteData[3].quotes[getRandomIdx()].noun} alt="snake" />
                 <p className={classes.copy}>
                   <p className={classes.textLeft}>{quoteData[3].quotes[0].quote}</p>
-                  <span className={classes.credit}>{quoteData[3].name}</span>
+                  <span className={classes.credit}>- {quoteData[3].name}</span>
                 </p>
               </div>
             </div>

@@ -14,7 +14,7 @@ const Quotes = ({ name, quote }: QuotesProps) => {
         <p className={classes.copy}>
           {quote.quote}
           <br />
-          <span className={classes.credit}>{name}</span>
+          <span className={classes.credit}>- {name}</span>
         </p>
       </div>
     </div>
