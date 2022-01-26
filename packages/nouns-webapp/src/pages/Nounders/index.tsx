@@ -137,6 +137,10 @@ const NoundersPage = () => {
             <p className={classes.questionTop}>What is the supply?</p>
             <p>404 Lost Nouns</p>
           </div>
+          <div className={classes.question}>
+            <p className={classes.questionTop}>Are they on-chain?</p>
+            <p>Yes, completely on-chain.</p>
+          </div>
 
           <div className={classes.question}>
             <p className={classes.questionTop}>Where can I find the assets?</p>
