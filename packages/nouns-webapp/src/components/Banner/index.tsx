@@ -130,6 +130,7 @@ const Banner = () => {
     />
   );
   const TeamLink = <Link text="a team" url="https://nouns.wtf/nounders" leavesPage={true} />;
+  const ArtLink = <Link text="some art" url="https://nouns.com/nounspedia" leavesPage={true} />;
   const ProtocolLink = (
     <Link
       text="a protocol"
@@ -142,6 +143,24 @@ const Banner = () => {
   return (
     <>
       <Section fullWidth={false} className={classes.bannerSection}>
+        {/* History */}
+        <div className="" style={{ marginBottom: '40px' }}>
+          {/* <h1 className="font-nouns text-8xl">Lost Nouns as History</h1> */}
+          <p className={classes.copy}>
+            Lost Nouns is an homage to the creation of Nouns. There were a ton of the traits created
+            by the founders that never made it into the final project. To us, that's history, and we
+            want to share it with you. Not everyone can afford a Nouns so we wanted to bring this
+            project to life to give people exposure to the project's art, in a different way.
+          </p>
+        </div>
+
+        {/* <div className={classes.wrapper}>
+          <img className="gr" src={noundersArt} alt="noundersArt" />
+          <p className={classes.subcopy}>
+            from left to right: 4156, Kai from eBoy, Gremplin, and Timpers
+          </p>
+        </div> */}
+
         {/* Art Nounders */}
         <div className="">
           <h1 className="font-nouns text-8xl">Every work of art begins as a draft.</h1>
@@ -204,9 +223,19 @@ const Banner = () => {
         <div className={classes.noundersDev}>
           <h1 className=" font-nouns text-8xl">The greatest projects start with an idea.</h1>
           <p className={classes.copy}>
-            What started out as {TweetLink}, developed into {TeamLink}, which created {ProtocolLink}
-            , that launched {ProjectLink}, which lived{' '}
-            <span style={{ fontFamily: 'Londrina Solid' }}>forever</span>.
+            What started out as {TweetLink}, developed into {TeamLink}, who drew {ArtLink}, which
+            they wrapped in {ProtocolLink}, that launched {ProjectLink}, which lived{' '}
+            <span
+              style={{
+                fontFamily: 'Londrina Solid',
+                color: '#ff0c0d',
+                fontSize: '22px',
+                letterSpacing: '0.1rem',
+              }}
+            >
+              forever
+            </span>
+            .
           </p>
           <div className={classes.wrapper}>
             <img className="gr" src={noundersDev} alt="noundersDev" />
