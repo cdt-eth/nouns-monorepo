@@ -4,8 +4,17 @@ import { task, types } from 'hardhat/config';
 import promptjs from 'prompt';
 
 // Rinkeby
-const nftDescriptor: string = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
-const weth: string = '0xc778417e063141139fce010982780140aa0cd5ab';
+// const nftDescriptor: string = '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B';
+// const weth: string = '0xc778417e063141139fce010982780140aa0cd5ab';
+
+// Mainnet
+const weth: string = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2';
+const nftDescriptor: string = '0x0BBAd8c947210ab6284699605ce2a61780958264';
+const proxy: string = '0x3a91EaAcd2D5d5B7E102E17ca8BD467B79139ed5';
+
+const auctionHouse: string = '0x4211639B5b49C768EF094EF9827870158e3f7c4e';
+const nounsToken: string = '0x2605aFBb22c59296C16ef5e477110357F760b20F';
+const proxyAdmin: string = '0x0Ce6Ba2536C79f165D3dB7935A1CD584492276B5';
 
 
 promptjs.colors = false;
@@ -14,11 +23,11 @@ promptjs.delimiter = '';
 
 type ContractName =
   | 'NounsDescriptor'
-  | 'NounsSeeder'
-  | 'NounsToken'
-  | 'NounsAuctionHouse'
-  | 'NounsAuctionHouseProxyAdmin'
-  | 'NounsAuctionHouseProxy';
+  //| 'NounsSeeder'
+  //| 'NounsToken'
+  //| 'NounsAuctionHouse'
+  //| 'NounsAuctionHouseProxyAdmin'
+  //| 'NounsAuctionHouseProxy';
 
 interface Contract {
   args?: (string | number | (() => string | undefined))[];
@@ -37,7 +46,7 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
     5,
     types.int,
   )
-  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 2 * 1, types.int) // Default: 24 hours
+  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 60 * 24, types.int) // Default: 24 hours
   .setAction(async (args, { ethers }) => {
 
     const network = await ethers.provider.getNetwork();
@@ -48,52 +57,29 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
         ? '0xa5409ec958c83c3f309868babaca7c86dcb077c1'
         : '0xf57b2c51ded3a29e6891aba85459d600256cf317';
 
-    const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 5;
+    // const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 5;
 
     const [deployer] = await ethers.getSigners();
     const nonce = await deployer.getTransactionCount();
-    const expectedAuctionHouseProxyAddress = ethers.utils.getContractAddress({
+    /*const expectedAuctionHouseProxyAddress = ethers.utils.getContractAddress({
       from: deployer.address,
       nonce: nonce + AUCTION_HOUSE_PROXY_NONCE_OFFSET,
+    });*/
+
+    /*
+    const expectedAuctionHouseProxyAddress = ethers.utils.getContractAddress({
+      from: deployer.address,
+      nonce: nonce
     });
 
     console.log(expectedAuctionHouseProxyAddress);
+    */
 
     const contracts: Record<ContractName, Contract> = {
       NounsDescriptor: {
         libraries: () => ({
           NFTDescriptor: nftDescriptor as string,
         }),
-      },
-      NounsSeeder: {},
-      NounsToken: {
-        args: [
-          // args.noundersdao,
-          expectedAuctionHouseProxyAddress,
-          () => contracts['NounsDescriptor'].address,
-          () => contracts['NounsSeeder'].address,
-          proxyRegistryAddress,
-        ],
-      },
-      NounsAuctionHouse: {
-        waitForConfirmation: true,
-      },
-      NounsAuctionHouseProxyAdmin: {},
-      NounsAuctionHouseProxy: {
-        args: [
-          () => contracts['NounsAuctionHouse'].address,
-          () => contracts['NounsAuctionHouseProxyAdmin'].address,
-          () =>
-            new Interface(NounsAuctionHouseABI).encodeFunctionData('initialize', [
-              contracts['NounsToken'].address,
-              args.weth,
-              args.auctionTimeBuffer,
-              args.auctionReservePrice,
-              args.auctionMinIncrementBidPercentage,
-              args.auctionDuration,
-            ]),
-        ],
-        waitForConfirmation: true,
       },
     };
 
@@ -175,3 +161,41 @@ task('deploy-mainnet', 'Deploys NFTDescriptor, NounsDescriptor, NounsSeeder, and
 
     return contracts;
   });
+
+  /*
+  NounsDescriptor: {
+        libraries: () => ({
+          NFTDescriptor: nftDescriptor as string,
+        }),
+      },
+      NounsSeeder: {},
+      NounsToken: {
+        args: [
+          // args.noundersdao,
+          expectedAuctionHouseProxyAddress,
+          () => contracts['NounsDescriptor'].address,
+          () => contracts['NounsSeeder'].address,
+          proxyRegistryAddress,
+        ],
+      },
+      NounsAuctionHouse: {
+        waitForConfirmation: true,
+      },
+      NounsAuctionHouseProxyAdmin: {},
+            NounsAuctionHouseProxy: {
+        args: [
+          () => auctionHouse,
+          () => proxyAdmin,
+          () =>
+            new Interface(NounsAuctionHouseABI).encodeFunctionData('initialize', [
+              nounsToken,
+              args.weth,
+              args.auctionTimeBuffer,
+              args.auctionReservePrice,
+              args.auctionMinIncrementBidPercentage,
+              args.auctionDuration,
+            ]),
+        ],
+        waitForConfirmation: true,
+      },
+      */

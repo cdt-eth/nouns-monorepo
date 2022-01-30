@@ -32,6 +32,8 @@ task(
       gasLimit: 1_000_000,
     });
   
+  await contracts.NounsDescriptor.instance.attach(contracts.NounsDescriptor.instance.address)
+  .generateSVG([0,10,98,])
     /*
   await contracts.NounsAuctionHouse.instance
     .attach(contracts.NounsAuctionHouseProxy.instance.address)

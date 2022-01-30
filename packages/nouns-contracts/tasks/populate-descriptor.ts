@@ -23,32 +23,57 @@ task('populate-descriptor', 'Populates the descriptor with color palettes and No
     });
     const descriptorContract = descriptorFactory.attach(nounsDescriptor);
 
+    console.log('Estimated gas price');
+    // let gasPrice = await ethers.provider.getGasPrice();
+    // const gasInGwei = Math.round(Number(ethers.utils.formatUnits(gasPrice, 'gwei')));
+
     const { bgcolors, palette, images } = ImageData;
     const { bodies, accessories, heads, glasses } = images;
 
     // Chunk head and accessory population due to high gas usage
-    await descriptorContract.addManyBackgrounds(bgcolors);
+    //await descriptorContract.addManyBackgrounds(bgcolors);
 
+    /*
     for (let paletteIndex = 0; paletteIndex < palette.length; paletteIndex++) {
       await descriptorContract.addManyColorsToPalette(paletteIndex, palette[paletteIndex]);
     }
+    */
 
-    await descriptorContract.addManyBodies(bodies.map(({ data }) => data));
+    // await descriptorContract.addManyBodies(bodies.map(({ data }) => data));
 
+    /*
     const accessoryChunk = chunkArray(accessories, 10);
+    let accessoryIdx = 0;
     for (const chunk of accessoryChunk) {
-      await descriptorContract.addManyAccessories(chunk.map(({ data }) => data));
-    }
+      console.log(accessoryIdx);
+      if (accessoryIdx >= 3) {
+        console.log(chunk);
+        await descriptorContract.addManyAccessories(chunk.map(({ data }) => data));
+      }
+      accessoryIdx++;
+    }*/
 
+    /*
+    let headIdx = 0;
     const headChunk = chunkArray(heads, 10);
     for (const chunk of headChunk) {
-      await descriptorContract.addManyHeads(chunk.map(({ data }) => data));
-    }
+        // console.log(headIdx);
+        if (headIdx == 11) {
+          console.log(headIdx, chunk);
+          await descriptorContract.addManyHeads(chunk.map(({ data }) => data));
+        }
+        headIdx++;
+    }*/
+    
 
-    await descriptorContract.addManyGlasses(glasses.map(({ data }) => data));
+    // console.log('Adding head complete', h);
 
-    await descriptorContract.addCustomSeed(62, [2, bodies.length - 1, accessories.length - 1, heads.length - 1, glasses.length - 1]);
-    await descriptorContract.addCustomSeed(88, [1, bodies.length - 2, accessories.length - 2, heads.length - 2, glasses.length - 2]);
+    // console.log('Add many glasses');
+
+    // await descriptorContract.addManyGlasses(glasses.map(({ data }) => data));
+
+    //await descriptorContract.addCustomSeed(62, [2, bodies.length - 1, accessories.length - 1, heads.length - 1, glasses.length - 1]);
+    //await descriptorContract.addCustomSeed(88, [1, bodies.length - 2, accessories.length - 2, heads.length - 2, glasses.length - 2]);
 
     console.log('Descriptor populated with palettes and parts');
   });

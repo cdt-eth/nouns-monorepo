@@ -2,22 +2,22 @@ import { ChainId, ContractAddresses } from './types';
 
 const chainIdToAddresses: { [chainId: number]: ContractAddresses } = {
   [ChainId.Mainnet]: {
-    nounsToken: '0x9C8fF314C9Bc7F6e59A9d9225Fb22946427eDC03',
-    nounsSeeder: '0xCC8a0FB5ab3C7132c1b2A0109142Fb112c4Ce515',
-    nounsDescriptor: '0x0Cfdb3Ba1694c2bb2CFACB0339ad7b1Ae5932B63',
+    nounsToken: '0x2605afbb22c59296c16ef5e477110357f760b20f',
+    nounsSeeder: '0xa44a4caa7690ed8791237b6c0551e48f404cf233',
+    nounsDescriptor: '0x7006337351b6127efacf63643ea97915e80268a9',
     nftDescriptor: '0x0BBAd8c947210ab6284699605ce2a61780958264',
-    nounsAuctionHouse: '0xF15a943787014461d94da08aD4040f79Cd7c124e',
-    nounsAuctionHouseProxy: '0x830BD73E4184ceF73443C15111a1DF14e495C706',
-    nounsAuctionHouseProxyAdmin: '0xC1C119932d78aB9080862C5fcb964029f086401e',
+    nounsAuctionHouse: '0x4211639b5b49c768ef094ef9827870158e3f7c4e',
+    nounsAuctionHouseProxy: '0x3a91eaacd2d5d5b7e102e17ca8bd467b79139ed5',
+    nounsAuctionHouseProxyAdmin: '0x0ce6ba2536c79f165d3db7935a1cd584492276b5',
   },
   [ChainId.Rinkeby]: {
-    nounsToken: '0x021c46dD4B55a495728D0dcD036AFAfa41A1982A',
-    nounsSeeder: '0x526aCEE057C4f36d1C4eB502274CC1385a18B9bb', //'0x9e9c4c9a7b97A4AD43e5Ef91DA265F356930Da31',
+    nounsToken: '0x2605aFBb22c59296C16ef5e477110357F760b20F',
+    nounsSeeder: '0xA44A4caa7690ed8791237b6c0551e48f404Cf233', //'0x9e9c4c9a7b97A4AD43e5Ef91DA265F356930Da31',
     nounsDescriptor: '0xE8EeB3F286cf1a362C639A74D6A12F4A9FC577D6',
     nftDescriptor: '0x1F28f148ef5f9BD182cCEfeAD4240A505C54dc9B',
-    nounsAuctionHouse: '0x4557afb09B5a1aa0576053749eCB062DCAb2226a',
-    nounsAuctionHouseProxy: '0x0b09DA0Fd259FbAC0FFc05f23c1d29112e0E6F75',
-    nounsAuctionHouseProxyAdmin: '0x52a894B524196Aa261EFf47440e66C2fE2ED3517',
+    nounsAuctionHouse: '0x4211639B5b49C768EF094EF9827870158e3f7c4e',
+    nounsAuctionHouseProxy: '0x3a91EaAcd2D5d5B7E102E17ca8BD467B79139ed5',
+    nounsAuctionHouseProxyAdmin: '0x0Ce6Ba2536C79f165D3dB7935A1CD584492276B5',
   },
   [ChainId.Local]: {
     nounsToken: '0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9',
