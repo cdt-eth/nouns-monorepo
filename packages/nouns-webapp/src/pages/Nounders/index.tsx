@@ -151,10 +151,10 @@ const NoundersPage = () => {
               </a>
             </p>
           </div>
-          <div className={classes.question}>
+          {/* <div className={classes.question}>
             <p className={classes.questionTop}>Can you buy on secondary?</p>
             <p>Yes, here's the link to buy on OpenSea. {`{insert OpenSea link}`}</p>
-          </div>
+          </div> */}
           <div className={classes.question}>
             <p className={classes.questionTop}>Are Lost Nouns CC0?</p>
             <p>Yes. They were created by the Nounders and fall under the CC0 license.</p>

@@ -36,3 +36,9 @@ code {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 200ms !important;
 }
+.question .download {
+  text-direction: underline;
+  pointer-events: cursor;
+  color: '#ff0c0d' !important;
+  color: var(--lost-red) !important;
+}

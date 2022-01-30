@@ -1,4 +1,5 @@
 // import { BigNumber } from 'ethers';
+import classes from './Auction.module.css';
 import Banner from '../../components/Banner';
 // import Auction from '../../components/Auction';
 // import Documentation from '../../components/Documentation';
@@ -49,7 +50,8 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   return (
     <>
       {/* <Auction auction={onDisplayAuction} /> */}
-      <img src={nounsHero} alt="nouns-hero-banner" />
+
+      <img className={classes.place} src={nounsHero} alt="nouns-hero-banner" />
 
       <Banner />
       {/* {lastAuctionNounId && (

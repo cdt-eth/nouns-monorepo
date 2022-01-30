@@ -152,6 +152,8 @@
 .download {
   text-direction: underline;
   pointer-events: cursor;
+  color: '#ff0c0d' !important;
+  color: var(--lost-red);
 }
 
 .center4 {
