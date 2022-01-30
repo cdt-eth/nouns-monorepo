@@ -9,9 +9,9 @@ import WalletConnectModal from '../WalletConnectModal';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Nav, Navbar, Container } from 'react-bootstrap';
-import testnetNoun from '../../assets/testnet-noun.png';
+// import testnetNoun from '../../assets/testnet-noun.png';
 import clsx from 'clsx';
-import { CHAIN_ID } from '../../config';
+// import { CHAIN_ID } from '../../config';
 // import config, { CHAIN_ID } from '../../config';
 // import { utils } from 'ethers';
 // import { buildEtherscanAddressLink } from '../../utils/etherscan';
@@ -90,12 +90,12 @@ const NavBar = () => {
               alt="Nouns DAO logo"
             />
           </Navbar.Brand>
-          {Number(CHAIN_ID) !== 1 && (
+          {/* {Number(CHAIN_ID) !== 1 && (
             <Nav.Item>
               <img className={classes.testnetImg} src={testnetNoun} alt="testnet noun" />
               TESTNET
             </Nav.Item>
-          )}
+          )} */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse className="justify-content-end">
             {/* <Nav.Item>
