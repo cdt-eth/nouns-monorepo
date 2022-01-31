@@ -1,7 +1,7 @@
 // import { BigNumber } from 'ethers';
-import classes from './Auction.module.css';
+// import classes from './Auction.module.css';
 import Banner from '../../components/Banner';
-// import Auction from '../../components/Auction';
+import Auction from '../../components/Auction';
 // import Documentation from '../../components/Documentation';
 // import HistoryCollection from '../../components/HistoryCollection';
 import { useAppDispatch, useAppSelector } from '../../hooks';
@@ -10,7 +10,7 @@ import { push } from 'connected-react-router';
 import { nounPath } from '../../utils/history';
 import useOnDisplayAuction from '../../wrappers/onDisplayAuction';
 import { useEffect } from 'react';
-import nounsHero from '../../assets/auction.png';
+// import nounsHero from '../../assets/auction.png';
 // import nounsHero from '../../assets/placeholder.png';
 // import nounsHero from '../../assets/nouns.png';
 
@@ -49,9 +49,9 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
 
   return (
     <>
-      {/* <Auction auction={onDisplayAuction} /> */}
+      <Auction auction={onDisplayAuction} />
 
-      <img className={classes.place} src={nounsHero} alt="nouns-hero-banner" />
+      {/* <img className={classes.place} src={nounsHero} alt="nouns-hero-banner" /> */}
 
       <Banner />
       {/* {lastAuctionNounId && (
