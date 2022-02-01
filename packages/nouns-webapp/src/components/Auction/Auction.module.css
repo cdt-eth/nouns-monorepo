@@ -16,7 +16,8 @@
 @media (max-width: 992px) {
   .auctionActivityCol {
     background-color: white;
-    border-bottom: 1px solid var(--lost-tan) !important;
+    background: #f9e7c7 !important;
+    /* border-bottom: 1px solid var(--lost-tan) !important; */
     padding-bottom: 2rem;
   }
 }
