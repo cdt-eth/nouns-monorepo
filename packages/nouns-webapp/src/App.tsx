@@ -21,11 +21,16 @@ import { CHAIN_ID } from './config';
 import VerifyPage from './pages/Verify';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
+import ReactGA from 'react-ga';
 
 function App() {
   const { account, chainId } = useEthers();
   const dispatch = useAppDispatch();
   dayjs.extend(relativeTime);
+
+  const TRACKING_ID = 'G-PEWZJTJWVR'; // YOUR_OWN_TRACKING_ID
+
+  ReactGA.initialize(TRACKING_ID);
 
   useEffect(() => {
     // Local account array updated

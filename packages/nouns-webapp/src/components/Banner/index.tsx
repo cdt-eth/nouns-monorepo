@@ -147,9 +147,9 @@ const Banner = () => {
         <div className="" style={{ marginBottom: '60px' }}>
           <h1 className="font-nouns text-8xl">WTF?</h1>
           <p className={classes.copy}>
-            Lost Nouns is an homage to the creation of Nouns. There were a ton of the traits created
-            by the founders that never made it into the final project. The value of these "lost"
-            assets comes from owning a piece of history, and we want to share it with you.
+            Lost Nouns is an homage to the creation of Nouns. There were a ton of traits created by
+            the founders that never made it into the final project. The value of these "lost" assets
+            comes from owning a piece of history, and we want to share it with you.
           </p>
         </div>
 
@@ -182,8 +182,8 @@ const Banner = () => {
           <div className={classes.wrapper}>
             <p className={classes.copy}>
               When the project began many ideas were iterated upon. Some heads went through several
-              redesigns until it they were just right, some just one draft, and others were
-              discarded altogether. You can check them all out on {TraitsLink}.
+              redesigns until they were just right, some just one draft, and others were discarded
+              altogether. You can check them all out on {TraitsLink}.
             </p>
             <img className="gr" src={mug} alt="mug" />
           </div>
