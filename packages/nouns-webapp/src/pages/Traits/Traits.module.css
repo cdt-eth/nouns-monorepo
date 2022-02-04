@@ -52,3 +52,7 @@
   width: 100%;
   padding-bottom: 10px;
 }
+.headNote {
+  text-align: center;
+  font-weight: bold;
+}

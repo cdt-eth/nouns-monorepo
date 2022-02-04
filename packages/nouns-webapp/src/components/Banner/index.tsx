@@ -151,6 +151,12 @@ const Banner = () => {
             the founders that never made it into the final project. The value of these "lost" assets
             comes from owning a piece of history, and we want to share it with you.
           </p>
+          <br />
+          <p className={classes.copy}>
+            There will be 404 Lost Nouns. We wanted a smaller supply due to there being a limited
+            amount of "lost" assets. Also, 404 is the HTTP status code for <em>"Page Not Found"</em>
+            .{' '}
+          </p>
         </div>
 
         {/* <div className={classes.wrapper}>

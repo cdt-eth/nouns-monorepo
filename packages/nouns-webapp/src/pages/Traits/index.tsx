@@ -14,14 +14,31 @@ const Traits = () => {
     <Section fullWidth={true}>
       <Col lg={12} className={classes.traitGroup}>
         <h1 className={classes.title}>Heads</h1>
+        <p className={classes.headNote}>
+          The asterisk (*) denotes "lost" heads. Head ideas that didn't make it altogether versus
+          drafts.
+        </p>
         <Row className={classes.traitsGrid}>
           {heads &&
             heads.map(head => (
               <div className={classes.imageGrid}>
                 <img src={`/lost-nouns/heads/${head.image}.png`} />
-                <p>{head.name}</p>
+                <p>
+                  {head.name}
+                  {head.lost && <span>*</span>}
+                </p>
               </div>
             ))}
+
+          {/* {heads &&
+            heads.map(head => (
+              <div className={`${classes.imageGrid} ${head.lost ? 'lostHeads' : 'notLost'}`}>
+                <div className={classes.imageGrid}>
+                  <img src={`/lost-nouns/heads/${head.image}.png`} />
+                  <p>{head.name}</p>
+                </div>
+              </div>
+            ))} */}
         </Row>
       </Col>
       <Col lg={12} className={classes.traitGroup}>

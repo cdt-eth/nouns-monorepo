@@ -2,6 +2,7 @@ import { useAppSelector } from '../../hooks';
 import ShortAddress from '../ShortAddress';
 import classes from './NavBar.module.css';
 import logo from '../../assets/lostnouns.png';
+// import logo from '../../assets/lostnouns_logo.svg';
 import { useState } from 'react';
 import { useEthers } from '@usedapp/core';
 // import { useEtherBalance, useEthers } from '@usedapp/core';

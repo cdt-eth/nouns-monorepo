@@ -506,15 +506,18 @@
   "heads": [
     {
       "name": "Ace Of Diamonds",
-      "image": "head-acediamonds"
+      "image": "head-acediamonds",
+      "lost": true
     },
     {
       "name": "Alien",
-      "image": "head-alien"
+      "image": "head-alien",
+      "lost": true
     },
     {
       "name": "Alien 2",
-      "image": "head-alien-two"
+      "image": "head-alien-two",
+      "lost": true
     },
     {
       "name": "Ape",
@@ -522,7 +525,8 @@
     },
     {
       "name": "Asteroid",
-      "image": "head-asteroid"
+      "image": "head-asteroid",
+      "lost": true
     },
     {
       "name": "Bag",
@@ -546,11 +550,13 @@
     },
     {
       "name": "Birdhouse",
-      "image": "head-birdhouse"
+      "image": "head-birdhouse",
+      "lost": true
     },
     {
       "name": "Birdhouse 2",
-      "image": "head-birdhouse-two"
+      "image": "head-birdhouse-two",
+      "lost": true
     },
     {
       "name": "Blue Diamond",
@@ -578,7 +584,8 @@
     },
     {
       "name": "Cappucin",
-      "image": "head-cappucin"
+      "image": "head-cappucin",
+      "lost": true
     },
     {
       "name": "Car",
@@ -593,20 +600,22 @@
       "image": "head-cassettetape-c"
     },
     {
+      "name": "Cat",
+      "image": "head-cat"
+    },
+    {
       "name": "Chainsaw",
       "image": "head-chainsaw"
     },
     {
       "name": "Cinderblock",
-      "image": "head-cinderblock"
-    },
-    {
-      "name": "Cat",
-      "image": "head-cat"
+      "image": "head-cinderblock",
+      "lost": true
     },
     {
       "name": "Clown",
-      "image": "head-clown"
+      "image": "head-clown",
+      "lost": true
     },
     {
       "name": "Cordless Phone",
@@ -638,19 +647,23 @@
     },
     {
       "name": "Finger Brown",
-      "image": "head-brown-finger"
+      "image": "head-brown-finger",
+      "lost": true
     },
     {
       "name": "Finger Rose",
-      "image": "head-finger-rose"
+      "image": "head-finger-rose",
+      "lost": true
     },
     {
       "name": "Finger Yellow",
-      "image": "head-finger-yellow"
+      "image": "head-finger-yellow",
+      "lost": true
     },
     {
       "name": "Finger Zombie",
-      "image": "head-finger-zombie"
+      "image": "head-finger-zombie",
+      "lost": true
     },
     {
       "name": "Ghost",
@@ -666,23 +679,28 @@
     },
     {
       "name": "Grid",
-      "image": "head-grid"
+      "image": "head-grid",
+      "lost": true
     },
     {
       "name": "Hat",
-      "image": "head-hat (1)"
+      "image": "head-hat (1)",
+      "lost": true
     },
     {
       "name": "Hat 2",
-      "image": "head-hat"
+      "image": "head-hat",
+      "lost": true
     },
     {
       "name": "Hat 3",
-      "image": "head-blue-hat"
+      "image": "head-blue-hat",
+      "lost": true
     },
     {
       "name": "Hat 4",
-      "image": "head-hat-green"
+      "image": "head-hat-green",
+      "lost": true
     },
     {
       "name": "Hockey Puck",
@@ -702,7 +720,8 @@
     },
     {
       "name": "Inline Skate",
-      "image": "head-inline-skate"
+      "image": "head-inline-skate",
+      "lost": true
     },
     {
       "name": "Jellyfish",
@@ -710,7 +729,8 @@
     },
     {
       "name": "Joker",
-      "image": "head-joker"
+      "image": "head-joker",
+      "lost": true
     },
     {
       "name": "Ketchup",
@@ -722,23 +742,28 @@
     },
     {
       "name": "Log",
-      "image": "head-log"
+      "image": "head-log",
+      "lost": true
     },
     {
       "name": "Long Nose Monkey",
-      "image": "head-long-nose-monkey"
+      "image": "head-long-nose-monkey",
+      "lost": true
     },
     {
       "name": "Mars",
-      "image": "head-mars"
+      "image": "head-mars",
+      "lost": true
     },
     {
       "name": "Microfiche",
-      "image": "head-microfiche"
+      "image": "head-microfiche",
+      "lost": true
     },
     {
       "name": "Microphone",
-      "image": "head-microphone"
+      "image": "head-microphone",
+      "lost": true
     },
     {
       "name": "Mug",
@@ -782,11 +807,13 @@
     },
     {
       "name": "Orange",
-      "image": "head-orange"
+      "image": "head-orange",
+      "lost": true
     },
     {
       "name": "Orangutan",
-      "image": "head-orangutan"
+      "image": "head-orangutan",
+      "lost": true
     },
     {
       "name": "Pencil",
@@ -842,19 +869,23 @@
     },
     {
       "name": "Snake",
-      "image": "head-snake"
+      "image": "head-snake",
+      "lost": true
     },
     {
       "name": "Snake 2",
-      "image": "head-snake2"
+      "image": "head-snake2",
+      "lost": true
     },
     {
       "name": "Snake Basket",
-      "image": "head-basket-snake"
+      "image": "head-basket-snake",
+      "lost": true
     },
     {
       "name": "Tardigrade",
-      "image": "head-tardigrade"
+      "image": "head-tardigrade",
+      "lost": true
     },
     {
       "name": "Toilet Paper",
@@ -882,11 +913,13 @@
     },
     {
       "name": "Trout",
-      "image": "head-trout"
+      "image": "head-trout",
+      "lost": true
     },
     {
       "name": "Vampire",
-      "image": "head-vampire"
+      "image": "head-vampire",
+      "lost": true
     },
     {
       "name": "Vent",

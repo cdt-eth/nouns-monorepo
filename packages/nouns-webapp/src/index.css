@@ -42,3 +42,7 @@ code {
   color: '#ff0c0d' !important;
   color: var(--lost-red) !important;
 }
+.lostHeads {
+  background: #f3f3f3;
+  /* opacity: 0.5; */
+}
